@@ -1,0 +1,2 @@
+torch 2.14.1+cu130 cuda 13.0 NVIDIA L4
+tensorrt 11.1.0.106

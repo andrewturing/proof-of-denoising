@@ -1,0 +1,242 @@
+[
+ {
+  "prompt": "wood",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a cat with four eyes",
+  "category": "Animals",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "two red balls on a table",
+  "category": "Artifacts",
+  "challenge": "Quantity"
+ },
+ {
+  "prompt": "an abstract painting of a waterfall",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a green pepper sliced into many pieces",
+  "category": "Food & Beverage",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "the words 'KEEP OFF THE GRASS' on a black sticker",
+  "category": "Illustrations",
+  "challenge": "Writing & Symbols"
+ },
+ {
+  "prompt": "a room with two chairs and a painting of the Statue of Liberty",
+  "category": "Indoor Scenes",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a tornado passing over a corn field",
+  "category": "Outdoor Scenes",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "two red flowers and three white flowers",
+  "category": "Produce & Plants",
+  "challenge": "Quantity"
+ },
+ {
+  "prompt": "a motorcycle in front of an rhinoceros",
+  "category": "Vehicles",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "artificial intelligence",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "view of a giraffe and a zebra in the middle of a field",
+  "category": "Animals",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "a bamboo ladder propped up against an oak tree",
+  "category": "Artifacts",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a surrealist dream-like oil painting by salvador dal\u00ed of a cat playing checkers",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a bottle of light beer with a lemon slice wedged in the rim",
+  "category": "Food & Beverage",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a cube made of porcupine",
+  "category": "Illustrations",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "a robot cooking in the kitchen",
+  "category": "Indoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "the moon",
+  "category": "Outdoor Scenes",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a pineapple",
+  "category": "Produce & Plants",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "Three-quarters front view of a red 1997 Ford F-150 coming around a curve in a mountain road and looking over a green valley on a cloudy day.",
+  "category": "Vehicles",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "yin-yang",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "an owl standing on a telephone wire",
+  "category": "Animals",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "view of a clock tower from above",
+  "category": "Artifacts",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "A raccoon wearing formal clothes, wearing a tophat and holding a cane. The raccoon is holding a garbage bag. Oil painting in the style of pointilism.",
+  "category": "Arts",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a half empty bottle of red wine",
+  "category": "Food & Beverage",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a black background with a large yellow square",
+  "category": "Illustrations",
+  "challenge": "Properties & Positioning"
+ },
+ {
+  "prompt": "a ceiling fan with five brown blades",
+  "category": "Indoor Scenes",
+  "challenge": "Quantity"
+ },
+ {
+  "prompt": "an image of the moons of the planet Jupiter",
+  "category": "Outdoor Scenes",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "a bundle of blue and yellow flowers in a vase",
+  "category": "Produce & Plants",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "an airplane",
+  "category": "Vehicles",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "bond",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "A close-up of two chameleons wearing karate uniforms and fighting, jumping over a waterfall.",
+  "category": "Animals",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "a circular brown trash bin in front of a brick wall",
+  "category": "Artifacts",
+  "challenge": "Properties & Positioning"
+ },
+ {
+  "prompt": "Hokusai's version of Animal Farm",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a close-up of a margarita",
+  "category": "Food & Beverage",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "a metallic blue sphere to the left of a brown cardboard box",
+  "category": "Illustrations",
+  "challenge": "Properties & Positioning"
+ },
+ {
+  "prompt": "a bunch of laptops piled on a sofa",
+  "category": "Indoor Scenes",
+  "challenge": "Quantity"
+ },
+ {
+  "prompt": "a cloud in the shape of a castle",
+  "category": "Outdoor Scenes",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "A photo of a palm tree made of water. ",
+  "category": "Produce & Plants",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a crayon drawing of a space elevator",
+  "category": "Vehicles",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "hope",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "an owl standing on a wire",
+  "category": "Animals",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "cash",
+  "category": "Artifacts",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "an oil painting of a tree and a building",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a green pepper to the left of a red pepper",
+  "category": "Food & Beverage",
+  "challenge": "Properties & Positioning"
+ },
+ {
+  "prompt": "a black background with a large yellow circle",
+  "category": "Illustrations",
+  "challenge": "Properties & Positioning"
+ },
+ {
+  "prompt": "A high resolution photo of a donkey in a clown costume giving a lecture at the front of a lecture hall. The blackboard has mathematical equations on it. There are many students in the lecture hall.",
+  "category": "Indoor Scenes",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a half moon in the day sky",
+  "category": "Outdoor Scenes",
+  "challenge": "Imagination"
+ }
+]

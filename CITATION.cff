@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Proof-of-Denoising: Verifying Diffusion Inference on Untrusted, Heterogeneous Devices"
+authors:
+  - name: "The Proof-of-Denoising Authors"
+version: 0.1.0
+date-released: 2026-11-16
+license: Apache-2.0

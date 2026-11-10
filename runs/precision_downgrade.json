@@ -1,0 +1,58 @@
+{
+ "runs": [
+  "study",
+  "calib_webgpu-fp32",
+  "cross_mac",
+  "nvidia48",
+  "cross_nvidia",
+  "arbiter_cuda",
+  "xcal_cuda_fp32",
+  "xcal_cuda_tf32",
+  "xcal_trt_fp16",
+  "xcpu_nvidia48"
+ ],
+ "margin": 1.5,
+ "calibration_records": 216,
+ "downgrades": {
+  "cuda-fp16": {
+   "records": 64,
+   "verifiers": [
+    "cpu-fp32",
+    "cuda-fp32",
+    "mps-fp32"
+   ],
+   "steps": 1248,
+   "flagged": 1248,
+   "flag_frac": 1.0,
+   "P_k2_mean": 1.0,
+   "P_k2_min": 1.0
+  },
+  "cuda-tf32": {
+   "records": 64,
+   "verifiers": [
+    "cpu-fp32",
+    "cuda-fp32",
+    "mps-fp32"
+   ],
+   "steps": 1248,
+   "flagged": 1248,
+   "flag_frac": 1.0,
+   "P_k2_mean": 1.0,
+   "P_k2_min": 1.0
+  },
+  "mps-fp16": {
+   "records": 56,
+   "verifiers": [
+    "cpu-fp32",
+    "cuda-fp32",
+    "mps-fp32",
+    "webgpu-fp32"
+   ],
+   "steps": 776,
+   "flagged": 776,
+   "flag_frac": 1.0,
+   "P_k2_mean": 1.0,
+   "P_k2_min": 1.0
+  }
+ }
+}

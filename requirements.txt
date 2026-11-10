@@ -1,0 +1,13 @@
+torch>=2.4
+diffusers>=0.30
+transformers>=4.44
+huggingface_hub>=0.24
+safetensors
+accelerate
+numpy
+pillow
+matplotlib
+# optional: in-browser backend export and parity checks
+onnx
+onnxruntime
+onnxconverter-common

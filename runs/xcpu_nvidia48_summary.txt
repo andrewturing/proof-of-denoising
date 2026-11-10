@@ -1,0 +1,17 @@
+# Study summary (48 prompts, 48 check records)
+
+## FP32 class
+
+Honest cross-device steps: 1200 (plus 0 same-backend re-run steps, all r = 0). Leave-one-prompt-out false flags: max 0/1200, maxV 0/1200, conformal 7/1200
+Rules: max = pooled over verifier stacks; maxV = per verifier stack (protocol rule).
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cuda-fp32->x86cpu-fp32 | 1200 | 9.14e-06 | 6.84e-05 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+
+## Verification time per checked step (median, s)
+
+- x86cpu-fp32: 5.16

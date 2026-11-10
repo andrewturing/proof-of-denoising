@@ -1,0 +1,66 @@
+{
+  "threshold_min_honest_psnr": 24.515718483289763,
+  "honest_pairs": {
+    "cpu-fp32|mps-fp16": {
+      "median": 49.00087527394315,
+      "min": 24.516259595328247
+    },
+    "cpu-fp32|mps-fp32": {
+      "median": 76.47297076219482,
+      "min": 65.85608873228333
+    },
+    "mps-fp16|mps-fp32": {
+      "median": 48.97877205058674,
+      "min": 24.515718483289763
+    }
+  },
+  "cheats": {
+    "sub-bk-small": {
+      "median": 13.756535541829635,
+      "accepted": 0,
+      "n": 12
+    },
+    "sub-bk-tiny": {
+      "median": 13.384281784503543,
+      "accepted": 0,
+      "n": 12
+    },
+    "w8": {
+      "median": 26.879876056047138,
+      "accepted": 7,
+      "n": 12
+    },
+    "w4": {
+      "median": 12.002968432161346,
+      "accepted": 0,
+      "n": 12
+    },
+    "cfg-skip": {
+      "median": 12.861669204523185,
+      "accepted": 0,
+      "n": 12
+    },
+    "cache2": {
+      "median": 18.882682612179476,
+      "accepted": 1,
+      "n": 12
+    },
+    "cache2-late": {
+      "median": 35.84982073001506,
+      "accepted": 12,
+      "n": 12
+    },
+    "step-skip": {
+      "median": 18.883883099919533,
+      "accepted": 1,
+      "n": 12
+    },
+    "neg-strip": {
+      "median": 14.759494704675108,
+      "accepted": 0,
+      "n": 12
+    }
+  },
+  "accepted_total": 21,
+  "cheat_images_total": 108
+}

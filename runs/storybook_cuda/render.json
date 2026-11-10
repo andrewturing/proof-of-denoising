@@ -1,0 +1,45 @@
+{
+ "book": "(pages not included; see README)",
+ "model_id": "sd15-unet-19da7aaa4b880e59",
+ "device": "cuda-fp32",
+ "node_b_plan": {
+  "1": "sub-bk-small",
+  "3": "w8",
+  "5": "cache2-late",
+  "6": "neg-strip"
+ },
+ "pages": {
+  "c1-p1": {
+   "A": "honest",
+   "B": "honest"
+  },
+  "c1-p2": {
+   "A": "honest",
+   "B": "sub-bk-small"
+  },
+  "c1-p3": {
+   "A": "honest",
+   "B": "honest"
+  },
+  "c1-p4": {
+   "A": "honest",
+   "B": "w8"
+  },
+  "c1-p5": {
+   "A": "honest",
+   "B": "honest"
+  },
+  "c1-p6": {
+   "A": "honest",
+   "B": "cache2-late"
+  },
+  "c1-p7": {
+   "A": "honest",
+   "B": "neg-strip"
+  },
+  "c1-p8": {
+   "A": "honest",
+   "B": "honest"
+  }
+ }
+}

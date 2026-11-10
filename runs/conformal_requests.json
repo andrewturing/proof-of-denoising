@@ -1,0 +1,85 @@
+{
+ "alpha": 0.01,
+ "fit_requests": 40,
+ "calibration_requests": 200,
+ "calibration": "runs/calib240 (NVIDIA L4 FP32 render) checked by the Apple GPU FP32 on all 25 steps",
+ "rank": 199,
+ "usable": true,
+ "tau": [
+  7.376641875297445e-05,
+  5.373508798437579e-05,
+  4.499362790767708e-05,
+  3.8615593871949686e-05,
+  3.510887256479069e-05,
+  3.217031749279879e-05,
+  3.0066507673034098e-05,
+  2.8057999394297115e-05,
+  2.5677598266696856e-05,
+  2.3732466249056906e-05,
+  2.23387169845083e-05,
+  2.0897275487836316e-05,
+  1.9994985451035544e-05,
+  1.9012211671024523e-05,
+  1.8745608246455316e-05,
+  1.8155417299614272e-05,
+  1.788106298144312e-05,
+  1.8199534053871892e-05,
+  1.8522303933180517e-05,
+  1.8822244710445996e-05,
+  1.995633630441255e-05,
+  2.1409134971886533e-05,
+  2.359121912573595e-05,
+  2.7882807256680937e-05,
+  6.294694297409555e-05
+ ],
+ "test_requests_flagged": {
+  "cpu-fp32->cuda-fp32": {
+   "flagged": 8,
+   "requests": 8
+  },
+  "cpu-fp32->mps-fp32": {
+   "flagged": 8,
+   "requests": 8
+  },
+  "cpu-fp32->webgpu-fp32": {
+   "flagged": 8,
+   "requests": 8
+  },
+  "cuda-fp32->webgpu-fp32": {
+   "flagged": 8,
+   "requests": 8
+  },
+  "cuda-fp32->x86cpu-fp32": {
+   "flagged": 3,
+   "requests": 48
+  },
+  "mps-fp32->cuda-fp32": {
+   "flagged": 0,
+   "requests": 32
+  },
+  "mps-fp32->webgpu-fp32": {
+   "flagged": 32,
+   "requests": 32
+  },
+  "webgpu-fp32->cuda-fp32": {
+   "flagged": 8,
+   "requests": 8
+  }
+ },
+ "test_same_stacks": {
+  "flagged": 0,
+  "requests": 32
+ },
+ "power_k2_mean": {
+  "cache2": 0.7708,
+  "cache2-late": 0.484,
+  "cfg-skip": 1.0,
+  "neg-strip": 1.0,
+  "step-skip": 1.0,
+  "sub-bk-sdm-small": 1.0,
+  "sub-bk-sdm-tiny": 1.0,
+  "w4": 1.0,
+  "w8": 1.0
+ },
+ "caught_k2_ge_099": 7
+}

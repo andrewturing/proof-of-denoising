@@ -1,0 +1,113 @@
+{
+ "prompts": 24,
+ "classes": {
+  "fp32": {
+   "honest_steps_xdev": 600,
+   "false_flags_max": 4,
+   "pairs": {
+    "cuda-fp32->x86cpu-fp32": {
+     "n": 600,
+     "median": 1.0849022897650333e-05,
+     "max": 0.0002288604944390494
+    }
+   }
+  },
+  "tf32": {
+   "honest_steps_xdev": 600,
+   "false_flags_max": 6,
+   "pairs": {
+    "cuda-tf32->cuda-fp32": {
+     "n": 600,
+     "median": 0.0007232610773082348,
+     "max": 0.003243106119520688
+    }
+   }
+  },
+  "bf16": {
+   "honest_steps_xdev": 600,
+   "false_flags_max": 0,
+   "pairs": {
+    "cuda-bf16->cuda-fp32": {
+     "n": 600,
+     "median": 0.07849119387580886,
+     "max": 0.20840388005037516
+    }
+   }
+  }
+ },
+ "fp32_detection": {
+  "cache2-late": {
+   "P_k2": 0.41729797979797983,
+   "flag_frac": 0.23611111111111113,
+   "n": 24
+  },
+  "cache2": {
+   "P_k2": 0.75,
+   "flag_frac": 0.48611111111111116,
+   "n": 24
+  },
+  "cfg-skip": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 24
+  },
+  "neg-strip": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 24
+  },
+  "step-skip": {
+   "P_k2": 1.0,
+   "flag_frac": 0.9756944444444443,
+   "n": 24
+  },
+  "sub-sana600": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 24
+  },
+  "w4": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 24
+  },
+  "w8": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 24
+  }
+ },
+ "fp32_caught_k2": 6,
+ "downgrades": {
+  "cuda-bf16": {
+   "flagged": 600,
+   "steps": 600
+  },
+  "cuda-tf32": {
+   "flagged": 600,
+   "steps": 600
+  }
+ },
+ "fp32_loo_flags": [
+  {
+   "prompt": 11,
+   "step": 15,
+   "over": 1.006
+  },
+  {
+   "prompt": 16,
+   "step": 14,
+   "over": 1.007
+  },
+  {
+   "prompt": 20,
+   "step": 6,
+   "over": 1.207
+  },
+  {
+   "prompt": 10,
+   "step": 17,
+   "over": 4.095
+  }
+ ]
+}

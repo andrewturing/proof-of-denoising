@@ -1,0 +1,393 @@
+W1019 08:12:08.382000 98603 .venv/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:02<03:14,  1.00s/it]Loading weights: 100%|██████████| 196/196 [00:02<00:00, 97.07it/s]
+gen mps-fp16__honest 0 36.1s
+gen mps-fp16__honest 1 30.8s
+gen mps-fp16__honest 2 34.9s
+gen mps-fp16__honest 3 33.4s
+gen mps-fp16__honest 4 35.5s
+gen mps-fp16__honest 5 38.2s
+gen mps-fp16__honest 6 39.3s
+gen mps-fp16__honest 7 29.8s
+gen mps-fp16__cfg-skip 0 14.6s
+gen mps-fp16__cfg-skip 1 15.0s
+gen mps-fp16__cfg-skip 2 13.4s
+gen mps-fp16__cfg-skip 3 14.2s
+gen mps-fp16__cfg-skip 4 14.5s
+gen mps-fp16__cfg-skip 5 15.1s
+gen mps-fp16__cfg-skip 6 14.4s
+gen mps-fp16__cfg-skip 7 15.1s
+gen mps-fp16__cache2 0 19.3s
+gen mps-fp16__cache2 1 15.0s
+gen mps-fp16__cache2 2 16.9s
+gen mps-fp16__cache2 3 14.9s
+gen mps-fp16__cache2 4 14.0s
+gen mps-fp16__cache2 5 14.7s
+gen mps-fp16__cache2 6 14.1s
+gen mps-fp16__cache2 7 14.9s
+gen mps-fp16__cache2-late 0 21.3s
+gen mps-fp16__cache2-late 1 20.9s
+gen mps-fp16__cache2-late 2 23.1s
+gen mps-fp16__cache2-late 3 23.1s
+gen mps-fp16__cache2-late 4 21.2s
+gen mps-fp16__cache2-late 5 21.1s
+gen mps-fp16__cache2-late 6 20.5s
+gen mps-fp16__cache2-late 7 19.8s
+gen mps-fp16__step-skip 0 15.6s
+gen mps-fp16__step-skip 1 13.6s
+gen mps-fp16__step-skip 2 13.8s
+gen mps-fp16__step-skip 3 14.8s
+gen mps-fp16__step-skip 4 14.7s
+gen mps-fp16__step-skip 5 13.5s
+gen mps-fp16__step-skip 6 14.5s
+gen mps-fp16__step-skip 7 13.8s
+gen mps-fp16__neg-strip 0 27.2s
+gen mps-fp16__neg-strip 1 26.7s
+gen mps-fp16__neg-strip 2 25.9s
+gen mps-fp16__neg-strip 3 28.0s
+gen mps-fp16__neg-strip 4 26.2s
+gen mps-fp16__neg-strip 5 27.8s
+gen mps-fp16__neg-strip 6 27.2s
+gen mps-fp16__neg-strip 7 26.6s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:00<00:24,  8.07it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 770.54it/s]
+gen mps-fp16__sub-bk-sdm-small 0 17.2s
+gen mps-fp16__sub-bk-sdm-small 1 17.2s
+gen mps-fp16__sub-bk-sdm-small 2 17.0s
+gen mps-fp16__sub-bk-sdm-small 3 17.5s
+gen mps-fp16__sub-bk-sdm-small 4 17.0s
+gen mps-fp16__sub-bk-sdm-small 5 16.2s
+gen mps-fp16__sub-bk-sdm-small 6 17.8s
+gen mps-fp16__sub-bk-sdm-small 7 16.9s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:00<00:21,  8.97it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 862.86it/s]
+gen mps-fp16__sub-bk-sdm-tiny 0 20.5s
+gen mps-fp16__sub-bk-sdm-tiny 1 18.2s
+gen mps-fp16__sub-bk-sdm-tiny 2 17.5s
+gen mps-fp16__sub-bk-sdm-tiny 3 18.3s
+gen mps-fp16__sub-bk-sdm-tiny 4 17.7s
+gen mps-fp16__sub-bk-sdm-tiny 5 17.9s
+gen mps-fp16__sub-bk-sdm-tiny 6 17.6s
+gen mps-fp16__sub-bk-sdm-tiny 7 18.6s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:00<01:02,  3.09it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 300.66it/s]
+gen mps-fp16__w8 0 28.6s
+gen mps-fp16__w8 1 27.4s
+gen mps-fp16__w8 2 27.1s
+gen mps-fp16__w8 3 26.9s
+gen mps-fp16__w8 4 27.1s
+gen mps-fp16__w8 5 27.3s
+gen mps-fp16__w8 6 27.2s
+gen mps-fp16__w8 7 28.3s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:00<00:39,  4.94it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 478.01it/s]
+gen mps-fp16__w4 0 35.3s
+gen mps-fp16__w4 1 32.1s
+gen mps-fp16__w4 2 29.9s
+gen mps-fp16__w4 3 29.0s
+gen mps-fp16__w4 4 28.9s
+gen mps-fp16__w4 5 29.0s
+gen mps-fp16__w4 6 28.9s
+gen mps-fp16__w4 7 29.3s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 4885.74it/s]
+gen mps-fp32__honest 0 46.1s
+gen mps-fp32__honest 1 30.4s
+gen mps-fp32__honest 2 32.6s
+gen mps-fp32__honest 3 48.4s
+gen mps-fp32__honest 4 28.3s
+gen mps-fp32__honest 5 31.6s
+gen mps-fp32__honest 6 27.4s
+gen mps-fp32__honest 7 31.2s
+gen mps-fp32__cfg-skip 0 18.9s
+gen mps-fp32__cfg-skip 1 15.0s
+gen mps-fp32__cfg-skip 2 15.8s
+gen mps-fp32__cfg-skip 3 17.6s
+gen mps-fp32__cfg-skip 4 17.6s
+gen mps-fp32__cfg-skip 5 16.3s
+gen mps-fp32__cfg-skip 6 18.2s
+gen mps-fp32__cfg-skip 7 16.2s
+gen mps-fp32__cache2 0 31.6s
+gen mps-fp32__cache2 1 17.1s
+gen mps-fp32__cache2 2 16.0s
+gen mps-fp32__cache2 3 19.0s
+gen mps-fp32__cache2 4 16.4s
+gen mps-fp32__cache2 5 16.5s
+gen mps-fp32__cache2 6 16.6s
+gen mps-fp32__cache2 7 17.6s
+gen mps-fp32__cache2-late 0 28.9s
+gen mps-fp32__cache2-late 1 20.9s
+gen mps-fp32__cache2-late 2 20.6s
+gen mps-fp32__cache2-late 3 24.5s
+gen mps-fp32__cache2-late 4 25.2s
+gen mps-fp32__cache2-late 5 24.5s
+gen mps-fp32__cache2-late 6 43.1s
+gen mps-fp32__cache2-late 7 23.9s
+gen mps-fp32__step-skip 0 15.9s
+gen mps-fp32__step-skip 1 16.6s
+gen mps-fp32__step-skip 2 16.1s
+gen mps-fp32__step-skip 3 14.6s
+gen mps-fp32__step-skip 4 15.1s
+gen mps-fp32__step-skip 5 16.0s
+gen mps-fp32__step-skip 6 16.8s
+gen mps-fp32__step-skip 7 15.5s
+gen mps-fp32__neg-strip 0 30.1s
+gen mps-fp32__neg-strip 1 30.6s
+gen mps-fp32__neg-strip 2 29.7s
+gen mps-fp32__neg-strip 3 32.6s
+gen mps-fp32__neg-strip 4 31.4s
+gen mps-fp32__neg-strip 5 32.1s
+gen mps-fp32__neg-strip 6 31.0s
+gen mps-fp32__neg-strip 7 33.1s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 9343.98it/s]
+gen mps-fp32__sub-bk-sdm-small 0 33.4s
+gen mps-fp32__sub-bk-sdm-small 1 17.5s
+gen mps-fp32__sub-bk-sdm-small 2 18.6s
+gen mps-fp32__sub-bk-sdm-small 3 18.2s
+gen mps-fp32__sub-bk-sdm-small 4 19.1s
+gen mps-fp32__sub-bk-sdm-small 5 19.7s
+gen mps-fp32__sub-bk-sdm-small 6 19.2s
+gen mps-fp32__sub-bk-sdm-small 7 19.9s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 4860.29it/s]
+gen mps-fp32__sub-bk-sdm-tiny 0 28.4s
+gen mps-fp32__sub-bk-sdm-tiny 1 18.3s
+gen mps-fp32__sub-bk-sdm-tiny 2 17.6s
+gen mps-fp32__sub-bk-sdm-tiny 3 19.0s
+gen mps-fp32__sub-bk-sdm-tiny 4 19.2s
+gen mps-fp32__sub-bk-sdm-tiny 5 17.6s
+gen mps-fp32__sub-bk-sdm-tiny 6 18.7s
+gen mps-fp32__sub-bk-sdm-tiny 7 19.6s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 3860.31it/s]
+gen mps-fp32__w8 0 53.5s
+gen mps-fp32__w8 1 31.7s
+gen mps-fp32__w8 2 33.1s
+gen mps-fp32__w8 3 34.8s
+gen mps-fp32__w8 4 33.1s
+gen mps-fp32__w8 5 32.5s
+gen mps-fp32__w8 6 31.3s
+gen mps-fp32__w8 7 31.5s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 5421.28it/s]
+gen mps-fp32__w4 0 46.2s
+gen mps-fp32__w4 1 329.5s
+gen mps-fp32__w4 2 29.9s
+gen mps-fp32__w4 3 30.0s
+gen mps-fp32__w4 4 27.5s
+gen mps-fp32__w4 5 35.8s
+gen mps-fp32__w4 6 30.3s
+gen mps-fp32__w4 7 41.0s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 5660.64it/s]
+verify mps-fp32 cpu-fp32__honest__00.npz 33.83s
+verify mps-fp32 cpu-fp32__honest__01.npz 38.53s
+verify mps-fp32 cpu-fp32__honest__02.npz 781.66s
+verify mps-fp32 cpu-fp32__honest__03.npz 32.67s
+verify mps-fp32 cpu-fp32__honest__04.npz 31.72s
+verify mps-fp32 cpu-fp32__honest__05.npz 32.98s
+verify mps-fp32 cpu-fp32__honest__06.npz 33.61s
+verify mps-fp32 cpu-fp32__honest__07.npz 33.99s
+verify mps-fp32 mps-fp16__cache2-late__00.npz 10.35s
+verify mps-fp32 mps-fp16__cache2-late__01.npz 10.5s
+verify mps-fp32 mps-fp16__cache2-late__02.npz 11.73s
+verify mps-fp32 mps-fp16__cache2-late__03.npz 107.65s
+verify mps-fp32 mps-fp16__cache2-late__04.npz 28.51s
+verify mps-fp32 mps-fp16__cache2-late__05.npz 11.41s
+verify mps-fp32 mps-fp16__cache2-late__06.npz 351.26s
+verify mps-fp32 mps-fp16__cache2-late__07.npz 9.15s
+verify mps-fp32 mps-fp16__cache2__00.npz 9.61s
+verify mps-fp32 mps-fp16__cache2__01.npz 8.32s
+verify mps-fp32 mps-fp16__cache2__02.npz 9.4s
+verify mps-fp32 mps-fp16__cache2__03.npz 9.0s
+verify mps-fp32 mps-fp16__cache2__04.npz 8.95s
+verify mps-fp32 mps-fp16__cache2__05.npz 10.04s
+verify mps-fp32 mps-fp16__cache2__06.npz 9.2s
+verify mps-fp32 mps-fp16__cache2__07.npz 8.46s
+verify mps-fp32 mps-fp16__cfg-skip__00.npz 9.46s
+verify mps-fp32 mps-fp16__cfg-skip__01.npz 8.7s
+verify mps-fp32 mps-fp16__cfg-skip__02.npz 9.34s
+verify mps-fp32 mps-fp16__cfg-skip__03.npz 10.32s
+verify mps-fp32 mps-fp16__cfg-skip__04.npz 9.45s
+verify mps-fp32 mps-fp16__cfg-skip__05.npz 11.21s
+verify mps-fp32 mps-fp16__cfg-skip__06.npz 9.59s
+verify mps-fp32 mps-fp16__cfg-skip__07.npz 10.04s
+verify mps-fp32 mps-fp16__honest__00.npz 34.26s
+verify mps-fp32 mps-fp16__honest__01.npz 33.02s
+verify mps-fp32 mps-fp16__honest__02.npz 27.7s
+verify mps-fp32 mps-fp16__honest__03.npz 28.18s
+verify mps-fp32 mps-fp16__honest__04.npz 29.06s
+verify mps-fp32 mps-fp16__honest__05.npz 27.08s
+verify mps-fp32 mps-fp16__honest__06.npz 28.0s
+verify mps-fp32 mps-fp16__honest__07.npz 29.75s
+verify mps-fp32 mps-fp16__neg-strip__00.npz 8.51s
+verify mps-fp32 mps-fp16__neg-strip__01.npz 10.14s
+verify mps-fp32 mps-fp16__neg-strip__02.npz 10.03s
+verify mps-fp32 mps-fp16__neg-strip__03.npz 10.41s
+verify mps-fp32 mps-fp16__neg-strip__04.npz 12.15s
+verify mps-fp32 mps-fp16__neg-strip__05.npz 11.41s
+verify mps-fp32 mps-fp16__neg-strip__06.npz 10.41s
+verify mps-fp32 mps-fp16__neg-strip__07.npz 11.07s
+verify mps-fp32 mps-fp16__step-skip__00.npz 9.36s
+verify mps-fp32 mps-fp16__step-skip__01.npz 10.85s
+verify mps-fp32 mps-fp16__step-skip__02.npz 10.48s
+verify mps-fp32 mps-fp16__step-skip__03.npz 8.11s
+verify mps-fp32 mps-fp16__step-skip__04.npz 8.54s
+verify mps-fp32 mps-fp16__step-skip__05.npz 9.17s
+verify mps-fp32 mps-fp16__step-skip__06.npz 9.7s
+verify mps-fp32 mps-fp16__step-skip__07.npz 9.89s
+verify mps-fp32 mps-fp16__sub-bk-sdm-small__00.npz 8.52s
+verify mps-fp32 mps-fp16__sub-bk-sdm-small__01.npz 9.62s
+verify mps-fp32 mps-fp16__sub-bk-sdm-small__02.npz 9.38s
+verify mps-fp32 mps-fp16__sub-bk-sdm-small__03.npz 8.27s
+verify mps-fp32 mps-fp16__sub-bk-sdm-small__04.npz 8.66s
+verify mps-fp32 mps-fp16__sub-bk-sdm-small__05.npz 11.11s
+verify mps-fp32 mps-fp16__sub-bk-sdm-small__06.npz 8.27s
+verify mps-fp32 mps-fp16__sub-bk-sdm-small__07.npz 9.54s
+verify mps-fp32 mps-fp16__sub-bk-sdm-tiny__00.npz 8.58s
+verify mps-fp32 mps-fp16__sub-bk-sdm-tiny__01.npz 10.48s
+verify mps-fp32 mps-fp16__sub-bk-sdm-tiny__02.npz 9.38s
+verify mps-fp32 mps-fp16__sub-bk-sdm-tiny__03.npz 9.03s
+verify mps-fp32 mps-fp16__sub-bk-sdm-tiny__04.npz 8.92s
+verify mps-fp32 mps-fp16__sub-bk-sdm-tiny__05.npz 9.54s
+verify mps-fp32 mps-fp16__sub-bk-sdm-tiny__06.npz 9.99s
+verify mps-fp32 mps-fp16__sub-bk-sdm-tiny__07.npz 10.44s
+verify mps-fp32 mps-fp16__w4__00.npz 9.16s
+verify mps-fp32 mps-fp16__w4__01.npz 9.4s
+verify mps-fp32 mps-fp16__w4__02.npz 12.32s
+verify mps-fp32 mps-fp16__w4__03.npz 10.08s
+verify mps-fp32 mps-fp16__w4__04.npz 10.43s
+verify mps-fp32 mps-fp16__w4__05.npz 9.64s
+verify mps-fp32 mps-fp16__w4__06.npz 8.38s
+verify mps-fp32 mps-fp16__w4__07.npz 9.53s
+verify mps-fp32 mps-fp16__w8__00.npz 7.97s
+verify mps-fp32 mps-fp16__w8__01.npz 9.27s
+verify mps-fp32 mps-fp16__w8__02.npz 21.75s
+verify mps-fp32 mps-fp16__w8__03.npz 487.72s
+verify mps-fp32 mps-fp16__w8__04.npz 1146.98s
+verify mps-fp32 mps-fp16__w8__05.npz 39.6s
+verify mps-fp32 mps-fp16__w8__06.npz 11.48s
+verify mps-fp32 mps-fp16__w8__07.npz 15.53s
+verify mps-fp32 mps-fp32__cache2-late__00.npz 11.17s
+verify mps-fp32 mps-fp32__cache2-late__01.npz 365.72s
+verify mps-fp32 mps-fp32__cache2-late__02.npz 879.74s
+verify mps-fp32 mps-fp32__cache2-late__03.npz 1529.52s
+verify mps-fp32 mps-fp32__cache2-late__04.npz 1362.18s
+verify mps-fp32 mps-fp32__cache2-late__05.npz 1550.72s
+verify mps-fp32 mps-fp32__cache2-late__06.npz 1347.0s
+verify mps-fp32 mps-fp32__cache2-late__07.npz 19.6s
+verify mps-fp32 mps-fp32__cache2__00.npz 12.76s
+verify mps-fp32 mps-fp32__cache2__01.npz 12.89s
+verify mps-fp32 mps-fp32__cache2__02.npz 23.52s
+verify mps-fp32 mps-fp32__cache2__03.npz 11.79s
+verify mps-fp32 mps-fp32__cache2__04.npz 13.8s
+verify mps-fp32 mps-fp32__cache2__05.npz 11.53s
+verify mps-fp32 mps-fp32__cache2__06.npz 13.63s
+verify mps-fp32 mps-fp32__cache2__07.npz 13.37s
+verify mps-fp32 mps-fp32__cfg-skip__00.npz 13.02s
+verify mps-fp32 mps-fp32__cfg-skip__01.npz 15.77s
+verify mps-fp32 mps-fp32__cfg-skip__02.npz 137.34s
+verify mps-fp32 mps-fp32__cfg-skip__03.npz 15.3s
+verify mps-fp32 mps-fp32__cfg-skip__04.npz 16.06s
+verify mps-fp32 mps-fp32__cfg-skip__05.npz 15.97s
+verify mps-fp32 mps-fp32__cfg-skip__06.npz 16.23s
+verify mps-fp32 mps-fp32__cfg-skip__07.npz 16.14s
+verify mps-fp32 mps-fp32__honest__00.npz 45.55s
+verify mps-fp32 mps-fp32__honest__01.npz 45.17s
+verify mps-fp32 mps-fp32__honest__02.npz 45.97s
+verify mps-fp32 mps-fp32__honest__03.npz 49.18s
+verify mps-fp32 mps-fp32__honest__04.npz 48.8s
+verify mps-fp32 mps-fp32__honest__05.npz 56.93s
+verify mps-fp32 mps-fp32__honest__06.npz 46.97s
+verify mps-fp32 mps-fp32__honest__07.npz 47.95s
+verify mps-fp32 mps-fp32__neg-strip__00.npz 14.57s
+verify mps-fp32 mps-fp32__neg-strip__01.npz 15.56s
+verify mps-fp32 mps-fp32__neg-strip__02.npz 17.07s
+verify mps-fp32 mps-fp32__neg-strip__03.npz 270.09s
+verify mps-fp32 mps-fp32__neg-strip__04.npz 90.55s
+verify mps-fp32 mps-fp32__neg-strip__05.npz 92.4s
+verify mps-fp32 mps-fp32__neg-strip__06.npz 16.74s
+verify mps-fp32 mps-fp32__neg-strip__07.npz 20.18s
+verify mps-fp32 mps-fp32__step-skip__00.npz 19.17s
+verify mps-fp32 mps-fp32__step-skip__01.npz 35.98s
+verify mps-fp32 mps-fp32__step-skip__02.npz 16.07s
+verify mps-fp32 mps-fp32__step-skip__03.npz 18.09s
+verify mps-fp32 mps-fp32__step-skip__04.npz 17.55s
+verify mps-fp32 mps-fp32__step-skip__05.npz 72.72s
+verify mps-fp32 mps-fp32__step-skip__06.npz 17.42s
+verify mps-fp32 mps-fp32__step-skip__07.npz 98.63s
+verify mps-fp32 mps-fp32__sub-bk-sdm-small__00.npz 92.73s
+verify mps-fp32 mps-fp32__sub-bk-sdm-small__01.npz 16.04s
+verify mps-fp32 mps-fp32__sub-bk-sdm-small__02.npz 60.45s
+verify mps-fp32 mps-fp32__sub-bk-sdm-small__03.npz 33.67s
+verify mps-fp32 mps-fp32__sub-bk-sdm-small__04.npz 31.55s
+verify mps-fp32 mps-fp32__sub-bk-sdm-small__05.npz 18.3s
+verify mps-fp32 mps-fp32__sub-bk-sdm-small__06.npz 15.13s
+verify mps-fp32 mps-fp32__sub-bk-sdm-small__07.npz 17.62s
+verify mps-fp32 mps-fp32__sub-bk-sdm-tiny__00.npz 88.29s
+verify mps-fp32 mps-fp32__sub-bk-sdm-tiny__01.npz 37.46s
+verify mps-fp32 mps-fp32__sub-bk-sdm-tiny__02.npz 22.02s
+verify mps-fp32 mps-fp32__sub-bk-sdm-tiny__03.npz 17.89s
+verify mps-fp32 mps-fp32__sub-bk-sdm-tiny__04.npz 16.56s
+verify mps-fp32 mps-fp32__sub-bk-sdm-tiny__05.npz 16.67s
+verify mps-fp32 mps-fp32__sub-bk-sdm-tiny__06.npz 18.16s
+verify mps-fp32 mps-fp32__sub-bk-sdm-tiny__07.npz 17.09s
+verify mps-fp32 mps-fp32__w4__00.npz 18.18s
+verify mps-fp32 mps-fp32__w4__01.npz 17.73s
+verify mps-fp32 mps-fp32__w4__02.npz 16.15s
+verify mps-fp32 mps-fp32__w4__03.npz 18.06s
+verify mps-fp32 mps-fp32__w4__04.npz 19.47s
+verify mps-fp32 mps-fp32__w4__05.npz 17.99s
+verify mps-fp32 mps-fp32__w4__06.npz 15.21s
+verify mps-fp32 mps-fp32__w4__07.npz 15.35s
+verify mps-fp32 mps-fp32__w8__00.npz 27.51s
+verify mps-fp32 mps-fp32__w8__01.npz 18.63s
+verify mps-fp32 mps-fp32__w8__02.npz 17.26s
+verify mps-fp32 mps-fp32__w8__03.npz 19.79s
+verify mps-fp32 mps-fp32__w8__04.npz 43.93s
+verify mps-fp32 mps-fp32__w8__05.npz 19.95s
+verify mps-fp32 mps-fp32__w8__06.npz 16.18s
+verify mps-fp32 mps-fp32__w8__07.npz 16.33s
+== mps block done 0
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:00<00:14, 13.04it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 1198.53it/s]
+gen mps-fp16__honest 8 93.9s
+gen mps-fp16__honest 9 55.2s
+gen mps-fp16__honest 10 48.9s
+gen mps-fp16__honest 11 51.8s
+gen mps-fp16__honest 12 49.9s
+gen mps-fp16__honest 13 53.2s
+gen mps-fp16__honest 14 53.2s
+gen mps-fp16__honest 15 50.7s
+gen mps-fp16__cfg-skip 8 27.4s
+gen mps-fp16__cfg-skip 9 28.0s
+gen mps-fp16__cfg-skip 10 25.5s
+gen mps-fp16__cfg-skip 11 26.6s
+gen mps-fp16__cfg-skip 12 27.2s
+gen mps-fp16__cfg-skip 13 24.8s
+gen mps-fp16__cfg-skip 14 29.4s
+gen mps-fp16__cfg-skip 15 25.0s
+gen mps-fp16__cache2 8 75.1s
+gen mps-fp16__cache2 9 24.3s
+gen mps-fp16__cache2 10 24.7s
+gen mps-fp16__cache2 11 23.8s
+gen mps-fp16__cache2 12 23.7s
+gen mps-fp16__cache2 13 24.6s
+gen mps-fp16__cache2 14 25.1s
+gen mps-fp16__cache2 15 23.4s
+gen mps-fp16__cache2-late 8 36.3s
+gen mps-fp16__cache2-late 9 35.0s
+gen mps-fp16__cache2-late 10 34.4s
+gen mps-fp16__cache2-late 11 36.6s
+gen mps-fp16__cache2-late 12 34.5s
+gen mps-fp16__cache2-late 13 34.5s
+gen mps-fp16__cache2-late 14 33.9s
+gen mps-fp16__cache2-late 15 35.1s
+gen mps-fp16__step-skip 8 24.9s
+gen mps-fp16__step-skip 9 23.8s
+gen mps-fp16__step-skip 10 23.4s
+gen mps-fp16__step-skip 11 25.9s
+gen mps-fp16__step-skip 12 23.5s
+gen mps-fp16__step-skip 13 24.4s
+gen mps-fp16__step-skip 14 23.1s
+gen mps-fp16__step-skip 15 23.6s
+gen mps-fp16__neg-strip 8 47.4s
+gen mps-fp16__neg-strip 9 44.6s
+gen mps-fp16__neg-strip 10 46.7s
+gen mps-fp16__neg-strip 11 45.9s
+gen mps-fp16__neg-strip 12 45.6s
+gen mps-fp16__neg-strip 13 46.9s
+gen mps-fp16__neg-strip 14 48.3s
+gen mps-fp16__neg-strip 15 44.5s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:00<01:08,  2.83it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 244.31it/s]
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

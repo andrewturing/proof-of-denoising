@@ -1,0 +1,89 @@
+{
+ "book": "(pages not included; see README)",
+ "model_id": "sd15-unet-19da7aaa4b880e59",
+ "device": "cuda-fp32",
+ "node_b_plan": {
+  "0": "sub-bk-small",
+  "1": "sub-bk-tiny",
+  "2": "w8",
+  "3": "w4",
+  "4": "cfg-skip",
+  "5": "cache2",
+  "6": "cache2-late",
+  "7": "step-skip",
+  "8": "neg-strip",
+  "9": "sub-bk-small",
+  "10": "sub-bk-tiny",
+  "11": "w8",
+  "12": "w4",
+  "13": "cfg-skip",
+  "14": "cache2",
+  "15": "cache2-late"
+ },
+ "pages": {
+  "c2-p1": {
+   "A": "honest",
+   "B": "sub-bk-small"
+  },
+  "c2-p2": {
+   "A": "honest",
+   "B": "sub-bk-tiny"
+  },
+  "c2-p3": {
+   "A": "honest",
+   "B": "w8"
+  },
+  "c2-p4": {
+   "A": "honest",
+   "B": "w4"
+  },
+  "c2-p5": {
+   "A": "honest",
+   "B": "cfg-skip"
+  },
+  "c2-p6": {
+   "A": "honest",
+   "B": "cache2"
+  },
+  "c2-p7": {
+   "A": "honest",
+   "B": "cache2-late"
+  },
+  "c2-p8": {
+   "A": "honest",
+   "B": "step-skip"
+  },
+  "c3-p1": {
+   "A": "honest",
+   "B": "neg-strip"
+  },
+  "c3-p2": {
+   "A": "honest",
+   "B": "sub-bk-small"
+  },
+  "c3-p3": {
+   "A": "honest",
+   "B": "sub-bk-tiny"
+  },
+  "c3-p4": {
+   "A": "honest",
+   "B": "w8"
+  },
+  "c3-p5": {
+   "A": "honest",
+   "B": "w4"
+  },
+  "c3-p6": {
+   "A": "honest",
+   "B": "cfg-skip"
+  },
+  "c3-p7": {
+   "A": "honest",
+   "B": "cache2"
+  },
+  "c3-p8": {
+   "A": "honest",
+   "B": "cache2-late"
+  }
+ }
+}

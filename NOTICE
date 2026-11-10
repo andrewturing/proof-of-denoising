@@ -1,0 +1,9 @@
+Proof-of-Denoising
+Copyright 2026 The Proof-of-Denoising Authors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes a 48-prompt sample and a 240-prompt calibration sample
+derived from PartiPrompts (https://github.com/google-research/parti), licensed under
+the Apache License, Version 2.0. See THIRD_PARTY_NOTICES.md for other third-party material, none of
+which (including model weights) is redistributed here.

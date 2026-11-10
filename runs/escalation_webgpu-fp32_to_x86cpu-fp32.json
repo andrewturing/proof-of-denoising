@@ -1,0 +1,32 @@
+{
+ "pool": "study+calib_webgpu-fp32+cross_mac+nvidia48+cross_nvidia+arbiter_cuda+xcal_cuda_fp32+xcal_cuda_tf32+xcal_trt_fp16+xcpu_nvidia48",
+ "light": "webgpu-fp32",
+ "ref": "x86cpu-fp32",
+ "light_honest_checks": 1200,
+ "light_honest_jobs": 48,
+ "prompts": 48,
+ "escalated": 2,
+ "confirmed": 0,
+ "no_reference_check": 2,
+ "escalated_prompts": [
+  10,
+  25
+ ],
+ "ref_over_max": null,
+ "escalations": [
+  {
+   "file": "mps-fp32__honest__10.npz",
+   "prompt": 10,
+   "step": 10,
+   "light_over": 1.257655877998862,
+   "ref_over": null
+  },
+  {
+   "file": "mps-fp32__honest__25.npz",
+   "prompt": 25,
+   "step": 5,
+   "light_over": 1.2851966596745887,
+   "ref_over": null
+  }
+ ]
+}

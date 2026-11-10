@@ -1,0 +1,39 @@
+W1109 14:28:42.858000 13447 .venv/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+== stage render
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:  19%|█▉        | 37/196 [00:00<00:00, 261.71it/s]Loading weights:  39%|███▉      | 76/196 [00:00<00:00, 193.27it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 507.63it/s]
+render A c1-p1 honest 48.0s
+render B c1-p1 honest 43.9s
+render A c1-p2 honest 44.7s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 4507.19it/s]
+render B c1-p2 sub-bk-small 32.0s
+render A c1-p3 honest 44.9s
+render B c1-p3 honest 43.9s
+render A c1-p4 honest 42.1s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 3674.35it/s]
+render B c1-p4 w8 55.7s
+render A c1-p5 honest 45.3s
+render B c1-p5 honest 44.1s
+render A c1-p6 honest 121.6s
+render B c1-p6 cache2-late 63.6s
+render A c1-p7 honest 132.6s
+render B c1-p7 neg-strip 63.9s
+render A c1-p8 honest 37.3s
+render B c1-p8 honest 495.1s
+== stage decode
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 3732.96it/s]
+decode A c1-p1
+decode B c1-p1
+decode A c1-p2
+decode B c1-p2
+decode A c1-p3
+decode B c1-p3
+decode A c1-p4
+decode B c1-p4
+decode A c1-p5
+decode B c1-p5
+decode A c1-p6
+decode B c1-p6
+decode A c1-p7
+decode B c1-p7
+decode A c1-p8
+decode B c1-p8

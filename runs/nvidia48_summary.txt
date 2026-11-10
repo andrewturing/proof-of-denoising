@@ -1,0 +1,60 @@
+# Study summary (48 prompts, 1008 check records)
+
+## FP32 class
+
+No cross-device honest pairs in these logs: thresholds undefined. Combine with a cross-vendor run (e.g. nvidia+cross_nvidia).
+
+## TF32 class
+
+Honest cross-device steps: 1200 (plus 0 same-backend re-run steps, all r = 0). Leave-one-prompt-out false flags: max 0/1200, maxV 0/1200, conformal 6/1200
+Rules: max = pooled over verifier stacks; maxV = per verifier stack (protocol rule).
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cuda-tf32->cuda-fp32 | 1200 | 2.41e-03 | 1.20e-02 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+
+## FP16 class
+
+Honest cross-device steps: 1200 (plus 0 same-backend re-run steps, all r = 0). Leave-one-prompt-out false flags: max 0/1200, maxV 0/1200, conformal 7/1200
+Rules: max = pooled over verifier stacks; maxV = per verifier stack (protocol rule).
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cuda-fp16->cuda-fp32 | 1200 | 7.15e-03 | 5.92e-02 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+| cache2-late|cuda-fp32|conformal | 48 | 0.27 | 0.27 | 0.47 | 0.73 | 0.94 |
+| cache2-late|cuda-fp32|max | 48 | 0.26 | 0.26 | 0.46 | 0.72 | 0.94 |
+| cache2-late|cuda-fp32|maxV | 48 | 0.26 | 0.26 | 0.46 | 0.72 | 0.94 |
+| cache2|cuda-fp32|conformal | 48 | 0.51 | 0.51 | 0.77 | 0.96 | 1.00 |
+| cache2|cuda-fp32|max | 48 | 0.50 | 0.50 | 0.77 | 0.96 | 1.00 |
+| cache2|cuda-fp32|maxV | 48 | 0.50 | 0.50 | 0.77 | 0.96 | 1.00 |
+| cfg-skip|cuda-fp32|conformal | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|cuda-fp32|max | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|cuda-fp32|maxV | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|cuda-fp32|conformal | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|cuda-fp32|max | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|cuda-fp32|maxV | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| step-skip|cuda-fp32|conformal | 48 | 0.96 | 0.96 | 1.00 | 1.00 | 1.00 |
+| step-skip|cuda-fp32|max | 48 | 0.96 | 0.96 | 1.00 | 1.00 | 1.00 |
+| step-skip|cuda-fp32|maxV | 48 | 0.96 | 0.96 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|cuda-fp32|conformal | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|cuda-fp32|max | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|cuda-fp32|maxV | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|cuda-fp32|conformal | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|cuda-fp32|max | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|cuda-fp32|maxV | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|cuda-fp32|conformal | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|cuda-fp32|max | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|cuda-fp32|maxV | 48 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w8|cuda-fp32|conformal | 48 | 0.95 | 0.95 | 1.00 | 1.00 | 1.00 |
+| w8|cuda-fp32|max | 48 | 0.89 | 0.89 | 0.99 | 1.00 | 1.00 |
+| w8|cuda-fp32|maxV | 48 | 0.89 | 0.89 | 0.99 | 1.00 | 1.00 |
+
+## Verification time per checked step (median, s)
+
+- cuda-fp32: 0.24

@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.pyc
+# heavy outputs: regenerate them, never commit them
+*.npz
+*.onnx
+*.onnx.data
+*.log
+runs/**/traj/
+runs/**/states/
+runs/**/img/
+runs/onnx/
+figures/
+nvidia_results.tgz
+web/node_modules/
+web/package-lock.json
+prompts/PartiPrompts.tsv
+# rebuild marker of the release script
+.pod-release

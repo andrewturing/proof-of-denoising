@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PoD WebGPU backend</title>
+<style>
+  body { font: 14px/1.5 -apple-system, system-ui, sans-serif; margin: 16px; background: #fcfcfb; color: #0b0b0b; }
+  pre { background: #f1f0ec; padding: 12px; white-space: pre-wrap; max-height: 70vh; overflow: auto; }
+</style>
+</head>
+<body>
+<h1>Proof-of-Denoising: in-browser WebGPU backend</h1>
+<p>This page runs the SD1.5 UNet and text encoder with ONNX Runtime Web on WebGPU, for jobs sent by the local research harness. Nothing leaves this machine.</p>
+<pre id="log"></pre>
+<script type="module">
+import { startWorker } from '/worker.js';
+const logEl = document.getElementById('log');
+startWorker({ log: (m) => { logEl.textContent += m + '\n'; } }).catch((e) => { logEl.textContent += 'FATAL ' + e + '\n'; });
+</script>
+</body>
+</html>

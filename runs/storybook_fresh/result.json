@@ -1,0 +1,1056 @@
+{
+ "prereg_sha256": "ee9bedb21e931dcbb5de1c4f0eb2cd0d48b691e2cbb1dda21633bca277550ed9",
+ "code_changed_since_prereg": [
+  "scripts/storybook_case.py"
+ ],
+ "honest_pages": 16,
+ "deviating_pages": 16,
+ "tier1_done": 32,
+ "honest_accepted_final": 16,
+ "honest_flagged_tier1": 0,
+ "deviating_rejected_final": 16,
+ "deviating_flagged_tier1": 16,
+ "deviating_cleared_by_tier2": 0,
+ "missed": [],
+ "honest_steps_over_tau_reference": 0,
+ "honest_max_over_reference": 0.0,
+ "detectable_min_over_reference": 45.59835490054816,
+ "expected_rejected_k2": 14.34,
+ "by_kind": {
+  "cache2": {
+   "pages": 2,
+   "m": [
+    12,
+    12
+   ],
+   "P_k2": [
+    0.74,
+    0.74
+   ],
+   "rejected": 2
+  },
+  "cache2-late": {
+   "pages": 2,
+   "m": [
+    6,
+    6
+   ],
+   "P_k2": [
+    0.43,
+    0.43
+   ],
+   "rejected": 2
+  },
+  "cfg-skip": {
+   "pages": 2,
+   "m": [
+    25,
+    25
+   ],
+   "P_k2": [
+    1.0,
+    1.0
+   ],
+   "rejected": 2
+  },
+  "neg-strip": {
+   "pages": 1,
+   "m": [
+    25
+   ],
+   "P_k2": [
+    1.0
+   ],
+   "rejected": 1
+  },
+  "step-skip": {
+   "pages": 1,
+   "m": [
+    24
+   ],
+   "P_k2": [
+    1.0
+   ],
+   "rejected": 1
+  },
+  "sub-bk-small": {
+   "pages": 2,
+   "m": [
+    25,
+    25
+   ],
+   "P_k2": [
+    1.0,
+    1.0
+   ],
+   "rejected": 2
+  },
+  "sub-bk-tiny": {
+   "pages": 2,
+   "m": [
+    25,
+    25
+   ],
+   "P_k2": [
+    1.0,
+    1.0
+   ],
+   "rejected": 2
+  },
+  "w4": {
+   "pages": 2,
+   "m": [
+    25,
+    25
+   ],
+   "P_k2": [
+    1.0,
+    1.0
+   ],
+   "rejected": 2
+  },
+  "w8": {
+   "pages": 2,
+   "m": [
+    25,
+    25
+   ],
+   "P_k2": [
+    1.0,
+    1.0
+   ],
+   "rejected": 2
+  }
+ },
+ "median_secs": {
+  "browser_check": 4.25
+ },
+ "pages": [
+  {
+   "page": "c2-p1",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     7,
+     24
+    ],
+    "accepted": true,
+    "secs": 5.7,
+    "max_over": 0.4457740630328283
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 11.85
+  },
+  {
+   "page": "c2-p1",
+   "node": "B",
+   "kind": "sub-bk-small",
+   "m_detectable": 25,
+   "P_detect": {
+    "1": 1.0,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0
+   },
+   "min_over_detectable": 533.4234055844952,
+   "flag_mask": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+   "tier1": {
+    "challenged": [
+     7,
+     13
+    ],
+    "accepted": false,
+    "secs": 4.45,
+    "max_over": 2709.497506154387
+   },
+   "tier2": {
+    "steps": [
+     7,
+     13
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 11.73
+  },
+  {
+   "page": "c2-p2",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     2,
+     18
+    ],
+    "accepted": true,
+    "secs": 4.19,
+    "max_over": 0.5529782661877874
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 11.64
+  },
+  {
+   "page": "c2-p2",
+   "node": "B",
+   "kind": "sub-bk-tiny",
+   "m_detectable": 25,
+   "P_detect": {
+    "1": 1.0,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0
+   },
+   "min_over_detectable": 511.3235820804174,
+   "flag_mask": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+   "tier1": {
+    "challenged": [
+     4,
+     22
+    ],
+    "accepted": false,
+    "secs": 4.17,
+    "max_over": 5756.873298260732
+   },
+   "tier2": {
+    "steps": [
+     4,
+     22
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 11.86
+  },
+  {
+   "page": "c2-p3",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     16,
+     22
+    ],
+    "accepted": true,
+    "secs": 4.16,
+    "max_over": 0.3481717670688391
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 11.6
+  },
+  {
+   "page": "c2-p3",
+   "node": "B",
+   "kind": "w8",
+   "m_detectable": 25,
+   "P_detect": {
+    "1": 1.0,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0
+   },
+   "min_over_detectable": 45.59835490054816,
+   "flag_mask": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+   "tier1": {
+    "challenged": [
+     12,
+     24
+    ],
+    "accepted": false,
+    "secs": 4.21,
+    "max_over": 315.59421906151823
+   },
+   "tier2": {
+    "steps": [
+     12,
+     24
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 6.37
+  },
+  {
+   "page": "c2-p4",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     14,
+     24
+    ],
+    "accepted": true,
+    "secs": 4.24,
+    "max_over": 0.42825990429776656
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 6.49
+  },
+  {
+   "page": "c2-p4",
+   "node": "B",
+   "kind": "w4",
+   "m_detectable": 25,
+   "P_detect": {
+    "1": 1.0,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0
+   },
+   "min_over_detectable": 908.1647339459217,
+   "flag_mask": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+   "tier1": {
+    "challenged": [
+     0,
+     16
+    ],
+    "accepted": false,
+    "secs": 4.2,
+    "max_over": 5036.637596342317
+   },
+   "tier2": {
+    "steps": [
+     0,
+     16
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 9.88
+  },
+  {
+   "page": "c2-p5",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     2,
+     11
+    ],
+    "accepted": true,
+    "secs": 4.11,
+    "max_over": 0.2894060129302867
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 10.11
+  },
+  {
+   "page": "c2-p5",
+   "node": "B",
+   "kind": "cfg-skip",
+   "m_detectable": 25,
+   "P_detect": {
+    "1": 1.0,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0
+   },
+   "min_over_detectable": 683.2956598671384,
+   "flag_mask": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+   "tier1": {
+    "challenged": [
+     4,
+     19
+    ],
+    "accepted": false,
+    "secs": 4.2,
+    "max_over": 4515.886219694998
+   },
+   "tier2": {
+    "steps": [
+     4,
+     19
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 10.06
+  },
+  {
+   "page": "c2-p6",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     0,
+     15
+    ],
+    "accepted": true,
+    "secs": 4.2,
+    "max_over": 0.5850283804198187
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 10.4
+  },
+  {
+   "page": "c2-p6",
+   "node": "B",
+   "kind": "cache2",
+   "m_detectable": 12,
+   "P_detect": {
+    "1": 0.48,
+    "2": 0.74,
+    "4": 0.9434782608695652,
+    "8": 0.9988100686498855
+   },
+   "min_over_detectable": 539.5862272525274,
+   "flag_mask": ".x.x.x.x.x.x.x.x.x.x.x.x.",
+   "tier1": {
+    "challenged": [
+     11,
+     21
+    ],
+    "accepted": false,
+    "secs": 4.29,
+    "max_over": 2071.1388985150597
+   },
+   "tier2": {
+    "steps": [
+     11,
+     21
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 10.16
+  },
+  {
+   "page": "c2-p7",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     0,
+     18
+    ],
+    "accepted": true,
+    "secs": 4.38,
+    "max_over": 0.7571775329465598
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 10.03
+  },
+  {
+   "page": "c2-p7",
+   "node": "B",
+   "kind": "cache2-late",
+   "m_detectable": 6,
+   "P_detect": {
+    "1": 0.24,
+    "2": 0.43000000000000005,
+    "4": 0.693596837944664,
+    "8": 0.9301185770750988
+   },
+   "min_over_detectable": 1795.667890179932,
+   "flag_mask": ".............x.x.x.x.x.x.",
+   "tier1": {
+    "challenged": [
+     17,
+     21
+    ],
+    "accepted": false,
+    "secs": 4.17,
+    "max_over": 2618.163597783879
+   },
+   "tier2": {
+    "steps": [
+     17,
+     21
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 10.04
+  },
+  {
+   "page": "c2-p8",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     5,
+     10
+    ],
+    "accepted": true,
+    "secs": 5.24,
+    "max_over": 0.15958852958431355
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 10.65
+  },
+  {
+   "page": "c2-p8",
+   "node": "B",
+   "kind": "step-skip",
+   "m_detectable": 24,
+   "P_detect": {
+    "1": 0.96,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0
+   },
+   "min_over_detectable": 83.45631422885694,
+   "flag_mask": "xxxxxxxxxxxxxxxxxxxxxxxx.",
+   "tier1": {
+    "challenged": [
+     1,
+     14
+    ],
+    "accepted": false,
+    "secs": 4.33,
+    "max_over": 1535.0124830461325
+   },
+   "tier2": {
+    "steps": [
+     1,
+     14
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 11.76
+  },
+  {
+   "page": "c3-p1",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     18,
+     19
+    ],
+    "accepted": true,
+    "secs": 4.35,
+    "max_over": 0.3846640463179449
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 11.76
+  },
+  {
+   "page": "c3-p1",
+   "node": "B",
+   "kind": "neg-strip",
+   "m_detectable": 25,
+   "P_detect": {
+    "1": 1.0,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0
+   },
+   "min_over_detectable": 399.43465064223886,
+   "flag_mask": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+   "tier1": {
+    "challenged": [
+     11,
+     14
+    ],
+    "accepted": false,
+    "secs": 4.17,
+    "max_over": 1889.028318197885
+   },
+   "tier2": {
+    "steps": [
+     11,
+     14
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 11.69
+  },
+  {
+   "page": "c3-p2",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     6,
+     14
+    ],
+    "accepted": true,
+    "secs": 4.25,
+    "max_over": 0.5711361057168671
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 11.73
+  },
+  {
+   "page": "c3-p2",
+   "node": "B",
+   "kind": "sub-bk-small",
+   "m_detectable": 25,
+   "P_detect": {
+    "1": 1.0,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0
+   },
+   "min_over_detectable": 829.6179414903138,
+   "flag_mask": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+   "tier1": {
+    "challenged": [
+     17,
+     19
+    ],
+    "accepted": false,
+    "secs": 4.41,
+    "max_over": 5148.532300949928
+   },
+   "tier2": {
+    "steps": [
+     17,
+     19
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 11.59
+  },
+  {
+   "page": "c3-p3",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     2,
+     18
+    ],
+    "accepted": true,
+    "secs": 4.38,
+    "max_over": 0.32433173718504926
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 11.62
+  },
+  {
+   "page": "c3-p3",
+   "node": "B",
+   "kind": "sub-bk-tiny",
+   "m_detectable": 25,
+   "P_detect": {
+    "1": 1.0,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0
+   },
+   "min_over_detectable": 631.9778902882942,
+   "flag_mask": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+   "tier1": {
+    "challenged": [
+     2,
+     20
+    ],
+    "accepted": false,
+    "secs": 4.15,
+    "max_over": 4557.032701115223
+   },
+   "tier2": {
+    "steps": [
+     2,
+     20
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 11.75
+  },
+  {
+   "page": "c3-p4",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     14,
+     22
+    ],
+    "accepted": true,
+    "secs": 4.84,
+    "max_over": 0.5547877067859002
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 11.75
+  },
+  {
+   "page": "c3-p4",
+   "node": "B",
+   "kind": "w8",
+   "m_detectable": 25,
+   "P_detect": {
+    "1": 1.0,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0
+   },
+   "min_over_detectable": 60.02170834208784,
+   "flag_mask": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+   "tier1": {
+    "challenged": [
+     14,
+     20
+    ],
+    "accepted": false,
+    "secs": 4.35,
+    "max_over": 446.45477423052876
+   },
+   "tier2": {
+    "steps": [
+     14,
+     20
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 11.58
+  },
+  {
+   "page": "c3-p5",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     0,
+     6
+    ],
+    "accepted": true,
+    "secs": 4.14,
+    "max_over": 0.3693925493606666
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 11.76
+  },
+  {
+   "page": "c3-p5",
+   "node": "B",
+   "kind": "w4",
+   "m_detectable": 25,
+   "P_detect": {
+    "1": 1.0,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0
+   },
+   "min_over_detectable": 1133.468618665379,
+   "flag_mask": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+   "tier1": {
+    "challenged": [
+     4,
+     15
+    ],
+    "accepted": false,
+    "secs": 4.67,
+    "max_over": 6322.7489146133
+   },
+   "tier2": {
+    "steps": [
+     4,
+     15
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 11.83
+  },
+  {
+   "page": "c3-p6",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     6,
+     20
+    ],
+    "accepted": true,
+    "secs": 5.18,
+    "max_over": 0.4648174085585251
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 11.79
+  },
+  {
+   "page": "c3-p6",
+   "node": "B",
+   "kind": "cfg-skip",
+   "m_detectable": 25,
+   "P_detect": {
+    "1": 1.0,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0
+   },
+   "min_over_detectable": 783.3608942799581,
+   "flag_mask": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+   "tier1": {
+    "challenged": [
+     2,
+     15
+    ],
+    "accepted": false,
+    "secs": 5.42,
+    "max_over": 4545.44288667715
+   },
+   "tier2": {
+    "steps": [
+     2,
+     15
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 11.81
+  },
+  {
+   "page": "c3-p7",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     8,
+     16
+    ],
+    "accepted": true,
+    "secs": 4.35,
+    "max_over": 0.5121908036486863
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 11.59
+  },
+  {
+   "page": "c3-p7",
+   "node": "B",
+   "kind": "cache2",
+   "m_detectable": 12,
+   "P_detect": {
+    "1": 0.48,
+    "2": 0.74,
+    "4": 0.9434782608695652,
+    "8": 0.9988100686498855
+   },
+   "min_over_detectable": 408.0666559809975,
+   "flag_mask": ".x.x.x.x.x.x.x.x.x.x.x.x.",
+   "tier1": {
+    "challenged": [
+     12,
+     23
+    ],
+    "accepted": false,
+    "secs": 4.19,
+    "max_over": 2794.2995824366676
+   },
+   "tier2": {
+    "steps": [
+     23
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 11.54
+  },
+  {
+   "page": "c3-p8",
+   "node": "A",
+   "kind": "honest",
+   "m_detectable": 0,
+   "P_detect": {
+    "1": 0.0,
+    "2": 0.0,
+    "4": 0.0,
+    "8": 0.0
+   },
+   "max_over_honest_steps": 0.0,
+   "flag_mask": ".........................",
+   "tier1": {
+    "challenged": [
+     2,
+     4
+    ],
+    "accepted": true,
+    "secs": 4.18,
+    "max_over": 0.3244252430895215
+   },
+   "tier2": null,
+   "final_accepted": true,
+   "ref_check_secs": 11.62
+  },
+  {
+   "page": "c3-p8",
+   "node": "B",
+   "kind": "cache2-late",
+   "m_detectable": 6,
+   "P_detect": {
+    "1": 0.24,
+    "2": 0.43000000000000005,
+    "4": 0.693596837944664,
+    "8": 0.9301185770750988
+   },
+   "min_over_detectable": 1430.6242674193045,
+   "flag_mask": ".............x.x.x.x.x.x.",
+   "tier1": {
+    "challenged": [
+     11,
+     23
+    ],
+    "accepted": false,
+    "secs": 4.25,
+    "max_over": 2590.7789159325407
+   },
+   "tier2": {
+    "steps": [
+     23
+    ],
+    "accepted": false
+   },
+   "final_accepted": false,
+   "ref_check_secs": 11.77
+  }
+ ]
+}

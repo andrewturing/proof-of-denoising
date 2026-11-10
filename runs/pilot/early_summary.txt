@@ -1,0 +1,33 @@
+# Pilot summary
+
+Records: 144; honest steps checked: 900; honest step false-accusation rate (leave-one-prompt-out, margin 1.5x): 0.0
+
+## Honest per-step drift ratio by worker -> verifier
+
+| pair | n | median | p99 | max |
+|---|---|---|---|---|
+| cpu-fp32->mps-fp32 | 300 | 2.26e-05 | 1.59e-04 | 1.87e-04 |
+| mps-fp16->mps-fp32 | 300 | 6.96e-03 | 4.37e-02 | 5.29e-02 |
+| mps-fp32->mps-fp32 | 300 | 0.00e+00 | 0.00e+00 | 0.00e+00 |
+
+## Cheats
+
+| cheat@verifier | n | flagged steps | max ratio / honest max (median) | P(detect) k=1 | k=2 | k=4 (min) |
+|---|---|---|---|---|---|---|
+| cache2-late@mps-fp32 | 12 | 0.24 | 25.1 | 0.24 | 0.43 | 0.69 |
+| cache2@mps-fp32 | 12 | 0.48 | 44.9 | 0.48 | 0.74 | 0.94 |
+| cfg-skip@mps-fp32 | 12 | 1.00 | 88.4 | 1.00 | 1.00 | 1.00 |
+| neg-strip@mps-fp32 | 12 | 1.00 | 52.4 | 1.00 | 1.00 | 1.00 |
+| step-skip@mps-fp32 | 12 | 0.96 | 57.4 | 0.96 | 1.00 | 1.00 |
+| sub-bk-small@mps-fp32 | 12 | 1.00 | 75.2 | 1.00 | 1.00 | 1.00 |
+| sub-bk-tiny@mps-fp32 | 12 | 1.00 | 69.9 | 1.00 | 1.00 | 1.00 |
+| w4@mps-fp32 | 12 | 1.00 | 75.0 | 1.00 | 1.00 | 1.00 |
+| w8@mps-fp32 | 12 | 0.95 | 4.9 | 0.95 | 1.00 | 1.00 |
+
+## Output-level PSNR (dB)
+
+| comparison | median | worst |
+|---|---|---|
+144 check records, 0 images
+wrote drift_vs_cheats
+wrote per_step

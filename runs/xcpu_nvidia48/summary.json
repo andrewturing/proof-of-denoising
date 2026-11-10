@@ -1,0 +1,41 @@
+{
+  "n_records": 48,
+  "n_prompts": 48,
+  "classes": {
+    "fp32": {
+      "honest_records": 48,
+      "honest_steps": 1200,
+      "honest_steps_xdev": 1200,
+      "calib_steps_min_fold": 1175,
+      "conformal_defined": true,
+      "rules": [
+        "max",
+        "maxV",
+        "conformal"
+      ],
+      "honest_false_flags_max": 0,
+      "honest_false_flag_rate_max": 0.0,
+      "honest_false_flag_pairs_max": {},
+      "honest_false_flags_maxV": 0,
+      "honest_false_flag_rate_maxV": 0.0,
+      "honest_false_flag_pairs_maxV": {},
+      "honest_false_flags_conformal": 7,
+      "honest_false_flag_rate_conformal": 0.005833333333333334,
+      "honest_false_flag_pairs_conformal": {
+        "cuda-fp32->x86cpu-fp32": 7
+      },
+      "honest_pairs": {
+        "cuda-fp32->x86cpu-fp32": {
+          "n": 1200,
+          "median": 9.136290210143784e-06,
+          "max": 6.840497693354984e-05
+        }
+      },
+      "cheats": {},
+      "cheats_by_worker": {}
+    }
+  },
+  "verify_secs_per_step": {
+    "x86cpu-fp32": 5.1582
+  }
+}

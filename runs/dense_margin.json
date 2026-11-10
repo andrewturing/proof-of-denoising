@@ -1,0 +1,72 @@
+{
+ "thresholds": "runs/storybook_fresh/taus_fp32.json",
+ "trajectories": 432,
+ "by_kind": {
+  "cache2-late": {
+   "trajectories": 48,
+   "min_over_changed": 447.46371081777284,
+   "max_over_unchanged": 0.0,
+   "changed_not_flagged": 0,
+   "unchanged_flagged": 0
+  },
+  "cache2": {
+   "trajectories": 48,
+   "min_over_changed": 208.67768473714276,
+   "max_over_unchanged": 0.0,
+   "changed_not_flagged": 0,
+   "unchanged_flagged": 0
+  },
+  "cfg-skip": {
+   "trajectories": 48,
+   "min_over_changed": 709.4629416010268,
+   "max_over_unchanged": 0.0,
+   "changed_not_flagged": 0,
+   "unchanged_flagged": 0
+  },
+  "neg-strip": {
+   "trajectories": 48,
+   "min_over_changed": 250.08931583190144,
+   "max_over_unchanged": 0.0,
+   "changed_not_flagged": 0,
+   "unchanged_flagged": 0
+  },
+  "step-skip": {
+   "trajectories": 48,
+   "min_over_changed": 77.21404718683895,
+   "max_over_unchanged": 0.0,
+   "changed_not_flagged": 0,
+   "unchanged_flagged": 0
+  },
+  "sub-bk-sdm-small": {
+   "trajectories": 48,
+   "min_over_changed": 362.91752755770955,
+   "max_over_unchanged": 0.0,
+   "changed_not_flagged": 0,
+   "unchanged_flagged": 0
+  },
+  "sub-bk-sdm-tiny": {
+   "trajectories": 48,
+   "min_over_changed": 403.6722454979423,
+   "max_over_unchanged": 0.0,
+   "changed_not_flagged": 0,
+   "unchanged_flagged": 0
+  },
+  "w4": {
+   "trajectories": 48,
+   "min_over_changed": 702.802363475206,
+   "max_over_unchanged": 0.0,
+   "changed_not_flagged": 0,
+   "unchanged_flagged": 0
+  },
+  "w8": {
+   "trajectories": 48,
+   "min_over_changed": 30.67976574027459,
+   "max_over_unchanged": 0.0,
+   "changed_not_flagged": 0,
+   "unchanged_flagged": 0
+  }
+ },
+ "min_over_detectable": 30.67976574027459,
+ "changed_not_flagged": 0,
+ "unchanged_flagged": 0
+}

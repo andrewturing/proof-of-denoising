@@ -1,0 +1,1 @@
+{"mps-fp16": {"load_s": 5.1, "step_s": 1.028}, "mps-fp32": {"load_s": 6.3, "step_s": 1.027}, "cpu-fp32": {"load_s": 0.3, "step_s": 3.233}, "_note": "copied verbatim from the bench_backends.py stdout of 2026-10-18 21:5x; rerun to regenerate"}

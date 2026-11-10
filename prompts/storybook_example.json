@@ -1,0 +1,14 @@
+{
+ "title": "A small example story",
+ "chapters": [
+  {
+   "title": "The lighthouse keeper",
+   "pages": [
+    {"id": "c1-p1", "title": "Dawn", "prompt": "Children's picture-book illustration, soft watercolour. A small red lighthouse on a rocky island at dawn, gulls over a calm sea."},
+    {"id": "c1-p2", "title": "The visitor", "prompt": "Children's picture-book illustration, soft watercolour. A curious sea otter climbs onto the lighthouse steps, holding a shell."},
+    {"id": "c1-p3", "title": "The storm", "prompt": "Children's picture-book illustration, soft watercolour. Dark clouds and tall waves around the lighthouse, its beam cutting through rain."},
+    {"id": "c1-p4", "title": "Home", "prompt": "Children's picture-book illustration, soft watercolour. A fishing boat follows the lighthouse beam safely into the harbour at night."}
+   ]
+  }
+ ]
+}

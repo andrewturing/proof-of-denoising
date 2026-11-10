@@ -1,0 +1,69 @@
+# Study summary (16 prompts, 304 check records)
+
+## FP32 class
+
+Honest steps: 192; false-flag rate max-rule 0.0469, conformal 0.0000
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cpu-fp32->cuda-fp32 | 64 | 2.34e-05 | 2.12e-04 |
+| mps-fp32->cuda-fp32 | 64 | 8.88e-06 | 4.83e-05 |
+| webgpu-fp32->cuda-fp32 | 64 | 6.12e-05 | 2.20e-04 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+| cache2-late|cuda-fp32|conformal | 8 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| cache2-late|cuda-fp32|max | 8 | 0.22 | 0.22 | 0.40 | 0.65 | 0.88 |
+| cache2|cuda-fp32|conformal | 8 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| cache2|cuda-fp32|max | 8 | 0.52 | 0.52 | 0.79 | 0.98 | 1.00 |
+| cfg-skip|cuda-fp32|conformal | 8 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| cfg-skip|cuda-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|cuda-fp32|conformal | 8 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| neg-strip|cuda-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| step-skip|cuda-fp32|conformal | 8 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| step-skip|cuda-fp32|max | 8 | 0.98 | 0.98 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|cuda-fp32|conformal | 8 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| sub-bk-sdm-small|cuda-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|cuda-fp32|conformal | 8 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| sub-bk-sdm-tiny|cuda-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|cuda-fp32|conformal | 8 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| w4|cuda-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w8|cuda-fp32|conformal | 8 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| w8|cuda-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+
+## FP16 class
+
+Honest steps: 256; false-flag rate max-rule 0.0273, conformal 0.0117
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| mps-fp16->cuda-fp32 | 128 | 6.90e-03 | 5.70e-02 |
+| mps-fp16->cuda-tf32 | 64 | 6.60e-03 | 4.24e-02 |
+| mps-fp16->trt-fp16 | 64 | 7.00e-02 | 3.85e-01 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+| cache2-late|cuda-fp32|conformal | 16 | 0.19 | 0.19 | 0.35 | 0.59 | 0.88 |
+| cache2-late|cuda-fp32|max | 16 | 0.23 | 0.23 | 0.41 | 0.67 | 0.94 |
+| cache2|cuda-fp32|conformal | 16 | 0.34 | 0.34 | 0.58 | 0.84 | 1.00 |
+| cache2|cuda-fp32|max | 16 | 0.38 | 0.38 | 0.62 | 0.84 | 0.94 |
+| cfg-skip|cuda-fp32|conformal | 16 | 0.95 | 0.95 | 0.99 | 1.00 | 1.00 |
+| cfg-skip|cuda-fp32|max | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|cuda-fp32|conformal | 16 | 0.88 | 0.88 | 0.98 | 1.00 | 1.00 |
+| neg-strip|cuda-fp32|max | 16 | 0.98 | 0.98 | 1.00 | 1.00 | 1.00 |
+| step-skip|cuda-fp32|conformal | 16 | 0.46 | 0.46 | 0.72 | 0.93 | 1.00 |
+| step-skip|cuda-fp32|max | 16 | 0.52 | 0.52 | 0.79 | 0.97 | 1.00 |
+| sub-bk-sdm-small|cuda-fp32|conformal | 8 | 0.94 | 0.94 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|cuda-fp32|max | 8 | 0.94 | 0.94 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|cuda-fp32|conformal | 8 | 0.91 | 0.91 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|cuda-fp32|max | 8 | 0.95 | 0.95 | 1.00 | 1.00 | 1.00 |
+| w4|cuda-fp32|conformal | 8 | 0.98 | 0.98 | 1.00 | 1.00 | 1.00 |
+| w4|cuda-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w8|cuda-fp32|conformal | 8 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| w8|cuda-fp32|max | 8 | 0.20 | 0.20 | 0.38 | 0.66 | 1.00 |
+
+## Verification time per checked step (median, s)
+
+- cuda-fp32: 0.24
+- cuda-tf32: 0.16
+- trt-fp16: 0.06

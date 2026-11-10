@@ -1,0 +1,169 @@
+{
+ "decoder": "mps-fp32",
+ "pairs": {
+  "cpu-fp32~cuda-fp32": {
+   "n": 8,
+   "psnr_min": 43.55157643068647,
+   "psnr_median": 75.25333267959549,
+   "latent_rel_max": 0.014347460726655447
+  },
+  "cpu-fp32~mps-fp32": {
+   "n": 8,
+   "psnr_min": 46.66975519636652,
+   "psnr_median": 76.50398821577393,
+   "latent_rel_max": 0.00971404466655705
+  },
+  "cuda-fp32~mps-fp32": {
+   "n": 8,
+   "psnr_min": 52.045725432333384,
+   "psnr_median": 81.01441462001496,
+   "latent_rel_max": 0.00534714094512711
+  }
+ },
+ "rows": [
+  {
+   "prompt": 0,
+   "pair": "cpu-fp32~cuda-fp32",
+   "psnr": 79.28424225399083,
+   "latent_rel": 1.2592506147590512e-05
+  },
+  {
+   "prompt": 0,
+   "pair": "cpu-fp32~mps-fp32",
+   "psnr": 80.22105268276943,
+   "latent_rel": 1.089696433802311e-05
+  },
+  {
+   "prompt": 0,
+   "pair": "cuda-fp32~mps-fp32",
+   "psnr": 80.35720630410339,
+   "latent_rel": 1.000492154177147e-05
+  },
+  {
+   "prompt": 1,
+   "pair": "cpu-fp32~cuda-fp32",
+   "psnr": 75.23482772242649,
+   "latent_rel": 8.819577098113254e-05
+  },
+  {
+   "prompt": 1,
+   "pair": "cpu-fp32~mps-fp32",
+   "psnr": 75.96807261206553,
+   "latent_rel": 7.53023934197411e-05
+  },
+  {
+   "prompt": 1,
+   "pair": "cuda-fp32~mps-fp32",
+   "psnr": 82.3452527346298,
+   "latent_rel": 1.4623144117329922e-05
+  },
+  {
+   "prompt": 2,
+   "pair": "cpu-fp32~cuda-fp32",
+   "psnr": 83.78327764190044,
+   "latent_rel": 1.0642461484911085e-05
+  },
+  {
+   "prompt": 2,
+   "pair": "cpu-fp32~mps-fp32",
+   "psnr": 84.39228593321317,
+   "latent_rel": 1.0643310833315067e-05
+  },
+  {
+   "prompt": 2,
+   "pair": "cuda-fp32~mps-fp32",
+   "psnr": 84.39228593321317,
+   "latent_rel": 8.237988926751818e-06
+  },
+  {
+   "prompt": 3,
+   "pair": "cpu-fp32~cuda-fp32",
+   "psnr": 75.27183763676449,
+   "latent_rel": 6.523033376502988e-05
+  },
+  {
+   "prompt": 3,
+   "pair": "cpu-fp32~mps-fp32",
+   "psnr": 75.62923823047407,
+   "latent_rel": 5.950687273688237e-05
+  },
+  {
+   "prompt": 3,
+   "pair": "cuda-fp32~mps-fp32",
+   "psnr": 81.67162293592654,
+   "latent_rel": 9.246202920716022e-06
+  },
+  {
+   "prompt": 4,
+   "pair": "cpu-fp32~cuda-fp32",
+   "psnr": 74.43451911678405,
+   "latent_rel": 9.14608115720838e-05
+  },
+  {
+   "prompt": 4,
+   "pair": "cpu-fp32~mps-fp32",
+   "psnr": 77.03990381948233,
+   "latent_rel": 4.5759177497480506e-05
+  },
+  {
+   "prompt": 4,
+   "pair": "cuda-fp32~mps-fp32",
+   "psnr": 76.68534909964524,
+   "latent_rel": 5.019942515278536e-05
+  },
+  {
+   "prompt": 5,
+   "pair": "cpu-fp32~cuda-fp32",
+   "psnr": 43.55157643068647,
+   "latent_rel": 0.014347460726655447
+  },
+  {
+   "prompt": 5,
+   "pair": "cpu-fp32~mps-fp32",
+   "psnr": 46.66975519636652,
+   "latent_rel": 0.00971404466655705
+  },
+  {
+   "prompt": 5,
+   "pair": "cuda-fp32~mps-fp32",
+   "psnr": 52.045725432333384,
+   "latent_rel": 0.00534714094512711
+  },
+  {
+   "prompt": 6,
+   "pair": "cpu-fp32~cuda-fp32",
+   "psnr": 77.99185508298059,
+   "latent_rel": 2.5716211984250794e-05
+  },
+  {
+   "prompt": 6,
+   "pair": "cpu-fp32~mps-fp32",
+   "psnr": 78.41863723201735,
+   "latent_rel": 2.650201314343493e-05
+  },
+  {
+   "prompt": 6,
+   "pair": "cuda-fp32~mps-fp32",
+   "psnr": 82.2019082103879,
+   "latent_rel": 9.408785141186358e-06
+  },
+  {
+   "prompt": 7,
+   "pair": "cpu-fp32~cuda-fp32",
+   "psnr": 73.48148123973986,
+   "latent_rel": 7.389032486067307e-05
+  },
+  {
+   "prompt": 7,
+   "pair": "cpu-fp32~mps-fp32",
+   "psnr": 75.25187003920372,
+   "latent_rel": 4.571980329540638e-05
+  },
+  {
+   "prompt": 7,
+   "pair": "cuda-fp32~mps-fp32",
+   "psnr": 77.49700145218141,
+   "latent_rel": 2.905794510524596e-05
+  }
+ ]
+}

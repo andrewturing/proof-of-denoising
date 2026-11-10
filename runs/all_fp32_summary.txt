@@ -1,0 +1,254 @@
+# Study summary (32 prompts, 1029 check records)
+
+## FP32 class
+
+Honest cross-device steps: 2272 (plus 432 same-backend re-run steps, all r = 0). Leave-one-prompt-out false flags: max 2/2272, maxV 11/2272, conformal 14/2272
+Rules: max = pooled over verifier stacks; maxV = per verifier stack (protocol rule).
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cpu-fp32->cpu-fp32 | 32 | 0.00e+00 | 0.00e+00 |
+| cpu-fp32->cuda-fp32 | 64 | 2.34e-05 | 2.12e-04 |
+| cpu-fp32->mps-fp32 | 200 | 2.29e-05 | 2.12e-04 |
+| cpu-fp32->webgpu-fp32 | 200 | 5.45e-05 | 3.07e-04 |
+| cuda-fp32->cpu-fp32 | 16 | 1.98e-05 | 8.16e-05 |
+| cuda-fp32->cuda-fp32 | 200 | 0.00e+00 | 0.00e+00 |
+| cuda-fp32->mps-fp32 | 32 | 9.15e-06 | 3.86e-05 |
+| cuda-fp32->webgpu-fp32 | 200 | 5.13e-05 | 2.64e-04 |
+| mps-fp32->cpu-fp32 | 32 | 2.12e-05 | 1.39e-04 |
+| mps-fp32->cuda-fp32 | 664 | 9.78e-06 | 4.83e-05 |
+| mps-fp32->mps-fp32 | 200 | 0.00e+00 | 0.00e+00 |
+| mps-fp32->webgpu-fp32 | 800 | 5.49e-05 | 6.14e-04 |
+| webgpu-fp32->cuda-fp32 | 64 | 6.12e-05 | 2.20e-04 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+| cache2-late|cpu-fp32|conformal | 8 | 0.19 | 0.19 | 0.35 | 0.62 | nan |
+| cache2-late|cpu-fp32|max | 8 | 0.19 | 0.19 | 0.35 | 0.62 | nan |
+| cache2-late|cpu-fp32|maxV | 8 | 0.19 | 0.19 | 0.35 | 0.62 | nan |
+| cache2-late|cuda-fp32|conformal | 16 | 0.23 | 0.23 | 0.42 | 0.68 | 0.88 |
+| cache2-late|cuda-fp32|max | 16 | 0.23 | 0.23 | 0.42 | 0.68 | 0.88 |
+| cache2-late|cuda-fp32|maxV | 16 | 0.23 | 0.23 | 0.42 | 0.68 | 0.88 |
+| cache2-late|mps-fp32|conformal | 8 | 0.19 | 0.19 | 0.35 | 0.62 | 0.88 |
+| cache2-late|mps-fp32|max | 8 | 0.19 | 0.19 | 0.35 | 0.62 | 0.88 |
+| cache2-late|mps-fp32|maxV | 8 | 0.19 | 0.19 | 0.35 | 0.62 | 0.88 |
+| cache2-late|webgpu-fp32|conformal | 8 | 0.12 | 0.12 | 0.25 | nan | nan |
+| cache2-late|webgpu-fp32|max | 8 | 0.12 | 0.12 | 0.25 | nan | nan |
+| cache2-late|webgpu-fp32|maxV | 8 | 0.12 | 0.12 | 0.25 | nan | nan |
+| cache2|cpu-fp32|conformal | 8 | 0.44 | 0.44 | 0.73 | 1.00 | nan |
+| cache2|cpu-fp32|max | 8 | 0.44 | 0.44 | 0.73 | 1.00 | nan |
+| cache2|cpu-fp32|maxV | 8 | 0.44 | 0.44 | 0.73 | 1.00 | nan |
+| cache2|cuda-fp32|conformal | 16 | 0.47 | 0.47 | 0.74 | 0.95 | 1.00 |
+| cache2|cuda-fp32|max | 16 | 0.47 | 0.47 | 0.74 | 0.95 | 1.00 |
+| cache2|cuda-fp32|maxV | 16 | 0.47 | 0.47 | 0.74 | 0.95 | 1.00 |
+| cache2|mps-fp32|conformal | 8 | 0.42 | 0.42 | 0.69 | 0.93 | 1.00 |
+| cache2|mps-fp32|max | 8 | 0.42 | 0.42 | 0.69 | 0.93 | 1.00 |
+| cache2|mps-fp32|maxV | 8 | 0.42 | 0.42 | 0.69 | 0.93 | 1.00 |
+| cache2|webgpu-fp32|conformal | 8 | 0.50 | 0.50 | 0.75 | nan | nan |
+| cache2|webgpu-fp32|max | 8 | 0.50 | 0.50 | 0.75 | nan | nan |
+| cache2|webgpu-fp32|maxV | 8 | 0.50 | 0.50 | 0.75 | nan | nan |
+| cfg-skip|cpu-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| cfg-skip|cpu-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| cfg-skip|cpu-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| cfg-skip|cuda-fp32|conformal | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|cuda-fp32|max | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|cuda-fp32|maxV | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|mps-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|mps-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|mps-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|webgpu-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| cfg-skip|webgpu-fp32|max | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| cfg-skip|webgpu-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| neg-strip|cpu-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| neg-strip|cpu-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| neg-strip|cpu-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| neg-strip|cuda-fp32|conformal | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|cuda-fp32|max | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|cuda-fp32|maxV | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|mps-fp32|conformal | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|mps-fp32|max | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|mps-fp32|maxV | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|webgpu-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| neg-strip|webgpu-fp32|max | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| neg-strip|webgpu-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| step-skip|cpu-fp32|conformal | 8 | 0.91 | 0.91 | 1.00 | 1.00 | nan |
+| step-skip|cpu-fp32|max | 8 | 0.91 | 0.91 | 1.00 | 1.00 | nan |
+| step-skip|cpu-fp32|maxV | 8 | 0.91 | 0.91 | 1.00 | 1.00 | nan |
+| step-skip|cuda-fp32|conformal | 16 | 0.97 | 0.97 | 1.00 | 1.00 | 1.00 |
+| step-skip|cuda-fp32|max | 16 | 0.97 | 0.97 | 1.00 | 1.00 | 1.00 |
+| step-skip|cuda-fp32|maxV | 16 | 0.97 | 0.97 | 1.00 | 1.00 | 1.00 |
+| step-skip|mps-fp32|conformal | 8 | 0.94 | 0.94 | 1.00 | 1.00 | 1.00 |
+| step-skip|mps-fp32|max | 8 | 0.94 | 0.94 | 1.00 | 1.00 | 1.00 |
+| step-skip|mps-fp32|maxV | 8 | 0.94 | 0.94 | 1.00 | 1.00 | 1.00 |
+| step-skip|webgpu-fp32|conformal | 8 | 0.94 | 0.94 | 1.00 | nan | nan |
+| step-skip|webgpu-fp32|max | 8 | 0.94 | 0.94 | 1.00 | nan | nan |
+| step-skip|webgpu-fp32|maxV | 8 | 0.94 | 0.94 | 1.00 | nan | nan |
+| sub-bk-sdm-small|cpu-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| sub-bk-sdm-small|cpu-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| sub-bk-sdm-small|cpu-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| sub-bk-sdm-small|cuda-fp32|conformal | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|cuda-fp32|max | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|cuda-fp32|maxV | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|mps-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|mps-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|mps-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|webgpu-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| sub-bk-sdm-small|webgpu-fp32|max | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| sub-bk-sdm-small|webgpu-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| sub-bk-sdm-tiny|cpu-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| sub-bk-sdm-tiny|cpu-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| sub-bk-sdm-tiny|cpu-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| sub-bk-sdm-tiny|cuda-fp32|conformal | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|cuda-fp32|max | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|cuda-fp32|maxV | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|mps-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|mps-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|mps-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|webgpu-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| sub-bk-sdm-tiny|webgpu-fp32|max | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| sub-bk-sdm-tiny|webgpu-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| w4|cpu-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| w4|cpu-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| w4|cpu-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| w4|cuda-fp32|conformal | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|cuda-fp32|max | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|cuda-fp32|maxV | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|mps-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|mps-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|mps-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|webgpu-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| w4|webgpu-fp32|max | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| w4|webgpu-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | nan | nan |
+| w8|cuda-fp32|conformal | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w8|cuda-fp32|max | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w8|cuda-fp32|maxV | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w8|mps-fp32|conformal | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w8|mps-fp32|max | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w8|mps-fp32|maxV | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w8|webgpu-fp32|conformal | 5 | 1.00 | 1.00 | 1.00 | nan | nan |
+| w8|webgpu-fp32|max | 5 | 1.00 | 1.00 | 1.00 | nan | nan |
+| w8|webgpu-fp32|maxV | 5 | 1.00 | 1.00 | 1.00 | nan | nan |
+
+## TF32 class
+
+Honest cross-device steps: 248 (plus 0 same-backend re-run steps, all r = 0). Leave-one-prompt-out false flags: max 0/248, maxV 0/248, conformal 4/248
+Rules: max = pooled over verifier stacks; maxV = per verifier stack (protocol rule).
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cuda-tf32->cpu-fp32 | 16 | 2.33e-03 | 8.38e-03 |
+| cuda-tf32->cuda-fp32 | 200 | 2.33e-03 | 1.20e-02 |
+| cuda-tf32->mps-fp32 | 32 | 2.67e-03 | 1.14e-02 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+
+## FP16 class
+
+Honest cross-device steps: 752 (plus 0 same-backend re-run steps, all r = 0). Leave-one-prompt-out false flags: max 7/752, maxV 8/752, conformal 5/752
+Rules: max = pooled over verifier stacks; maxV = per verifier stack (protocol rule).
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cuda-fp16->cpu-fp32 | 16 | 7.44e-03 | 5.92e-02 |
+| cuda-fp16->cuda-fp32 | 200 | 7.07e-03 | 5.92e-02 |
+| cuda-fp16->mps-fp32 | 32 | 7.37e-03 | 4.17e-02 |
+| mps-fp16->cpu-fp32 | 32 | 6.07e-03 | 4.78e-02 |
+| mps-fp16->cuda-fp32 | 128 | 6.90e-03 | 5.70e-02 |
+| mps-fp16->cuda-tf32 | 64 | 6.60e-03 | 4.24e-02 |
+| mps-fp16->mps-fp32 | 200 | 6.94e-03 | 5.90e-02 |
+| mps-fp16->trt-fp16 | 64 | 7.00e-02 | 3.85e-01 |
+| mps-fp16->webgpu-fp32 | 16 | 6.26e-03 | 3.90e-02 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+| cache2-late|cpu-fp32|conformal | 8 | 0.28 | 0.28 | 0.50 | 0.88 | nan |
+| cache2-late|cpu-fp32|max | 8 | 0.25 | 0.25 | 0.44 | 0.75 | nan |
+| cache2-late|cpu-fp32|maxV | 8 | 0.25 | 0.25 | 0.44 | 0.75 | nan |
+| cache2-late|cuda-fp32|conformal | 24 | 0.26 | 0.26 | 0.45 | 0.71 | 0.92 |
+| cache2-late|cuda-fp32|max | 24 | 0.24 | 0.24 | 0.43 | 0.68 | 0.92 |
+| cache2-late|cuda-fp32|maxV | 24 | 0.26 | 0.26 | 0.46 | 0.71 | 0.92 |
+| cache2-late|mps-fp32|conformal | 8 | 0.28 | 0.28 | 0.50 | 0.76 | 0.88 |
+| cache2-late|mps-fp32|max | 8 | 0.25 | 0.25 | 0.45 | 0.71 | 0.88 |
+| cache2-late|mps-fp32|maxV | 8 | 0.30 | 0.30 | 0.52 | 0.78 | 0.88 |
+| cache2|cpu-fp32|conformal | 8 | 0.41 | 0.41 | 0.56 | 0.75 | nan |
+| cache2|cpu-fp32|max | 8 | 0.34 | 0.34 | 0.48 | 0.62 | nan |
+| cache2|cpu-fp32|maxV | 8 | 0.34 | 0.34 | 0.48 | 0.62 | nan |
+| cache2|cuda-fp32|conformal | 24 | 0.45 | 0.45 | 0.71 | 0.93 | 1.00 |
+| cache2|cuda-fp32|max | 24 | 0.40 | 0.40 | 0.63 | 0.85 | 0.96 |
+| cache2|cuda-fp32|maxV | 24 | 0.48 | 0.48 | 0.74 | 0.95 | 1.00 |
+| cache2|mps-fp32|conformal | 8 | 0.48 | 0.48 | 0.75 | 0.96 | 1.00 |
+| cache2|mps-fp32|max | 8 | 0.41 | 0.41 | 0.64 | 0.84 | 1.00 |
+| cache2|mps-fp32|maxV | 8 | 0.56 | 0.56 | 0.83 | 0.99 | 1.00 |
+| cfg-skip|cpu-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| cfg-skip|cpu-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| cfg-skip|cpu-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| cfg-skip|cuda-fp32|conformal | 24 | 0.99 | 0.99 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|cuda-fp32|max | 24 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|cuda-fp32|maxV | 24 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|mps-fp32|conformal | 8 | 0.98 | 0.98 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|mps-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| cfg-skip|mps-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|cpu-fp32|conformal | 8 | 0.94 | 0.94 | 1.00 | 1.00 | nan |
+| neg-strip|cpu-fp32|max | 8 | 0.94 | 0.94 | 1.00 | 1.00 | nan |
+| neg-strip|cpu-fp32|maxV | 8 | 0.94 | 0.94 | 1.00 | 1.00 | nan |
+| neg-strip|cuda-fp32|conformal | 24 | 0.97 | 0.97 | 1.00 | 1.00 | 1.00 |
+| neg-strip|cuda-fp32|max | 24 | 0.98 | 0.98 | 1.00 | 1.00 | 1.00 |
+| neg-strip|cuda-fp32|maxV | 24 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| neg-strip|mps-fp32|conformal | 16 | 0.92 | 0.92 | 1.00 | 1.00 | 1.00 |
+| neg-strip|mps-fp32|max | 16 | 0.94 | 0.94 | 0.99 | 1.00 | 1.00 |
+| neg-strip|mps-fp32|maxV | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| step-skip|cpu-fp32|conformal | 8 | 0.47 | 0.47 | 0.75 | 1.00 | nan |
+| step-skip|cpu-fp32|max | 8 | 0.44 | 0.44 | 0.71 | 0.88 | nan |
+| step-skip|cpu-fp32|maxV | 8 | 0.44 | 0.44 | 0.71 | 0.88 | nan |
+| step-skip|cuda-fp32|conformal | 24 | 0.57 | 0.57 | 0.83 | 0.98 | 1.00 |
+| step-skip|cuda-fp32|max | 24 | 0.50 | 0.50 | 0.76 | 0.95 | 1.00 |
+| step-skip|cuda-fp32|maxV | 24 | 0.96 | 0.96 | 1.00 | 1.00 | 1.00 |
+| step-skip|mps-fp32|conformal | 8 | 0.56 | 0.56 | 0.83 | 0.98 | 1.00 |
+| step-skip|mps-fp32|max | 8 | 0.50 | 0.50 | 0.74 | 0.92 | 1.00 |
+| step-skip|mps-fp32|maxV | 8 | 0.94 | 0.94 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|cpu-fp32|conformal | 8 | 0.97 | 0.97 | 1.00 | 1.00 | nan |
+| sub-bk-sdm-small|cpu-fp32|max | 8 | 0.88 | 0.88 | 1.00 | 1.00 | nan |
+| sub-bk-sdm-small|cpu-fp32|maxV | 8 | 0.88 | 0.88 | 1.00 | 1.00 | nan |
+| sub-bk-sdm-small|cuda-fp32|conformal | 16 | 0.98 | 0.98 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|cuda-fp32|max | 16 | 0.94 | 0.94 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|cuda-fp32|maxV | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|mps-fp32|conformal | 8 | 0.98 | 0.98 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|mps-fp32|max | 8 | 0.95 | 0.95 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-small|mps-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|cpu-fp32|conformal | 8 | 0.97 | 0.97 | 1.00 | 1.00 | nan |
+| sub-bk-sdm-tiny|cpu-fp32|max | 8 | 0.91 | 0.91 | 1.00 | 1.00 | nan |
+| sub-bk-sdm-tiny|cpu-fp32|maxV | 8 | 0.91 | 0.91 | 1.00 | 1.00 | nan |
+| sub-bk-sdm-tiny|cuda-fp32|conformal | 16 | 0.97 | 0.97 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|cuda-fp32|max | 16 | 0.95 | 0.95 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|cuda-fp32|maxV | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|mps-fp32|conformal | 8 | 0.95 | 0.95 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|mps-fp32|max | 8 | 0.95 | 0.95 | 1.00 | 1.00 | 1.00 |
+| sub-bk-sdm-tiny|mps-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|cpu-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| w4|cpu-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| w4|cpu-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | nan |
+| w4|cuda-fp32|conformal | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|cuda-fp32|max | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|cuda-fp32|maxV | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|mps-fp32|conformal | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|mps-fp32|max | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w4|mps-fp32|maxV | 8 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| w8|cpu-fp32|conformal | 8 | 0.00 | 0.00 | 0.00 | 0.00 | nan |
+| w8|cpu-fp32|max | 8 | 0.12 | 0.12 | 0.25 | 0.50 | nan |
+| w8|cpu-fp32|maxV | 8 | 0.12 | 0.12 | 0.25 | 0.50 | nan |
+| w8|cuda-fp32|conformal | 16 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| w8|cuda-fp32|max | 16 | 0.14 | 0.14 | 0.27 | 0.47 | 0.75 |
+| w8|cuda-fp32|maxV | 16 | 0.88 | 0.88 | 0.99 | 1.00 | 1.00 |
+| w8|mps-fp32|conformal | 16 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| w8|mps-fp32|max | 16 | 0.17 | 0.17 | 0.31 | 0.49 | 0.50 |
+| w8|mps-fp32|maxV | 16 | 0.89 | 0.89 | 1.00 | 1.00 | 1.00 |
+
+## Verification time per checked step (median, s)
+
+- mps-fp32: 1.31
+- cpu-fp32: 23.66
+- webgpu-fp32: 6.92
+- cuda-fp32: 0.24
+- cuda-tf32: 0.16
+- trt-fp16: 0.06

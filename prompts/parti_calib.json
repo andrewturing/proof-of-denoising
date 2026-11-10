@@ -1,0 +1,1202 @@
+[
+ {
+  "prompt": "anger",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a zebra",
+  "category": "Animals",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "the back of a violin",
+  "category": "Artifacts",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "An oil painting of two rabbits in the style of American Gothic, wearing the same clothes as in the original.",
+  "category": "Arts",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a bottle of beer next to an ashtray with a half-smoked cigarrette",
+  "category": "Food & Beverage",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "background pattern with alternating roses and skulls",
+  "category": "Illustrations",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a wood cabin with a fire pit in front of it",
+  "category": "Indoor Scenes",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "an aerial photo of a baseball stadium",
+  "category": "Outdoor Scenes",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "a pumpkin",
+  "category": "Produce & Plants",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a subway train coming out of a tunnel",
+  "category": "Vehicles",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "motion",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a chimpanzee",
+  "category": "Animals",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a yellow diamond-shaped sign with a turtle silhouette",
+  "category": "Artifacts",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a drawing of a house on a mountain",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "an old-fashioned cocktail next to a napkin",
+  "category": "Food & Beverage",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a white background with a large blue circle",
+  "category": "Illustrations",
+  "challenge": "Properties & Positioning"
+ },
+ {
+  "prompt": "a ceiling fan",
+  "category": "Indoor Scenes",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a white country home",
+  "category": "Outdoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a tree reflected in the hood of a blue car",
+  "category": "Produce & Plants",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "Three-quarters front view of a blue 1977 Ford F-150 coming around a curve in a mountain road and looking over a green valley on a cloudy day.",
+  "category": "Vehicles",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "molecule",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "A penguin wearing aviator goggles and flying confidently next to a bemused eagle.",
+  "category": "Animals",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a long wooden bench in front of a brick wall",
+  "category": "Artifacts",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a drawing of a peaceful lakeside landscape",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a wine bottle with a red ribbon wrapped around it",
+  "category": "Food & Beverage",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a square with an angry face",
+  "category": "Illustrations",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "a ceiling fan with an ornate light fixture",
+  "category": "Indoor Scenes",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "Snow mountain and tree reflection in the lake",
+  "category": "Outdoor Scenes",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "A photo of a lotus flower made of water.",
+  "category": "Produce & Plants",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a flying boat gliding past the Parthenon",
+  "category": "Vehicles",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "emotion",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a giraffe wearing a white bathing suit and carefully stepping to the edge of a diving board and preparing to dive",
+  "category": "Animals",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a white robot, a red robot and a black robot standing together",
+  "category": "Artifacts",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a painting of a peaceful lakeside landscape",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "wine bottles",
+  "category": "Food & Beverage",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a circle",
+  "category": "Illustrations",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a piano with an open song book above the keys",
+  "category": "Indoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "trees seen through a car window on a rainy day",
+  "category": "Outdoor Scenes",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "a smiling banana wearing a bandana",
+  "category": "Produce & Plants",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "a blue airplane taxiing on a runway with the sun behind it",
+  "category": "Vehicles",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "supercalifragilisticexpialidocious",
+  "category": "Abstract",
+  "challenge": "Linguistic Structures"
+ },
+ {
+  "prompt": "a Diplodocus",
+  "category": "Animals",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "three green glass bottles",
+  "category": "Artifacts",
+  "challenge": "Quantity"
+ },
+ {
+  "prompt": "A richly textured oil painting of a young badger delicately sniffing a yellow rose next to a tree trunk. A small waterfall can be seen in the background.",
+  "category": "Arts",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a margarita next to a napkin",
+  "category": "Food & Beverage",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "graffiti of a rocket ship on a brick wall",
+  "category": "Illustrations",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a group of cats in a meeting. there is a whiteboard with \"stack more layers\" written on it.",
+  "category": "Indoor Scenes",
+  "challenge": "Writing & Symbols"
+ },
+ {
+  "prompt": "A black and white landscape photograph of a black tree",
+  "category": "Outdoor Scenes",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a banana",
+  "category": "Produce & Plants",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a sunken submarine at the bottom of the ocean",
+  "category": "Vehicles",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "peace",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "The dog chased the cat, which ran up a tree. It waited at the bottom.",
+  "category": "Animals",
+  "challenge": "Linguistic Structures"
+ },
+ {
+  "prompt": "cash on a stone floor",
+  "category": "Artifacts",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "A tornado made of sharks crashing into a skyscraper. painting in the style of abstract cubism.",
+  "category": "Arts",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "a can of Spam on an elegant plate",
+  "category": "Food & Beverage",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "concurrent lines",
+  "category": "Illustrations",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a wood cabin",
+  "category": "Indoor Scenes",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a tornado",
+  "category": "Outdoor Scenes",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "A photo of a palm tree made of water.",
+  "category": "Produce & Plants",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a pickup truck under street lights at night",
+  "category": "Vehicles",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "force",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a goat wearing headphones",
+  "category": "Animals",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a stop sign knocked over on a sidewalk",
+  "category": "Artifacts",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "A tornado made of bees crashing into a skyscraper. painting in the style of watercolor.",
+  "category": "Arts",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "orange juice",
+  "category": "Food & Beverage",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a red circle on top of a blue square",
+  "category": "Illustrations",
+  "challenge": "Properties & Positioning"
+ },
+ {
+  "prompt": "A living area with a television and a table",
+  "category": "Indoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "A robot painted as graffiti on a brick wall. The words \"Fly an airplane\" are written on the wall. A sidewalk is in front of the wall, and grass is growing out of cracks in the concrete.",
+  "category": "Outdoor Scenes",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "an avocado",
+  "category": "Produce & Plants",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a small airplane",
+  "category": "Vehicles",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "element",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a bird",
+  "category": "Animals",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a stained glass window of a panda eating bamboo",
+  "category": "Artifacts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "an old raccoon wearing a top hat and holding an apple, oil painting in the style of van gogh",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "A man sips a latte and a woman a beer.",
+  "category": "Food & Beverage",
+  "challenge": "Linguistic Structures"
+ },
+ {
+  "prompt": "a sketch of a horse",
+  "category": "Illustrations",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a yellow wall with two framed sketches",
+  "category": "Indoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a volcano",
+  "category": "Outdoor Scenes",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a baby daikon radish",
+  "category": "Produce & Plants",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "The raft floated down the river sank.",
+  "category": "Vehicles",
+  "challenge": "Linguistic Structures"
+ },
+ {
+  "prompt": "inertia",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a real flamingo reading a large open book. a big stack of books is piled up next to it. dslr photograph.",
+  "category": "Animals",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a toy car in front of a teddy bear",
+  "category": "Artifacts",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "A tornado made of tigers crashing into a skyscraper. painting in the style of abstract cubism.",
+  "category": "Arts",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "a glass of orange juice",
+  "category": "Food & Beverage",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "A heart made of cookie",
+  "category": "Illustrations",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a room",
+  "category": "Indoor Scenes",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a long chemtrail trailing an airplane in a blue sky",
+  "category": "Outdoor Scenes",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "an orange",
+  "category": "Produce & Plants",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a large white yacht tossed about in a stormy sea",
+  "category": "Vehicles",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "intelligence",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "A punk rock squirrel in a studded leather jacket shouting into a microphone while standing on a lily pad",
+  "category": "Animals",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "The large ball crashed right through the table because it was made of steel",
+  "category": "Artifacts",
+  "challenge": "Linguistic Structures"
+ },
+ {
+  "prompt": "an abstract painting of a pond with a bridge",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a margarita",
+  "category": "Food & Beverage",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "A set of 2x2 emoji icons with happy, angry, surprised and sobbing faces. The emoji icons look like pigs. All of the pigs are wearing crowns.",
+  "category": "Illustrations",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a ceiling fan with four white blades",
+  "category": "Indoor Scenes",
+  "challenge": "Quantity"
+ },
+ {
+  "prompt": "A red hydrant on the grass",
+  "category": "Outdoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a butterfly kite stuck high in a tree",
+  "category": "Produce & Plants",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "three quarters view of a rusty old red pickup truck with white doors and a smashed windshield",
+  "category": "Vehicles",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "Oil painting generated by artificial intelligence",
+  "category": "Abstract",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a cream-colored labradoodle wearing glasses and black beret teaching calculus at a blackboard",
+  "category": "Animals",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a toaster",
+  "category": "Artifacts",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a painting of a fox in the style of starry night",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "A bowl of Chicken Pho",
+  "category": "Food & Beverage",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a satellite image of a costal french city there is a large park on the west side and a mountain to the north. There is a cloud covering part of the image",
+  "category": "Illustrations",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a large present with a red ribbon to the left of a Christmas tree",
+  "category": "Indoor Scenes",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a horse in a field of flowers",
+  "category": "Outdoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a half-peeled banana",
+  "category": "Produce & Plants",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a pickup truck missing its wheels",
+  "category": "Vehicles",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "300",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a marine iguana crossing the street",
+  "category": "Animals",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a laptop screen",
+  "category": "Artifacts",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "an abstract painting of a spaceship",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a bloody mary cocktail",
+  "category": "Food & Beverage",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a logo",
+  "category": "Illustrations",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "two pianos next to each other",
+  "category": "Indoor Scenes",
+  "challenge": "Quantity"
+ },
+ {
+  "prompt": "a view of the Earth from the moon",
+  "category": "Outdoor Scenes",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "an orange wearing a cowboy hat",
+  "category": "Produce & Plants",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "Three-quarters front view of a blue 1977 Corvette coming around a curve in a mountain road and looking over a green valley on a cloudy day.",
+  "category": "Vehicles",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "inspiration",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "The frog found itself in the newspaper",
+  "category": "Animals",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "toy cars",
+  "category": "Artifacts",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "A raccoon wearing formal clothes, wearing a tophat and holding a cane. The raccoon is holding a garbage bag. Oil painting in the style of Vincent Van Gogh.",
+  "category": "Arts",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a glass of orange juice next to an empty pitcher",
+  "category": "Food & Beverage",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a yellow swirl next to a blue dashed line.",
+  "category": "Illustrations",
+  "challenge": "Properties & Positioning"
+ },
+ {
+  "prompt": "three violins lying on the floor",
+  "category": "Indoor Scenes",
+  "challenge": "Quantity"
+ },
+ {
+  "prompt": "a basketball hoop with a large blue ball stuck in it",
+  "category": "Outdoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "A photo of a maple leaf made of water.",
+  "category": "Produce & Plants",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "Three-quarters front view of a red 1997 Corvette coming around a curve in a mountain road and looking over a green valley on a cloudy day.",
+  "category": "Vehicles",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "protein",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a corgi\u2019s head depicted as an explosion of a nebula",
+  "category": "Animals",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a pair of headphones",
+  "category": "Artifacts",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "an impressionistic painting of tree and a building",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "beer",
+  "category": "Food & Beverage",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "G I G G L E painted in thick colorful lettering as graffiti on a faded red brick wall with a splotch of exploding white paint.",
+  "category": "Illustrations",
+  "challenge": "Writing & Symbols"
+ },
+ {
+  "prompt": "a grand piano with a white bench",
+  "category": "Indoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a sidewalk next to a wooden post with a blue '5' painted on top",
+  "category": "Outdoor Scenes",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a small garden with an apple tree behind it",
+  "category": "Produce & Plants",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a blue sports car on the road",
+  "category": "Vehicles",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "insight",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a close-up of an ostrich's face",
+  "category": "Animals",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "a book",
+  "category": "Artifacts",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a watercolor painting of a tree and a building",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "orange jello",
+  "category": "Food & Beverage",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a red cube",
+  "category": "Illustrations",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a piano with Christmas lights all over it",
+  "category": "Indoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a tennis court",
+  "category": "Outdoor Scenes",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a plant with small flowers with purple petals",
+  "category": "Produce & Plants",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a cartoon of a happy car on the road",
+  "category": "Vehicles",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "101",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a racoon detective using a microscope while riding in a train",
+  "category": "Animals",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a black shoe with a lightning bolt on it",
+  "category": "Artifacts",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "an abstract painting of a house on a mountain",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "milk pouring from a glass into a bowl",
+  "category": "Food & Beverage",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "concentric squares fading from yellow on the outside to deep orange on the inside",
+  "category": "Illustrations",
+  "challenge": "Properties & Positioning"
+ },
+ {
+  "prompt": "a living room with a large Egyptian statue in the corner",
+  "category": "Indoor Scenes",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a volcano exploding next to a marina",
+  "category": "Outdoor Scenes",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a walnut",
+  "category": "Produce & Plants",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a motorcycle",
+  "category": "Vehicles",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "imaginary numbers",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "A photo of llama wearing sunglasses standing on the deck of a spaceship with the Earth in the background.",
+  "category": "Animals",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "a brown trash bin to the left of a blue recycling bin",
+  "category": "Artifacts",
+  "challenge": "Properties & Positioning"
+ },
+ {
+  "prompt": "A raccoon wearing formal clothes, wearing a tophat and holding a cane. The raccoon is holding a garbage bag. Oil painting in the style of Rembrandt.",
+  "category": "Arts",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a plate that has no bananas on it. there is a glass without orange juice next to it.",
+  "category": "Food & Beverage",
+  "challenge": "Linguistic Structures"
+ },
+ {
+  "prompt": "a professional high quality emoji of a lovestruck cup of boba",
+  "category": "Illustrations",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "the words 'KEEP OFF THE GRASS' written on a brick wall",
+  "category": "Indoor Scenes",
+  "challenge": "Writing & Symbols"
+ },
+ {
+  "prompt": "a massive modern windmill",
+  "category": "Outdoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a tree",
+  "category": "Produce & Plants",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "an F1 race car",
+  "category": "Vehicles",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "earth",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "A tiger is playing football",
+  "category": "Animals",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a white robot with a red mohawk painted as graffiti on a red brick wall",
+  "category": "Artifacts",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "A tornado made of tigers crashing into a skyscraper. painting in the style of Hokusai.",
+  "category": "Arts",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "A table full of food. There is a plate of chicken rice, a bowl of bak chor mee, and a bowl of laksa.",
+  "category": "Food & Beverage",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a blue metallic sphere",
+  "category": "Illustrations",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a small kitchen with a white goat in it",
+  "category": "Indoor Scenes",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "The sunset on the beach is wonderful",
+  "category": "Outdoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a plant with orange flowers shaped like stars",
+  "category": "Produce & Plants",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a red sport bike",
+  "category": "Vehicles",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "gravity",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a mouse sitting next to a computer mouse",
+  "category": "Animals",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a black towel",
+  "category": "Artifacts",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "an abstract painting of three squares in blue, red and white",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "an old-fashioned cocktail",
+  "category": "Food & Beverage",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a black background with a large yellow circle and a small red square",
+  "category": "Illustrations",
+  "challenge": "Properties & Positioning"
+ },
+ {
+  "prompt": "A cozy living room with a painting of a corgi on the wall above a couch and a round coffee table in front of a couch and a vase of flowers on a coffee table",
+  "category": "Indoor Scenes",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a store front that has the word \u2018openai\u2019 written on it.",
+  "category": "Outdoor Scenes",
+  "challenge": "Writing & Symbols"
+ },
+ {
+  "prompt": "a summer tree without any leaves",
+  "category": "Produce & Plants",
+  "challenge": "Linguistic Structures"
+ },
+ {
+  "prompt": "A van parked on grass",
+  "category": "Vehicles",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "gender",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "brain coral",
+  "category": "Animals",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "two beat-up baseballs on either side of a yellow basketball",
+  "category": "Artifacts",
+  "challenge": "Quantity"
+ },
+ {
+  "prompt": "a super math wizard cat, richly textured oil painting",
+  "category": "Arts",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "A castle made of tortilla chips, in a river made of salsa. There are tiny burritos walking around the castle",
+  "category": "Food & Beverage",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "the letters P A X forming a very simple outline of an elephant's shape.  the elephant is facing left. vector art, orange logo.",
+  "category": "Illustrations",
+  "challenge": "Writing & Symbols"
+ },
+ {
+  "prompt": "A single beam of light enter the room from the ceiling. The beam of light is illuminating an easel. On the easel there is a Rembrandt painting of a raccoon",
+  "category": "Indoor Scenes",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a marina without any boats in it",
+  "category": "Outdoor Scenes",
+  "challenge": "Linguistic Structures"
+ },
+ {
+  "prompt": "a flower with large red petals growing on the moon's surface",
+  "category": "Produce & Plants",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "a photo of the back of a covered wagon. a polar bear is sticking it's head out of the wagon.",
+  "category": "Vehicles",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "metal",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a tiger in a forest",
+  "category": "Animals",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a close-up of the keys of a piano",
+  "category": "Artifacts",
+  "challenge": "Perspective"
+ },
+ {
+  "prompt": "A raccoon wearing formal clothes, wearing a tophat and holding a cane. The raccoon is holding a garbage bag. Oil painting in the style of Egyptian tomp hieroglyphics.",
+  "category": "Arts",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a long-island ice tea cocktail next to a napkin",
+  "category": "Food & Beverage",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "parallel lines",
+  "category": "Illustrations",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a kitchen with a large refrigerator",
+  "category": "Indoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a tornado with a house carried along at its top",
+  "category": "Outdoor Scenes",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "a tree reflected in the sunroof of a blue car",
+  "category": "Produce & Plants",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "a car and a truck on the road next to a traffic light",
+  "category": "Vehicles",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "0",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a snail made of harp",
+  "category": "Animals",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "A spaceship made of cardboard.",
+  "category": "Artifacts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a painting of a house on a mountain",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a green pepper cut in half on a plate",
+  "category": "Food & Beverage",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a series of musical notes",
+  "category": "Illustrations",
+  "challenge": "Quantity"
+ },
+ {
+  "prompt": "a yellow wall with a large framed oil painting of a car",
+  "category": "Indoor Scenes",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a street",
+  "category": "Outdoor Scenes",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "square red apples on a tree with circular green leaves",
+  "category": "Produce & Plants",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "a hot air balloon landing in a corn field",
+  "category": "Vehicles",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "hate",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a giraffe imitating a turtle",
+  "category": "Animals",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "a comic book supervillian",
+  "category": "Artifacts",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "A raccoon wearing formal clothes, wearing a tophat and holding a cane. The raccoon is holding a garbage bag. Oil painting in the style of abstract cubism.",
+  "category": "Arts",
+  "challenge": "Complex"
+ },
+ {
+  "prompt": "Two cups of coffee, one with latte art of a lovely princess. The other has latte art of a frog.",
+  "category": "Food & Beverage",
+  "challenge": "Writing & Symbols"
+ },
+ {
+  "prompt": "a pixel art corgi pizza",
+  "category": "Illustrations",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a kitchen",
+  "category": "Indoor Scenes",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a house on a mountain",
+  "category": "Outdoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a flower with large yellow petals",
+  "category": "Produce & Plants",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a dump truck filled with soccer balls scuba diving in a coral reef.",
+  "category": "Vehicles",
+  "challenge": "Imagination"
+ },
+ {
+  "prompt": "fire",
+  "category": "Abstract",
+  "challenge": "Basic"
+ },
+ {
+  "prompt": "a penguin standing on a sidewalk",
+  "category": "Animals",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a metal treehouse in an oak tree",
+  "category": "Artifacts",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a painting of a sport car in the style of Dali",
+  "category": "Arts",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "a roast turkey being taken out of the oven",
+  "category": "Food & Beverage",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "A cartoon house with red roof",
+  "category": "Illustrations",
+  "challenge": "Style & Format"
+ },
+ {
+  "prompt": "A glass of red wine tipped over on a couch, with a stain that writes \"OOPS\" on the couch.",
+  "category": "Indoor Scenes",
+  "challenge": "Writing & Symbols"
+ },
+ {
+  "prompt": "beautiful fireworks in the sky",
+  "category": "Outdoor Scenes",
+  "challenge": "Simple Detail"
+ },
+ {
+  "prompt": "a plant at the bottom of a shallow stream",
+  "category": "Produce & Plants",
+  "challenge": "Fine-grained Detail"
+ },
+ {
+  "prompt": "a red train is coming down the beach",
+  "category": "Vehicles",
+  "challenge": "Imagination"
+ }
+]

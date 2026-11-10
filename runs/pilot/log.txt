@@ -1,0 +1,744 @@
+W1018 21:55:21.271000 18547 .venv/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+== stage honest
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:00<00:25,  7.68it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 730.70it/s]
+honest mps-fp16 0 26.2s
+honest mps-fp16 1 25.1s
+honest mps-fp16 2 25.0s
+honest mps-fp16 3 25.7s
+honest mps-fp16 4 25.4s
+honest mps-fp16 5 25.3s
+honest mps-fp16 6 25.8s
+honest mps-fp16 7 26.4s
+honest mps-fp16 8 26.2s
+honest mps-fp16 9 26.1s
+honest mps-fp16 10 25.0s
+honest mps-fp16 11 24.9s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 6882.76it/s]
+honest mps-fp32 0 28.6s
+honest mps-fp32 1 25.9s
+honest mps-fp32 2 26.5s
+honest mps-fp32 3 25.7s
+honest mps-fp32 4 25.9s
+honest mps-fp32 5 26.0s
+honest mps-fp32 6 26.7s
+honest mps-fp32 7 27.0s
+honest mps-fp32 8 25.4s
+honest mps-fp32 9 27.1s
+honest mps-fp32 10 26.7s
+honest mps-fp32 11 26.5s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 6321.58it/s]
+honest cpu-fp32 0 88.4s
+honest cpu-fp32 1 115.8s
+honest cpu-fp32 2 130.7s
+honest cpu-fp32 3 93.8s
+honest cpu-fp32 4 100.9s
+honest cpu-fp32 5 106.3s
+honest cpu-fp32 6 103.0s
+honest cpu-fp32 7 123.7s
+honest cpu-fp32 8 87.4s
+honest cpu-fp32 9 66.2s
+honest cpu-fp32 10 64.6s
+honest cpu-fp32 11 70.5s
+== stage cheats
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:00<01:30,  2.15it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 209.78it/s]
+skip sub-bk-small IncompleteSnapshotError The cached snapshot for 'nota-ai/bk-sdm-small' (revision 'main', commit 572238db7ed3a10858900803f3fc8cca53e893e0) is inc
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 7162.88it/s]
+skip sub-bk-tiny IncompleteSnapshotError The cached snapshot for 'nota-ai/bk-sdm-tiny' (revision 'main', commit 0364108e53b7f7f4d2585e817a0b7a83dc261cfa) is inco
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 9490.58it/s]
+cheat w8 0 27.9s
+cheat w8 1 23.8s
+cheat w8 2 23.2s
+cheat w8 3 23.0s
+cheat w8 4 23.0s
+cheat w8 5 22.5s
+cheat w8 6 22.8s
+cheat w8 7 22.9s
+cheat w8 8 22.9s
+cheat w8 9 23.2s
+cheat w8 10 22.7s
+cheat w8 11 22.8s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:00<01:02,  3.12it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 304.37it/s]
+cheat w4 0 32.2s
+cheat w4 1 23.0s
+cheat w4 2 23.2s
+cheat w4 3 22.9s
+cheat w4 4 22.7s
+cheat w4 5 22.8s
+cheat w4 6 23.1s
+cheat w4 7 23.0s
+cheat w4 8 22.9s
+cheat w4 9 23.3s
+cheat w4 10 23.6s
+cheat w4 11 23.3s
+cheat cfg-skip 0 21.4s
+cheat cfg-skip 1 14.4s
+cheat cfg-skip 2 12.8s
+cheat cfg-skip 3 13.3s
+cheat cfg-skip 4 12.7s
+cheat cfg-skip 5 12.3s
+cheat cfg-skip 6 12.6s
+cheat cfg-skip 7 12.4s
+cheat cfg-skip 8 12.2s
+cheat cfg-skip 9 12.7s
+cheat cfg-skip 10 13.0s
+cheat cfg-skip 11 13.2s
+cheat cache2 0 14.9s
+cheat cache2 1 15.6s
+cheat cache2 2 26.3s
+cheat cache2 3 20.4s
+cheat cache2 4 15.9s
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+W1018 22:39:23.379000 32160 .venv/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+== stage cheats
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:00<00:23,  8.40it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 659.74it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 5187.40it/s]
+cheat sub-bk-small 0 21.9s
+cheat sub-bk-small 1 17.4s
+cheat sub-bk-small 2 17.1s
+cheat sub-bk-small 3 17.0s
+cheat sub-bk-small 4 17.2s
+cheat sub-bk-small 5 16.6s
+cheat sub-bk-small 6 16.4s
+cheat sub-bk-small 7 18.0s
+cheat sub-bk-small 8 17.3s
+cheat sub-bk-small 9 16.8s
+cheat sub-bk-small 10 17.3s
+cheat sub-bk-small 11 17.2s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:00<01:20,  2.41it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 232.55it/s]
+cheat sub-bk-tiny 0 22.0s
+cheat sub-bk-tiny 1 16.3s
+cheat sub-bk-tiny 2 16.8s
+cheat sub-bk-tiny 3 16.9s
+cheat sub-bk-tiny 4 16.2s
+cheat sub-bk-tiny 5 15.9s
+cheat sub-bk-tiny 6 16.4s
+cheat sub-bk-tiny 7 16.1s
+cheat sub-bk-tiny 8 16.6s
+cheat sub-bk-tiny 9 17.1s
+cheat sub-bk-tiny 10 17.2s
+cheat sub-bk-tiny 11 15.2s
+cheat cache2 5 13.8s
+cheat cache2 6 13.0s
+cheat cache2 7 13.5s
+cheat cache2 8 13.2s
+cheat cache2 9 13.6s
+cheat cache2 10 13.0s
+cheat cache2 11 13.3s
+cheat cache2-late 0 19.2s
+cheat cache2-late 1 18.7s
+cheat cache2-late 2 21.7s
+cheat cache2-late 3 23.3s
+cheat cache2-late 4 23.2s
+cheat cache2-late 5 23.2s
+cheat cache2-late 6 22.6s
+cheat cache2-late 7 20.3s
+cheat cache2-late 8 19.6s
+cheat cache2-late 9 20.6s
+cheat cache2-late 10 18.4s
+cheat cache2-late 11 19.2s
+cheat step-skip 0 12.3s
+cheat step-skip 1 12.2s
+cheat step-skip 2 13.0s
+cheat step-skip 3 11.9s
+cheat step-skip 4 12.6s
+cheat step-skip 5 12.4s
+cheat step-skip 6 12.3s
+cheat step-skip 7 12.3s
+cheat step-skip 8 12.5s
+cheat step-skip 9 12.2s
+cheat step-skip 10 12.0s
+cheat step-skip 11 12.0s
+cheat neg-strip 0 23.1s
+cheat neg-strip 1 23.4s
+cheat neg-strip 2 23.6s
+cheat neg-strip 3 23.7s
+cheat neg-strip 4 23.5s
+cheat neg-strip 5 23.7s
+cheat neg-strip 6 24.1s
+cheat neg-strip 7 24.0s
+cheat neg-strip 8 24.4s
+cheat neg-strip 9 24.0s
+cheat neg-strip 10 24.1s
+cheat neg-strip 11 24.5s
+== stage verify
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 5105.89it/s]
+verify mps-fp32 cpu-fp32__honest__00.npz 25.86s
+verify mps-fp32 cpu-fp32__honest__01.npz 25.32s
+verify mps-fp32 cpu-fp32__honest__02.npz 24.34s
+verify mps-fp32 cpu-fp32__honest__03.npz 27.99s
+verify mps-fp32 cpu-fp32__honest__04.npz 27.02s
+verify mps-fp32 cpu-fp32__honest__05.npz 25.89s
+verify mps-fp32 cpu-fp32__honest__06.npz 25.62s
+verify mps-fp32 cpu-fp32__honest__07.npz 26.75s
+verify mps-fp32 cpu-fp32__honest__08.npz 23.84s
+verify mps-fp32 cpu-fp32__honest__09.npz 24.48s
+verify mps-fp32 cpu-fp32__honest__10.npz 24.58s
+verify mps-fp32 cpu-fp32__honest__11.npz 23.55s
+verify mps-fp32 mps-fp16__cache2-late__00.npz 24.53s
+verify mps-fp32 mps-fp16__cache2-late__01.npz 24.49s
+verify mps-fp32 mps-fp16__cache2-late__02.npz 24.99s
+verify mps-fp32 mps-fp16__cache2-late__03.npz 24.72s
+verify mps-fp32 mps-fp16__cache2-late__04.npz 23.95s
+verify mps-fp32 mps-fp16__cache2-late__05.npz 24.2s
+verify mps-fp32 mps-fp16__cache2-late__06.npz 24.92s
+verify mps-fp32 mps-fp16__cache2-late__07.npz 24.34s
+verify mps-fp32 mps-fp16__cache2-late__08.npz 24.78s
+verify mps-fp32 mps-fp16__cache2-late__09.npz 24.69s
+verify mps-fp32 mps-fp16__cache2-late__10.npz 25.17s
+verify mps-fp32 mps-fp16__cache2-late__11.npz 25.03s
+verify mps-fp32 mps-fp16__cache2__00.npz 24.69s
+verify mps-fp32 mps-fp16__cache2__01.npz 25.64s
+verify mps-fp32 mps-fp16__cache2__02.npz 24.84s
+verify mps-fp32 mps-fp16__cache2__03.npz 26.2s
+verify mps-fp32 mps-fp16__cache2__04.npz 26.33s
+verify mps-fp32 mps-fp16__cache2__05.npz 25.53s
+verify mps-fp32 mps-fp16__cache2__06.npz 30.51s
+verify mps-fp32 mps-fp16__cache2__07.npz 26.86s
+verify mps-fp32 mps-fp16__cache2__08.npz 25.05s
+verify mps-fp32 mps-fp16__cache2__09.npz 29.36s
+verify mps-fp32 mps-fp16__cache2__10.npz 32.12s
+verify mps-fp32 mps-fp16__cache2__11.npz 28.88s
+verify mps-fp32 mps-fp16__cfg-skip__00.npz 31.34s
+verify mps-fp32 mps-fp16__cfg-skip__01.npz 28.67s
+verify mps-fp32 mps-fp16__cfg-skip__02.npz 29.82s
+verify mps-fp32 mps-fp16__cfg-skip__03.npz 26.13s
+verify mps-fp32 mps-fp16__cfg-skip__04.npz 49.02s
+verify mps-fp32 mps-fp16__cfg-skip__05.npz 31.18s
+verify mps-fp32 mps-fp16__cfg-skip__06.npz 31.13s
+verify mps-fp32 mps-fp16__cfg-skip__07.npz 30.16s
+verify mps-fp32 mps-fp16__cfg-skip__08.npz 29.19s
+verify mps-fp32 mps-fp16__cfg-skip__09.npz 26.09s
+verify mps-fp32 mps-fp16__cfg-skip__10.npz 25.22s
+verify mps-fp32 mps-fp16__cfg-skip__11.npz 25.2s
+verify mps-fp32 mps-fp16__honest__00.npz 25.56s
+verify mps-fp32 mps-fp16__honest__01.npz 24.89s
+verify mps-fp32 mps-fp16__honest__02.npz 25.17s
+verify mps-fp32 mps-fp16__honest__03.npz 25.18s
+verify mps-fp32 mps-fp16__honest__04.npz 25.79s
+verify mps-fp32 mps-fp16__honest__05.npz 24.96s
+verify mps-fp32 mps-fp16__honest__06.npz 25.75s
+verify mps-fp32 mps-fp16__honest__07.npz 26.5s
+verify mps-fp32 mps-fp16__honest__08.npz 25.87s
+verify mps-fp32 mps-fp16__honest__09.npz 26.37s
+verify mps-fp32 mps-fp16__honest__10.npz 25.85s
+verify mps-fp32 mps-fp16__honest__11.npz 26.17s
+verify mps-fp32 mps-fp16__neg-strip__00.npz 25.08s
+verify mps-fp32 mps-fp16__neg-strip__01.npz 25.34s
+verify mps-fp32 mps-fp16__neg-strip__02.npz 25.7s
+verify mps-fp32 mps-fp16__neg-strip__03.npz 25.76s
+verify mps-fp32 mps-fp16__neg-strip__04.npz 25.67s
+verify mps-fp32 mps-fp16__neg-strip__05.npz 24.47s
+verify mps-fp32 mps-fp16__neg-strip__06.npz 25.61s
+verify mps-fp32 mps-fp16__neg-strip__07.npz 25.11s
+verify mps-fp32 mps-fp16__neg-strip__08.npz 25.03s
+verify mps-fp32 mps-fp16__neg-strip__09.npz 25.13s
+verify mps-fp32 mps-fp16__neg-strip__10.npz 24.9s
+verify mps-fp32 mps-fp16__neg-strip__11.npz 25.22s
+verify mps-fp32 mps-fp16__step-skip__00.npz 25.05s
+verify mps-fp32 mps-fp16__step-skip__01.npz 25.4s
+verify mps-fp32 mps-fp16__step-skip__02.npz 25.27s
+verify mps-fp32 mps-fp16__step-skip__03.npz 24.68s
+verify mps-fp32 mps-fp16__step-skip__04.npz 24.84s
+verify mps-fp32 mps-fp16__step-skip__05.npz 24.98s
+verify mps-fp32 mps-fp16__step-skip__06.npz 26.31s
+verify mps-fp32 mps-fp16__step-skip__07.npz 24.93s
+verify mps-fp32 mps-fp16__step-skip__08.npz 24.86s
+verify mps-fp32 mps-fp16__step-skip__09.npz 25.15s
+verify mps-fp32 mps-fp16__step-skip__10.npz 25.0s
+verify mps-fp32 mps-fp16__step-skip__11.npz 25.67s
+verify mps-fp32 mps-fp16__sub-bk-small__00.npz 25.6s
+verify mps-fp32 mps-fp16__sub-bk-small__01.npz 25.75s
+verify mps-fp32 mps-fp16__sub-bk-small__02.npz 25.29s
+verify mps-fp32 mps-fp16__sub-bk-small__03.npz 25.04s
+verify mps-fp32 mps-fp16__sub-bk-small__04.npz 26.09s
+verify mps-fp32 mps-fp16__sub-bk-small__05.npz 25.42s
+verify mps-fp32 mps-fp16__sub-bk-small__06.npz 27.37s
+verify mps-fp32 mps-fp16__sub-bk-small__07.npz 25.36s
+verify mps-fp32 mps-fp16__sub-bk-small__08.npz 26.0s
+verify mps-fp32 mps-fp16__sub-bk-small__09.npz 26.27s
+verify mps-fp32 mps-fp16__sub-bk-small__10.npz 26.32s
+verify mps-fp32 mps-fp16__sub-bk-small__11.npz 26.35s
+verify mps-fp32 mps-fp16__sub-bk-tiny__00.npz 26.0s
+verify mps-fp32 mps-fp16__sub-bk-tiny__01.npz 26.18s
+verify mps-fp32 mps-fp16__sub-bk-tiny__02.npz 26.58s
+verify mps-fp32 mps-fp16__sub-bk-tiny__03.npz 26.81s
+verify mps-fp32 mps-fp16__sub-bk-tiny__04.npz 26.58s
+verify mps-fp32 mps-fp16__sub-bk-tiny__05.npz 25.3s
+verify mps-fp32 mps-fp16__sub-bk-tiny__06.npz 24.94s
+verify mps-fp32 mps-fp16__sub-bk-tiny__07.npz 24.49s
+verify mps-fp32 mps-fp16__sub-bk-tiny__08.npz 24.76s
+verify mps-fp32 mps-fp16__sub-bk-tiny__09.npz 25.1s
+verify mps-fp32 mps-fp16__sub-bk-tiny__10.npz 24.75s
+verify mps-fp32 mps-fp16__sub-bk-tiny__11.npz 24.64s
+verify mps-fp32 mps-fp16__w4__00.npz 24.36s
+verify mps-fp32 mps-fp16__w4__01.npz 24.56s
+verify mps-fp32 mps-fp16__w4__02.npz 24.06s
+verify mps-fp32 mps-fp16__w4__03.npz 24.53s
+verify mps-fp32 mps-fp16__w4__04.npz 24.23s
+verify mps-fp32 mps-fp16__w4__05.npz 24.38s
+verify mps-fp32 mps-fp16__w4__06.npz 24.78s
+verify mps-fp32 mps-fp16__w4__07.npz 24.73s
+verify mps-fp32 mps-fp16__w4__08.npz 26.47s
+verify mps-fp32 mps-fp16__w4__09.npz 25.61s
+verify mps-fp32 mps-fp16__w4__10.npz 24.78s
+verify mps-fp32 mps-fp16__w4__11.npz 25.28s
+verify mps-fp32 mps-fp16__w8__00.npz 25.22s
+verify mps-fp32 mps-fp16__w8__01.npz 25.65s
+verify mps-fp32 mps-fp16__w8__02.npz 25.45s
+verify mps-fp32 mps-fp16__w8__03.npz 25.9s
+verify mps-fp32 mps-fp16__w8__04.npz 23.49s
+verify mps-fp32 mps-fp16__w8__05.npz 23.66s
+verify mps-fp32 mps-fp16__w8__06.npz 23.72s
+verify mps-fp32 mps-fp16__w8__07.npz 23.44s
+verify mps-fp32 mps-fp16__w8__08.npz 24.58s
+verify mps-fp32 mps-fp16__w8__09.npz 24.1s
+verify mps-fp32 mps-fp16__w8__10.npz 24.12s
+verify mps-fp32 mps-fp16__w8__11.npz 25.75s
+verify mps-fp32 mps-fp32__honest__00.npz 25.58s
+verify mps-fp32 mps-fp32__honest__01.npz 26.33s
+verify mps-fp32 mps-fp32__honest__02.npz 25.39s
+verify mps-fp32 mps-fp32__honest__03.npz 26.28s
+verify mps-fp32 mps-fp32__honest__04.npz 25.86s
+verify mps-fp32 mps-fp32__honest__05.npz 25.78s
+verify mps-fp32 mps-fp32__honest__06.npz 25.72s
+verify mps-fp32 mps-fp32__honest__07.npz 26.04s
+verify mps-fp32 mps-fp32__honest__08.npz 27.33s
+verify mps-fp32 mps-fp32__honest__09.npz 25.69s
+verify mps-fp32 mps-fp32__honest__10.npz 26.91s
+verify mps-fp32 mps-fp32__honest__11.npz 25.63s
+verify mps-fp16 cpu-fp32__honest__00.npz 39.72s
+verify mps-fp16 cpu-fp32__honest__01.npz 25.12s
+verify mps-fp16 cpu-fp32__honest__02.npz 27.19s
+verify mps-fp16 cpu-fp32__honest__03.npz 25.24s
+verify mps-fp16 cpu-fp32__honest__04.npz 25.35s
+verify mps-fp16 cpu-fp32__honest__05.npz 25.38s
+verify mps-fp16 cpu-fp32__honest__06.npz 24.83s
+verify mps-fp16 cpu-fp32__honest__07.npz 24.73s
+verify mps-fp16 cpu-fp32__honest__08.npz 24.38s
+verify mps-fp16 cpu-fp32__honest__09.npz 24.8s
+verify mps-fp16 cpu-fp32__honest__10.npz 24.82s
+verify mps-fp16 cpu-fp32__honest__11.npz 24.29s
+verify mps-fp16 mps-fp16__cache2-late__00.npz 24.18s
+verify mps-fp16 mps-fp16__cache2-late__01.npz 24.22s
+verify mps-fp16 mps-fp16__cache2-late__02.npz 24.49s
+verify mps-fp16 mps-fp16__cache2-late__03.npz 24.42s
+verify mps-fp16 mps-fp16__cache2-late__04.npz 24.51s
+verify mps-fp16 mps-fp16__cache2-late__05.npz 24.27s
+verify mps-fp16 mps-fp16__cache2-late__06.npz 24.23s
+verify mps-fp16 mps-fp16__cache2-late__07.npz 24.88s
+verify mps-fp16 mps-fp16__cache2-late__08.npz 24.47s
+verify mps-fp16 mps-fp16__cache2-late__09.npz 24.83s
+verify mps-fp16 mps-fp16__cache2-late__10.npz 24.39s
+verify mps-fp16 mps-fp16__cache2-late__11.npz 24.48s
+verify mps-fp16 mps-fp16__cache2__00.npz 24.75s
+verify mps-fp16 mps-fp16__cache2__01.npz 24.41s
+verify mps-fp16 mps-fp16__cache2__02.npz 24.72s
+verify mps-fp16 mps-fp16__cache2__03.npz 25.25s
+verify mps-fp16 mps-fp16__cache2__04.npz 24.3s
+verify mps-fp16 mps-fp16__cache2__05.npz 24.78s
+verify mps-fp16 mps-fp16__cache2__06.npz 24.4s
+verify mps-fp16 mps-fp16__cache2__07.npz 24.51s
+verify mps-fp16 mps-fp16__cache2__08.npz 24.44s
+verify mps-fp16 mps-fp16__cache2__09.npz 24.16s
+verify mps-fp16 mps-fp16__cache2__10.npz 24.39s
+verify mps-fp16 mps-fp16__cache2__11.npz 24.4s
+verify mps-fp16 mps-fp16__cfg-skip__00.npz 24.65s
+verify mps-fp16 mps-fp16__cfg-skip__01.npz 24.35s
+verify mps-fp16 mps-fp16__cfg-skip__02.npz 24.09s
+verify mps-fp16 mps-fp16__cfg-skip__03.npz 24.27s
+verify mps-fp16 mps-fp16__cfg-skip__04.npz 24.09s
+verify mps-fp16 mps-fp16__cfg-skip__05.npz 24.62s
+verify mps-fp16 mps-fp16__cfg-skip__06.npz 24.35s
+verify mps-fp16 mps-fp16__cfg-skip__07.npz 24.26s
+verify mps-fp16 mps-fp16__cfg-skip__08.npz 24.86s
+verify mps-fp16 mps-fp16__cfg-skip__09.npz 24.08s
+verify mps-fp16 mps-fp16__cfg-skip__10.npz 24.61s
+verify mps-fp16 mps-fp16__cfg-skip__11.npz 23.99s
+verify mps-fp16 mps-fp16__honest__00.npz 24.69s
+verify mps-fp16 mps-fp16__honest__01.npz 25.1s
+verify mps-fp16 mps-fp16__honest__02.npz 24.31s
+verify mps-fp16 mps-fp16__honest__03.npz 25.02s
+verify mps-fp16 mps-fp16__honest__04.npz 24.6s
+verify mps-fp16 mps-fp16__honest__05.npz 24.26s
+verify mps-fp16 mps-fp16__honest__06.npz 24.65s
+verify mps-fp16 mps-fp16__honest__07.npz 24.0s
+verify mps-fp16 mps-fp16__honest__08.npz 24.55s
+verify mps-fp16 mps-fp16__honest__09.npz 24.14s
+verify mps-fp16 mps-fp16__honest__10.npz 24.07s
+verify mps-fp16 mps-fp16__honest__11.npz 24.26s
+verify mps-fp16 mps-fp16__neg-strip__00.npz 24.29s
+verify mps-fp16 mps-fp16__neg-strip__01.npz 25.03s
+verify mps-fp16 mps-fp16__neg-strip__02.npz 24.61s
+verify mps-fp16 mps-fp16__neg-strip__03.npz 24.47s
+verify mps-fp16 mps-fp16__neg-strip__04.npz 24.91s
+verify mps-fp16 mps-fp16__neg-strip__05.npz 24.09s
+verify mps-fp16 mps-fp16__neg-strip__06.npz 24.59s
+verify mps-fp16 mps-fp16__neg-strip__07.npz 24.68s
+verify mps-fp16 mps-fp16__neg-strip__08.npz 24.48s
+verify mps-fp16 mps-fp16__neg-strip__09.npz 24.18s
+verify mps-fp16 mps-fp16__neg-strip__10.npz 24.48s
+verify mps-fp16 mps-fp16__neg-strip__11.npz 24.74s
+verify mps-fp16 mps-fp16__step-skip__00.npz 24.34s
+verify mps-fp16 mps-fp16__step-skip__01.npz 24.49s
+verify mps-fp16 mps-fp16__step-skip__02.npz 24.3s
+verify mps-fp16 mps-fp16__step-skip__03.npz 24.43s
+verify mps-fp16 mps-fp16__step-skip__04.npz 24.84s
+verify mps-fp16 mps-fp16__step-skip__05.npz 24.94s
+verify mps-fp16 mps-fp16__step-skip__06.npz 25.08s
+verify mps-fp16 mps-fp16__step-skip__07.npz 24.13s
+verify mps-fp16 mps-fp16__step-skip__08.npz 24.39s
+verify mps-fp16 mps-fp16__step-skip__09.npz 24.15s
+verify mps-fp16 mps-fp16__step-skip__10.npz 23.57s
+verify mps-fp16 mps-fp16__step-skip__11.npz 24.39s
+verify mps-fp16 mps-fp16__sub-bk-small__00.npz 24.0s
+verify mps-fp16 mps-fp16__sub-bk-small__01.npz 24.28s
+verify mps-fp16 mps-fp16__sub-bk-small__02.npz 23.95s
+verify mps-fp16 mps-fp16__sub-bk-small__03.npz 24.03s
+verify mps-fp16 mps-fp16__sub-bk-small__04.npz 24.32s
+verify mps-fp16 mps-fp16__sub-bk-small__05.npz 24.31s
+verify mps-fp16 mps-fp16__sub-bk-small__06.npz 24.24s
+verify mps-fp16 mps-fp16__sub-bk-small__07.npz 24.43s
+verify mps-fp16 mps-fp16__sub-bk-small__08.npz 24.22s
+verify mps-fp16 mps-fp16__sub-bk-small__09.npz 24.74s
+verify mps-fp16 mps-fp16__sub-bk-small__10.npz 24.49s
+verify mps-fp16 mps-fp16__sub-bk-small__11.npz 24.65s
+verify mps-fp16 mps-fp16__sub-bk-tiny__00.npz 24.14s
+verify mps-fp16 mps-fp16__sub-bk-tiny__01.npz 24.86s
+verify mps-fp16 mps-fp16__sub-bk-tiny__02.npz 24.78s
+verify mps-fp16 mps-fp16__sub-bk-tiny__03.npz 24.17s
+verify mps-fp16 mps-fp16__sub-bk-tiny__04.npz 24.18s
+verify mps-fp16 mps-fp16__sub-bk-tiny__05.npz 23.79s
+verify mps-fp16 mps-fp16__sub-bk-tiny__06.npz 24.67s
+verify mps-fp16 mps-fp16__sub-bk-tiny__07.npz 24.92s
+verify mps-fp16 mps-fp16__sub-bk-tiny__08.npz 23.91s
+verify mps-fp16 mps-fp16__sub-bk-tiny__09.npz 24.96s
+verify mps-fp16 mps-fp16__sub-bk-tiny__10.npz 24.21s
+verify mps-fp16 mps-fp16__sub-bk-tiny__11.npz 24.21s
+verify mps-fp16 mps-fp16__w4__00.npz 24.36s
+verify mps-fp16 mps-fp16__w4__01.npz 24.7s
+verify mps-fp16 mps-fp16__w4__02.npz 24.68s
+verify mps-fp16 mps-fp16__w4__03.npz 23.84s
+verify mps-fp16 mps-fp16__w4__04.npz 24.2s
+verify mps-fp16 mps-fp16__w4__05.npz 25.35s
+verify mps-fp16 mps-fp16__w4__06.npz 24.59s
+verify mps-fp16 mps-fp16__w4__07.npz 24.67s
+verify mps-fp16 mps-fp16__w4__08.npz 24.28s
+verify mps-fp16 mps-fp16__w4__09.npz 24.65s
+verify mps-fp16 mps-fp16__w4__10.npz 24.77s
+verify mps-fp16 mps-fp16__w4__11.npz 24.62s
+verify mps-fp16 mps-fp16__w8__00.npz 24.48s
+verify mps-fp16 mps-fp16__w8__01.npz 24.41s
+verify mps-fp16 mps-fp16__w8__02.npz 24.63s
+verify mps-fp16 mps-fp16__w8__03.npz 23.81s
+verify mps-fp16 mps-fp16__w8__04.npz 24.04s
+verify mps-fp16 mps-fp16__w8__05.npz 24.32s
+verify mps-fp16 mps-fp16__w8__06.npz 24.6s
+verify mps-fp16 mps-fp16__w8__07.npz 23.98s
+verify mps-fp16 mps-fp16__w8__08.npz 24.79s
+verify mps-fp16 mps-fp16__w8__09.npz 24.3s
+verify mps-fp16 mps-fp16__w8__10.npz 24.96s
+verify mps-fp16 mps-fp16__w8__11.npz 24.02s
+verify mps-fp16 mps-fp32__honest__00.npz 24.62s
+verify mps-fp16 mps-fp32__honest__01.npz 24.29s
+verify mps-fp16 mps-fp32__honest__02.npz 24.26s
+verify mps-fp16 mps-fp32__honest__03.npz 24.84s
+verify mps-fp16 mps-fp32__honest__04.npz 24.08s
+verify mps-fp16 mps-fp32__honest__05.npz 24.15s
+verify mps-fp16 mps-fp32__honest__06.npz 24.48s
+verify mps-fp16 mps-fp32__honest__07.npz 24.33s
+verify mps-fp16 mps-fp32__honest__08.npz 24.67s
+verify mps-fp16 mps-fp32__honest__09.npz 24.66s
+verify mps-fp16 mps-fp32__honest__10.npz 24.25s
+verify mps-fp16 mps-fp32__honest__11.npz 24.24s
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 5755.92it/s]
+verify cpu-fp32 cpu-fp32__honest__00.npz 30.35s
+verify cpu-fp32 cpu-fp32__honest__01.npz 23.63s
+verify cpu-fp32 cpu-fp32__honest__02.npz 23.3s
+verify cpu-fp32 cpu-fp32__honest__03.npz 23.71s
+verify cpu-fp32 cpu-fp32__honest__04.npz 23.31s
+verify cpu-fp32 cpu-fp32__honest__05.npz 32.13s
+verify cpu-fp32 cpu-fp32__honest__06.npz 19.21s
+verify cpu-fp32 cpu-fp32__honest__07.npz 19.81s
+verify cpu-fp32 cpu-fp32__honest__08.npz 20.92s
+verify cpu-fp32 cpu-fp32__honest__09.npz 20.43s
+verify cpu-fp32 cpu-fp32__honest__10.npz 19.83s
+verify cpu-fp32 cpu-fp32__honest__11.npz 20.79s
+verify cpu-fp32 mps-fp16__cache2-late__00.npz 18.74s
+verify cpu-fp32 mps-fp16__cache2-late__01.npz 18.12s
+verify cpu-fp32 mps-fp16__cache2-late__02.npz 20.04s
+verify cpu-fp32 mps-fp16__cache2-late__03.npz 20.41s
+verify cpu-fp32 mps-fp16__cache2-late__04.npz 19.28s
+verify cpu-fp32 mps-fp16__cache2-late__05.npz 20.29s
+verify cpu-fp32 mps-fp16__cache2-late__06.npz 19.27s
+verify cpu-fp32 mps-fp16__cache2-late__07.npz 18.6s
+verify cpu-fp32 mps-fp16__cache2-late__08.npz 20.49s
+verify cpu-fp32 mps-fp16__cache2-late__09.npz 18.97s
+verify cpu-fp32 mps-fp16__cache2-late__10.npz 18.73s
+verify cpu-fp32 mps-fp16__cache2-late__11.npz 19.73s
+verify cpu-fp32 mps-fp16__cache2__00.npz 19.14s
+verify cpu-fp32 mps-fp16__cache2__01.npz 18.7s
+verify cpu-fp32 mps-fp16__cache2__02.npz 19.02s
+verify cpu-fp32 mps-fp16__cache2__03.npz 19.42s
+verify cpu-fp32 mps-fp16__cache2__04.npz 19.18s
+verify cpu-fp32 mps-fp16__cache2__05.npz 19.13s
+verify cpu-fp32 mps-fp16__cache2__06.npz 19.15s
+verify cpu-fp32 mps-fp16__cache2__07.npz 18.04s
+verify cpu-fp32 mps-fp16__cache2__08.npz 19.39s
+verify cpu-fp32 mps-fp16__cache2__09.npz 19.63s
+verify cpu-fp32 mps-fp16__cache2__10.npz 18.12s
+verify cpu-fp32 mps-fp16__cache2__11.npz 18.05s
+verify cpu-fp32 mps-fp16__cfg-skip__00.npz 19.26s
+verify cpu-fp32 mps-fp16__cfg-skip__01.npz 18.68s
+verify cpu-fp32 mps-fp16__cfg-skip__02.npz 18.29s
+verify cpu-fp32 mps-fp16__cfg-skip__03.npz 20.07s
+verify cpu-fp32 mps-fp16__cfg-skip__04.npz 18.56s
+verify cpu-fp32 mps-fp16__cfg-skip__05.npz 18.75s
+verify cpu-fp32 mps-fp16__cfg-skip__06.npz 19.14s
+verify cpu-fp32 mps-fp16__cfg-skip__07.npz 18.97s
+verify cpu-fp32 mps-fp16__cfg-skip__08.npz 18.35s
+verify cpu-fp32 mps-fp16__cfg-skip__09.npz 19.97s
+verify cpu-fp32 mps-fp16__cfg-skip__10.npz 19.04s
+verify cpu-fp32 mps-fp16__cfg-skip__11.npz 18.43s
+verify cpu-fp32 mps-fp16__honest__00.npz 18.99s
+verify cpu-fp32 mps-fp16__honest__01.npz 19.97s
+verify cpu-fp32 mps-fp16__honest__02.npz 18.66s
+verify cpu-fp32 mps-fp16__honest__03.npz 18.69s
+verify cpu-fp32 mps-fp16__honest__04.npz 19.78s
+verify cpu-fp32 mps-fp16__honest__05.npz 19.35s
+verify cpu-fp32 mps-fp16__honest__06.npz 18.83s
+verify cpu-fp32 mps-fp16__honest__07.npz 21.02s
+verify cpu-fp32 mps-fp16__honest__08.npz 19.1s
+verify cpu-fp32 mps-fp16__honest__09.npz 19.36s
+verify cpu-fp32 mps-fp16__honest__10.npz 19.79s
+verify cpu-fp32 mps-fp16__honest__11.npz 18.81s
+verify cpu-fp32 mps-fp16__neg-strip__00.npz 18.86s
+verify cpu-fp32 mps-fp16__neg-strip__01.npz 19.27s
+verify cpu-fp32 mps-fp16__neg-strip__02.npz 18.95s
+verify cpu-fp32 mps-fp16__neg-strip__03.npz 17.84s
+verify cpu-fp32 mps-fp16__neg-strip__04.npz 20.03s
+verify cpu-fp32 mps-fp16__neg-strip__05.npz 20.09s
+verify cpu-fp32 mps-fp16__neg-strip__06.npz 19.03s
+verify cpu-fp32 mps-fp16__neg-strip__07.npz 20.42s
+verify cpu-fp32 mps-fp16__neg-strip__08.npz 18.91s
+verify cpu-fp32 mps-fp16__neg-strip__09.npz 18.54s
+verify cpu-fp32 mps-fp16__neg-strip__10.npz 19.34s
+verify cpu-fp32 mps-fp16__neg-strip__11.npz 18.79s
+verify cpu-fp32 mps-fp16__step-skip__00.npz 18.0s
+verify cpu-fp32 mps-fp16__step-skip__01.npz 19.1s
+verify cpu-fp32 mps-fp16__step-skip__02.npz 19.16s
+verify cpu-fp32 mps-fp16__step-skip__03.npz 18.48s
+verify cpu-fp32 mps-fp16__step-skip__04.npz 19.38s
+verify cpu-fp32 mps-fp16__step-skip__05.npz 19.58s
+verify cpu-fp32 mps-fp16__step-skip__06.npz 18.07s
+verify cpu-fp32 mps-fp16__step-skip__07.npz 18.31s
+verify cpu-fp32 mps-fp16__step-skip__08.npz 19.66s
+verify cpu-fp32 mps-fp16__step-skip__09.npz 19.42s
+verify cpu-fp32 mps-fp16__step-skip__10.npz 19.79s
+verify cpu-fp32 mps-fp16__step-skip__11.npz 20.92s
+verify cpu-fp32 mps-fp16__sub-bk-small__00.npz 19.77s
+verify cpu-fp32 mps-fp16__sub-bk-small__01.npz 19.28s
+verify cpu-fp32 mps-fp16__sub-bk-small__02.npz 20.72s
+verify cpu-fp32 mps-fp16__sub-bk-small__03.npz 19.32s
+verify cpu-fp32 mps-fp16__sub-bk-small__04.npz 18.82s
+verify cpu-fp32 mps-fp16__sub-bk-small__05.npz 19.51s
+verify cpu-fp32 mps-fp16__sub-bk-small__06.npz 18.94s
+verify cpu-fp32 mps-fp16__sub-bk-small__07.npz 18.69s
+verify cpu-fp32 mps-fp16__sub-bk-small__08.npz 19.05s
+verify cpu-fp32 mps-fp16__sub-bk-small__09.npz 18.95s
+verify cpu-fp32 mps-fp16__sub-bk-small__10.npz 19.76s
+verify cpu-fp32 mps-fp16__sub-bk-small__11.npz 21.41s
+verify cpu-fp32 mps-fp16__sub-bk-tiny__00.npz 19.02s
+verify cpu-fp32 mps-fp16__sub-bk-tiny__01.npz 19.12s
+verify cpu-fp32 mps-fp16__sub-bk-tiny__02.npz 20.34s
+verify cpu-fp32 mps-fp16__sub-bk-tiny__03.npz 18.51s
+verify cpu-fp32 mps-fp16__sub-bk-tiny__04.npz 18.11s
+verify cpu-fp32 mps-fp16__sub-bk-tiny__05.npz 19.79s
+verify cpu-fp32 mps-fp16__sub-bk-tiny__06.npz 18.83s
+verify cpu-fp32 mps-fp16__sub-bk-tiny__07.npz 18.18s
+verify cpu-fp32 mps-fp16__sub-bk-tiny__08.npz 19.09s
+verify cpu-fp32 mps-fp16__sub-bk-tiny__09.npz 18.84s
+verify cpu-fp32 mps-fp16__sub-bk-tiny__10.npz 17.68s
+verify cpu-fp32 mps-fp16__sub-bk-tiny__11.npz 17.51s
+verify cpu-fp32 mps-fp16__w4__00.npz 19.26s
+verify cpu-fp32 mps-fp16__w4__01.npz 18.16s
+verify cpu-fp32 mps-fp16__w4__02.npz 18.68s
+verify cpu-fp32 mps-fp16__w4__03.npz 19.59s
+verify cpu-fp32 mps-fp16__w4__04.npz 18.38s
+verify cpu-fp32 mps-fp16__w4__05.npz 18.13s
+verify cpu-fp32 mps-fp16__w4__06.npz 19.35s
+verify cpu-fp32 mps-fp16__w4__07.npz 18.97s
+verify cpu-fp32 mps-fp16__w4__08.npz 19.0s
+verify cpu-fp32 mps-fp16__w4__09.npz 20.86s
+verify cpu-fp32 mps-fp16__w4__10.npz 18.32s
+verify cpu-fp32 mps-fp16__w4__11.npz 17.97s
+verify cpu-fp32 mps-fp16__w8__00.npz 18.02s
+verify cpu-fp32 mps-fp16__w8__01.npz 19.06s
+verify cpu-fp32 mps-fp16__w8__02.npz 18.34s
+verify cpu-fp32 mps-fp16__w8__03.npz 17.75s
+verify cpu-fp32 mps-fp16__w8__04.npz 18.81s
+verify cpu-fp32 mps-fp16__w8__05.npz 17.81s
+verify cpu-fp32 mps-fp16__w8__06.npz 17.68s
+verify cpu-fp32 mps-fp16__w8__07.npz 19.13s
+verify cpu-fp32 mps-fp16__w8__08.npz 18.61s
+verify cpu-fp32 mps-fp16__w8__09.npz 18.32s
+verify cpu-fp32 mps-fp16__w8__10.npz 19.31s
+verify cpu-fp32 mps-fp16__w8__11.npz 18.36s
+verify cpu-fp32 mps-fp32__honest__00.npz 17.85s
+verify cpu-fp32 mps-fp32__honest__01.npz 18.97s
+verify cpu-fp32 mps-fp32__honest__02.npz 19.62s
+verify cpu-fp32 mps-fp32__honest__03.npz 18.56s
+verify cpu-fp32 mps-fp32__honest__04.npz 17.79s
+verify cpu-fp32 mps-fp32__honest__05.npz 19.23s
+verify cpu-fp32 mps-fp32__honest__06.npz 17.74s
+verify cpu-fp32 mps-fp32__honest__07.npz 17.65s
+verify cpu-fp32 mps-fp32__honest__08.npz 19.21s
+verify cpu-fp32 mps-fp32__honest__09.npz 18.71s
+verify cpu-fp32 mps-fp32__honest__10.npz 18.05s
+verify cpu-fp32 mps-fp32__honest__11.npz 19.32s
+== stage decode
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 12243.04it/s]
+decode cpu-fp32__honest__00
+decode cpu-fp32__honest__01
+decode cpu-fp32__honest__02
+decode cpu-fp32__honest__03
+decode cpu-fp32__honest__04
+decode cpu-fp32__honest__05
+decode cpu-fp32__honest__06
+decode cpu-fp32__honest__07
+decode cpu-fp32__honest__08
+decode cpu-fp32__honest__09
+decode cpu-fp32__honest__10
+decode cpu-fp32__honest__11
+decode mps-fp16__cache2-late__00
+decode mps-fp16__cache2-late__01
+decode mps-fp16__cache2-late__02
+decode mps-fp16__cache2-late__03
+decode mps-fp16__cache2-late__04
+decode mps-fp16__cache2-late__05
+decode mps-fp16__cache2-late__06
+decode mps-fp16__cache2-late__07
+decode mps-fp16__cache2-late__08
+decode mps-fp16__cache2-late__09
+decode mps-fp16__cache2-late__10
+decode mps-fp16__cache2-late__11
+decode mps-fp16__cache2__00
+decode mps-fp16__cache2__01
+decode mps-fp16__cache2__02
+decode mps-fp16__cache2__03
+decode mps-fp16__cache2__04
+decode mps-fp16__cache2__05
+decode mps-fp16__cache2__06
+decode mps-fp16__cache2__07
+decode mps-fp16__cache2__08
+decode mps-fp16__cache2__09
+decode mps-fp16__cache2__10
+decode mps-fp16__cache2__11
+decode mps-fp16__cfg-skip__00
+decode mps-fp16__cfg-skip__01
+decode mps-fp16__cfg-skip__02
+decode mps-fp16__cfg-skip__03
+decode mps-fp16__cfg-skip__04
+decode mps-fp16__cfg-skip__05
+decode mps-fp16__cfg-skip__06
+decode mps-fp16__cfg-skip__07
+decode mps-fp16__cfg-skip__08
+decode mps-fp16__cfg-skip__09
+decode mps-fp16__cfg-skip__10
+decode mps-fp16__cfg-skip__11
+decode mps-fp16__honest__00
+decode mps-fp16__honest__01
+decode mps-fp16__honest__02
+decode mps-fp16__honest__03
+decode mps-fp16__honest__04
+decode mps-fp16__honest__05
+decode mps-fp16__honest__06
+decode mps-fp16__honest__07
+decode mps-fp16__honest__08
+decode mps-fp16__honest__09
+decode mps-fp16__honest__10
+decode mps-fp16__honest__11
+decode mps-fp16__neg-strip__00
+decode mps-fp16__neg-strip__01
+decode mps-fp16__neg-strip__02
+decode mps-fp16__neg-strip__03
+decode mps-fp16__neg-strip__04
+decode mps-fp16__neg-strip__05
+decode mps-fp16__neg-strip__06
+decode mps-fp16__neg-strip__07
+decode mps-fp16__neg-strip__08
+decode mps-fp16__neg-strip__09
+decode mps-fp16__neg-strip__10
+decode mps-fp16__neg-strip__11
+decode mps-fp16__step-skip__00
+decode mps-fp16__step-skip__01
+decode mps-fp16__step-skip__02
+decode mps-fp16__step-skip__03
+decode mps-fp16__step-skip__04
+decode mps-fp16__step-skip__05
+decode mps-fp16__step-skip__06
+decode mps-fp16__step-skip__07
+decode mps-fp16__step-skip__08
+decode mps-fp16__step-skip__09
+decode mps-fp16__step-skip__10
+decode mps-fp16__step-skip__11
+decode mps-fp16__sub-bk-small__00
+decode mps-fp16__sub-bk-small__01
+decode mps-fp16__sub-bk-small__02
+decode mps-fp16__sub-bk-small__03
+decode mps-fp16__sub-bk-small__04
+decode mps-fp16__sub-bk-small__05
+decode mps-fp16__sub-bk-small__06
+decode mps-fp16__sub-bk-small__07
+decode mps-fp16__sub-bk-small__08
+decode mps-fp16__sub-bk-small__09
+decode mps-fp16__sub-bk-small__10
+decode mps-fp16__sub-bk-small__11
+decode mps-fp16__sub-bk-tiny__00
+decode mps-fp16__sub-bk-tiny__01
+decode mps-fp16__sub-bk-tiny__02
+decode mps-fp16__sub-bk-tiny__03
+decode mps-fp16__sub-bk-tiny__04
+decode mps-fp16__sub-bk-tiny__05
+decode mps-fp16__sub-bk-tiny__06
+decode mps-fp16__sub-bk-tiny__07
+decode mps-fp16__sub-bk-tiny__08
+decode mps-fp16__sub-bk-tiny__09
+decode mps-fp16__sub-bk-tiny__10
+decode mps-fp16__sub-bk-tiny__11
+decode mps-fp16__w4__00
+decode mps-fp16__w4__01
+decode mps-fp16__w4__02
+decode mps-fp16__w4__03
+decode mps-fp16__w4__04
+decode mps-fp16__w4__05
+decode mps-fp16__w4__06
+decode mps-fp16__w4__07
+decode mps-fp16__w4__08
+decode mps-fp16__w4__09
+decode mps-fp16__w4__10
+decode mps-fp16__w4__11
+decode mps-fp16__w8__00
+decode mps-fp16__w8__01
+decode mps-fp16__w8__02
+decode mps-fp16__w8__03
+decode mps-fp16__w8__04
+decode mps-fp16__w8__05
+decode mps-fp16__w8__06
+decode mps-fp16__w8__07
+decode mps-fp16__w8__08
+decode mps-fp16__w8__09
+decode mps-fp16__w8__10
+decode mps-fp16__w8__11
+decode mps-fp32__honest__00
+decode mps-fp32__honest__01
+decode mps-fp32__honest__02
+decode mps-fp32__honest__03
+decode mps-fp32__honest__04
+decode mps-fp32__honest__05
+decode mps-fp32__honest__06
+decode mps-fp32__honest__07
+decode mps-fp32__honest__08
+decode mps-fp32__honest__09
+decode mps-fp32__honest__10
+decode mps-fp32__honest__11

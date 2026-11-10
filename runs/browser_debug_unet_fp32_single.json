@@ -1,0 +1,30 @@
+{
+  "unet": "unet_fp32_single.onnx",
+  "rows": [
+    {
+      "t": 961,
+      "ort_cpu_fp16_rel": 7.84779986133799e-05,
+      "browser_rel": 3.0603584946220508e-06,
+      "browser_finite": true
+    },
+    {
+      "t": 481,
+      "ort_cpu_fp16_rel": 0.00015373865608125925,
+      "browser_rel": 7.093147360137664e-06,
+      "browser_finite": true
+    },
+    {
+      "t": 41,
+      "ort_cpu_fp16_rel": 0.0006802448770031333,
+      "browser_rel": 1.0900294000748545e-05,
+      "browser_finite": true
+    }
+  ],
+  "guided_step_r_vs_cpu_fp32": 0.00018116355931852013,
+  "ms_per_call": [
+    22926,
+    38705,
+    43062,
+    8124
+  ]
+}

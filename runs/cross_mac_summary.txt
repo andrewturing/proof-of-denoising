@@ -1,0 +1,53 @@
+# Study summary (8 prompts, 80 check records)
+
+## FP32 class
+
+Honest cross-device steps: 48 (plus 0 same-backend re-run steps, all r = 0). Leave-one-prompt-out false flags: max 8/48, maxV 8/48; conformal n/a (smallest fold has 42 calibration steps; needs >= 199)
+Rules: max = pooled over verifier stacks; maxV = per verifier stack (protocol rule).
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cuda-fp32->cpu-fp32 | 16 | 1.98e-05 | 8.16e-05 |
+| cuda-fp32->mps-fp32 | 32 | 9.15e-06 | 3.86e-05 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+| neg-strip|mps-fp32|max | 8 | 0.78 | 0.78 | 1.00 | 1.00 | nan |
+| neg-strip|mps-fp32|maxV | 8 | 0.78 | 0.78 | 1.00 | 1.00 | nan |
+| w8|mps-fp32|max | 8 | 0.91 | 0.91 | 1.00 | 1.00 | nan |
+| w8|mps-fp32|maxV | 8 | 0.91 | 0.91 | 1.00 | 1.00 | nan |
+
+## TF32 class
+
+Honest cross-device steps: 48 (plus 0 same-backend re-run steps, all r = 0). Leave-one-prompt-out false flags: max 0/48, maxV 0/48; conformal n/a (smallest fold has 42 calibration steps; needs >= 199)
+Rules: max = pooled over verifier stacks; maxV = per verifier stack (protocol rule).
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cuda-tf32->cpu-fp32 | 16 | 2.33e-03 | 8.38e-03 |
+| cuda-tf32->mps-fp32 | 32 | 2.67e-03 | 1.14e-02 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+
+## FP16 class
+
+Honest cross-device steps: 48 (plus 0 same-backend re-run steps, all r = 0). Leave-one-prompt-out false flags: max 0/48, maxV 0/48; conformal n/a (smallest fold has 42 calibration steps; needs >= 199)
+Rules: max = pooled over verifier stacks; maxV = per verifier stack (protocol rule).
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cuda-fp16->cpu-fp32 | 16 | 7.44e-03 | 5.92e-02 |
+| cuda-fp16->mps-fp32 | 32 | 7.37e-03 | 4.17e-02 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+| neg-strip|mps-fp32|max | 8 | 0.88 | 0.88 | 0.98 | 1.00 | nan |
+| neg-strip|mps-fp32|maxV | 8 | 0.88 | 0.88 | 0.98 | 1.00 | nan |
+| w8|mps-fp32|max | 8 | 0.78 | 0.78 | 0.98 | 1.00 | nan |
+| w8|mps-fp32|maxV | 8 | 0.78 | 0.78 | 0.98 | 1.00 | nan |
+
+## Verification time per checked step (median, s)
+
+- mps-fp32: 1.21
+- cpu-fp32: 4.08

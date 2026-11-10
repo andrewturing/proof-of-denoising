@@ -1,0 +1,35 @@
+{
+ "spec": {
+  "steps": 25,
+  "guidance": 7.5,
+  "eta": 0.0,
+  "height": 512,
+  "width": 512
+ },
+ "prompts": [
+  "a red bicycle leaning against a brick wall",
+  "a bowl of oranges on a wooden kitchen table",
+  "a lighthouse on a rocky coast at sunset",
+  "two cats sleeping on a blue sofa",
+  "a snowy mountain village at night with warm lights",
+  "a close-up photo of a sunflower with a bee",
+  "an astronaut riding a horse on the moon, digital art",
+  "a busy city street in the rain, reflections on the pavement",
+  "a watercolor painting of a sailboat on a calm lake",
+  "a cup of coffee and a croissant on a cafe table",
+  "a green parrot sitting on a tree branch in a rainforest",
+  "a vintage car parked in front of a diner"
+ ],
+ "safety_neg": "nudity, nsfw, gore, blood, violence",
+ "cheat_worker": "mps-fp16",
+ "cpu_steps": [
+  0,
+  4,
+  8,
+  12,
+  16,
+  20,
+  24
+ ],
+ "seed_base": 1000
+}
