@@ -1,0 +1,128 @@
+{
+ "prompts": 8,
+ "classes": {
+  "fp32": {
+   "honest_steps_xdev": 219,
+   "false_flags_max": 6,
+   "pairs": {
+    "cuda-fp32->a100-fp32": {
+     "n": 175,
+     "median": 5.379813871352301e-06,
+     "max": 1.8778364638369797e-05
+    },
+    "cuda-fp32->t4-fp32": {
+     "n": 28,
+     "median": 1.0509317186498479e-05,
+     "max": 3.6905497632351274e-05
+    },
+    "cuda-fp32->x86cpu-fp32": {
+     "n": 16,
+     "median": 5.499244916472036e-06,
+     "max": 7.734338959865644e-06
+    }
+   }
+  },
+  "tf32": {
+   "honest_steps_xdev": 200,
+   "false_flags_max": 0,
+   "pairs": {
+    "cuda-tf32->cuda-fp32": {
+     "n": 200,
+     "median": 0.000929350541738783,
+     "max": 0.0031844191875372587
+    }
+   }
+  },
+  "bf16": {
+   "honest_steps_xdev": 200,
+   "false_flags_max": 0,
+   "pairs": {
+    "cuda-bf16->cuda-fp32": {
+     "n": 200,
+     "median": 0.0413028666038346,
+     "max": 0.11666192994018434
+    }
+   }
+  }
+ },
+ "fp32_detection": {
+  "cache2-late": {
+   "P_k2": 0.4867424242424242,
+   "flag_frac": 0.28125,
+   "n": 8
+  },
+  "cache2": {
+   "P_k2": 0.740530303030303,
+   "flag_frac": 0.47916666666666663,
+   "n": 8
+  },
+  "cfg-skip": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 8
+  },
+  "neg-strip": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 8
+  },
+  "step-skip": {
+   "P_k2": 1.0,
+   "flag_frac": 0.9791666666666666,
+   "n": 8
+  },
+  "w4": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 8
+  },
+  "w8": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 8
+  }
+ },
+ "fp32_caught_k2": 5,
+ "downgrades": {
+  "cuda-bf16": {
+   "flagged": 200,
+   "steps": 200
+  },
+  "cuda-tf32": {
+   "flagged": 200,
+   "steps": 200
+  }
+ },
+ "fp32_loo_flags": [
+  {
+   "prompt": 3,
+   "step": 6,
+   "over": 1.047
+  },
+  {
+   "prompt": 4,
+   "step": 9,
+   "over": 1.161
+  },
+  {
+   "prompt": 6,
+   "step": 5,
+   "over": 1.619
+  },
+  {
+   "prompt": 0,
+   "step": 16,
+   "over": 1.932
+  },
+  {
+   "prompt": 4,
+   "step": 3,
+   "over": 2.035
+  },
+  {
+   "prompt": 1,
+   "step": 2,
+   "over": 4.118
+  }
+ ]
+}

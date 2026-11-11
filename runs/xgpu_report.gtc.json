@@ -1,0 +1,260 @@
+{
+ "taus": "runs/storybook_fresh/taus_fp32.json",
+ "gpus": {
+  "a100": {
+   "name": "NVIDIA A100-SXM4-40GB",
+   "software": "torch 2.14.1+cu130 cuda 13.0 NVIDIA A100-SXM4-40GB diffusers 0.41.0 transformers 5.20.2",
+   "step_s": {
+    "cuda-fp16": 0.052,
+    "cuda-tf32": 0.065,
+    "cuda-fp32": 0.101
+   }
+  },
+  "t4": {
+   "name": "Tesla T4",
+   "software": "torch 2.14.1+cu130 cuda 13.0 Tesla T4 diffusers 0.41.0 transformers 5.20.2",
+   "step_s": {
+    "cuda-fp16": 0.145,
+    "cuda-tf32": 0.433,
+    "cuda-fp32": 0.436
+   }
+  }
+ },
+ "honest_fp32": {
+  "a100-fp32->a100-fp32": {
+   "n": 192,
+   "prompts": 48,
+   "median": 0.0,
+   "max": 0.0,
+   "flagged": 0,
+   "max_over_tau": 0.0,
+   "same_gpu": true
+  },
+  "a100-fp32->mps-fp32": {
+   "n": 1200,
+   "prompts": 48,
+   "median": 9.634547384816346e-06,
+   "max": 4.858165991344218e-05,
+   "flagged": 0,
+   "max_over_tau": 0.26944251881428866,
+   "same_gpu": false
+  },
+  "a100-fp32->t4-fp32": {
+   "n": 1200,
+   "prompts": 48,
+   "median": 9.274032808556854e-06,
+   "max": 4.701659349178034e-05,
+   "flagged": 0,
+   "max_over_tau": 0.2686810544906712,
+   "same_gpu": false
+  },
+  "cuda-fp32->a100-fp32": {
+   "n": 1200,
+   "prompts": 48,
+   "median": 7.772602545586828e-06,
+   "max": 4.362244046597909e-05,
+   "flagged": 0,
+   "max_over_tau": 0.22272130559237643,
+   "same_gpu": false
+  },
+  "cuda-fp32->t4-fp32": {
+   "n": 1200,
+   "prompts": 48,
+   "median": 9.168116224632634e-06,
+   "max": 4.591610699840876e-05,
+   "flagged": 0,
+   "max_over_tau": 0.26400917221362435,
+   "same_gpu": false
+  },
+  "t4-fp32->a100-fp32": {
+   "n": 1200,
+   "prompts": 48,
+   "median": 9.262170930935037e-06,
+   "max": 4.70167374656738e-05,
+   "flagged": 0,
+   "max_over_tau": 0.2712284798482266,
+   "same_gpu": false
+  },
+  "t4-fp32->mps-fp32": {
+   "n": 1200,
+   "prompts": 48,
+   "median": 9.25964604935139e-06,
+   "max": 4.9745394017356806e-05,
+   "flagged": 0,
+   "max_over_tau": 0.290305856136119,
+   "same_gpu": false
+  },
+  "t4-fp32->t4-fp32": {
+   "n": 192,
+   "prompts": 48,
+   "median": 0.0,
+   "max": 0.0,
+   "flagged": 0,
+   "max_over_tau": 0.0,
+   "same_gpu": true
+  }
+ },
+ "precision": {
+  "a100-fp16->a100-fp32": {
+   "n": 384,
+   "median": 0.0069517622146539615,
+   "min": 0.003727212631826598,
+   "flagged": 384,
+   "bit_identical": false
+  },
+  "a100-tf32->a100-fp32": {
+   "n": 384,
+   "median": 0.0023552267599728696,
+   "min": 0.001399641804782168,
+   "flagged": 384,
+   "bit_identical": false
+  },
+  "cuda-fp16->a100-fp32": {
+   "n": 128,
+   "median": 0.006497361575710396,
+   "min": 0.004235298592960063,
+   "flagged": 128,
+   "bit_identical": false
+  },
+  "cuda-fp16->t4-fp32": {
+   "n": 128,
+   "median": 0.007581647273352915,
+   "min": 0.00429459219692161,
+   "flagged": 128,
+   "bit_identical": false
+  },
+  "cuda-tf32->a100-fp32": {
+   "n": 128,
+   "median": 0.002397711856336352,
+   "min": 0.0015214310166362748,
+   "flagged": 128,
+   "bit_identical": false
+  },
+  "cuda-tf32->t4-fp32": {
+   "n": 128,
+   "median": 0.0024422017648305693,
+   "min": 0.0015702062822711973,
+   "flagged": 128,
+   "bit_identical": false
+  },
+  "t4-fp16->t4-fp32": {
+   "n": 128,
+   "median": 0.008597887980887921,
+   "min": 0.004224622884758129,
+   "flagged": 128,
+   "bit_identical": false
+  },
+  "t4-tf32->t4-fp32": {
+   "n": 128,
+   "median": 0.0,
+   "min": 0.0,
+   "flagged": 0,
+   "bit_identical": true
+  }
+ },
+ "shortcuts": {
+  "a100-fp32": {
+   "cache2-late": {
+    "n": 8,
+    "flag_frac": 0.20833333333333331,
+    "P_k2": 0.39166666666666666
+   },
+   "cache2": {
+    "n": 8,
+    "flag_frac": 0.47916666666666663,
+    "P_k2": 0.7416666666666667
+   },
+   "cfg-skip": {
+    "n": 8,
+    "flag_frac": 1.0,
+    "P_k2": 1.0
+   },
+   "neg-strip": {
+    "n": 8,
+    "flag_frac": 1.0,
+    "P_k2": 1.0
+   },
+   "step-skip": {
+    "n": 8,
+    "flag_frac": 0.9791666666666667,
+    "P_k2": 1.0
+   },
+   "sub-bk-sdm-small": {
+    "n": 8,
+    "flag_frac": 1.0,
+    "P_k2": 1.0
+   },
+   "sub-bk-sdm-tiny": {
+    "n": 8,
+    "flag_frac": 1.0,
+    "P_k2": 1.0
+   },
+   "w4": {
+    "n": 8,
+    "flag_frac": 1.0,
+    "P_k2": 1.0
+   },
+   "w8": {
+    "n": 8,
+    "flag_frac": 1.0,
+    "P_k2": 1.0
+   },
+   "caught_k2": 7
+  },
+  "t4-fp32": {
+   "cache2-late": {
+    "n": 8,
+    "flag_frac": 0.3125,
+    "P_k2": 0.5583333333333333
+   },
+   "cache2": {
+    "n": 8,
+    "flag_frac": 0.5416666666666666,
+    "P_k2": 0.7916666666666667
+   },
+   "cfg-skip": {
+    "n": 8,
+    "flag_frac": 1.0,
+    "P_k2": 1.0
+   },
+   "neg-strip": {
+    "n": 8,
+    "flag_frac": 1.0,
+    "P_k2": 1.0
+   },
+   "step-skip": {
+    "n": 8,
+    "flag_frac": 0.9791666666666667,
+    "P_k2": 1.0
+   },
+   "sub-bk-sdm-small": {
+    "n": 8,
+    "flag_frac": 1.0,
+    "P_k2": 1.0
+   },
+   "sub-bk-sdm-tiny": {
+    "n": 8,
+    "flag_frac": 1.0,
+    "P_k2": 1.0
+   },
+   "w4": {
+    "n": 8,
+    "flag_frac": 1.0,
+    "P_k2": 1.0
+   },
+   "w8": {
+    "n": 8,
+    "flag_frac": 1.0,
+    "P_k2": 1.0
+   },
+   "caught_k2": 7
+  }
+ },
+ "honest_fp32_cross": {
+  "steps": 7200,
+  "flagged": 0,
+  "max_over_tau": 0.290305856136119,
+  "max": 4.9745394017356806e-05,
+  "median_of_medians": 9.260908490143214e-06
+ }
+}

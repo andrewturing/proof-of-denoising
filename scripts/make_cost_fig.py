@@ -36,7 +36,7 @@ LAYOUT = {
                            "cache2-late": ("cache, late steps only", 6.6, 0.7)},
                    splice=("one spliced step (exact: k / 25)", 7.6, 0.2),
                    xlabel="checked steps k  (cost: k / 25 of the network evaluations)"),
-    "paper": dict(size=(3.3, 2.2), text=7, tick=6.5, ytick=6.5, axis=7.5, lw=1.3, ms=3,
+    "paper": dict(size=(3.3, 2.0), text=7, tick=6.5, ytick=6.5, axis=7.5, lw=1.3, ms=3,
                   adjust=dict(left=0.13, right=0.985, top=0.975, bottom=0.25),
                   labels={"every": ("{n} every-step deviations (weakest)", 2.0, 1.1),
                           "cache2": ("cache, every other step", None, None),

@@ -1,0 +1,116 @@
+{
+ "prompts": 48,
+ "decoder": "mps-fp32",
+ "rows": {
+  "tf32-as-fp32": {
+   "n": 48,
+   "psnr_median": 50.83354992889193,
+   "psnr_min": 24.651369726820743,
+   "psnr_max": 64.51326978777047,
+   "saved": 0.35371179039301315,
+   "saved_source": "L4 step time",
+   "replay_detect": 0.2916666666666667,
+   "pod_k2": 1.0
+  },
+  "fp16-as-fp32": {
+   "n": 48,
+   "psnr_median": 41.68650664659518,
+   "psnr_min": 25.490637095483475,
+   "psnr_max": 56.07245354855461,
+   "saved": 0.7379912663755459,
+   "saved_source": "L4 step time",
+   "replay_detect": 0.7083333333333334,
+   "pod_k2": 1.0
+  },
+  "cache2-late": {
+   "n": 48,
+   "psnr_median": 33.79322622247384,
+   "psnr_min": 26.004455282147177,
+   "psnr_max": 44.28525230119934,
+   "saved": 0.24,
+   "saved_source": "by definition",
+   "replay_detect": 1.0,
+   "pod_k2": 0.4300000000000001
+  },
+  "cache2": {
+   "n": 48,
+   "psnr_median": 18.520292104946265,
+   "psnr_min": 11.045447082710085,
+   "psnr_max": 31.606321975697185,
+   "saved": 0.48,
+   "saved_source": "by definition",
+   "replay_detect": 1.0,
+   "pod_k2": 0.7400000000000001
+  },
+  "step-skip": {
+   "n": 48,
+   "psnr_median": 18.520241716748803,
+   "psnr_min": 11.045446605170115,
+   "psnr_max": 31.606273047907493,
+   "saved": 0.48,
+   "saved_source": "by definition",
+   "replay_detect": 1.0,
+   "pod_k2": 1.0
+  },
+  "cfg-skip": {
+   "n": 48,
+   "psnr_median": 13.165445471386677,
+   "psnr_min": 9.026970570848057,
+   "psnr_max": 19.187740469133384,
+   "saved": 0.5,
+   "saved_source": "by definition",
+   "replay_detect": 1.0,
+   "pod_k2": 1.0
+  },
+  "sub-bk-sdm-small": {
+   "n": 48,
+   "psnr_median": 13.747529340522455,
+   "psnr_min": 8.30339759700194,
+   "psnr_max": 27.908816055984026,
+   "saved": 0.36534905656486916,
+   "saved_source": "mps step time",
+   "replay_detect": 1.0,
+   "pod_k2": 1.0
+  },
+  "sub-bk-sdm-tiny": {
+   "n": 48,
+   "psnr_median": 13.34925478655519,
+   "psnr_min": 7.859987148072843,
+   "psnr_max": 22.176341289067274,
+   "saved": 0.37612992299594417,
+   "saved_source": "mps step time",
+   "replay_detect": 1.0,
+   "pod_k2": 1.0
+  },
+  "w8": {
+   "n": 48,
+   "psnr_median": 24.217047288351104,
+   "psnr_min": 9.872620696107475,
+   "psnr_max": 43.90320474590326,
+   "saved": null,
+   "saved_source": "simulated",
+   "replay_detect": 1.0,
+   "pod_k2": 1.0
+  },
+  "w4": {
+   "n": 48,
+   "psnr_median": 11.752563586065087,
+   "psnr_min": 8.319389328758854,
+   "psnr_max": 17.29921292159079,
+   "saved": null,
+   "saved_source": "simulated",
+   "replay_detect": 1.0,
+   "pod_k2": 1.0
+  },
+  "neg-strip": {
+   "n": 48,
+   "psnr_median": 14.66085150964884,
+   "psnr_min": 8.01916071543735,
+   "psnr_max": 25.033049044108246,
+   "saved": 0.0,
+   "saved_source": "by definition",
+   "replay_detect": 1.0,
+   "pod_k2": 1.0
+  }
+ }
+}

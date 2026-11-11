@@ -1,0 +1,57 @@
+# Study summary (8 prompts, 88 check records)
+
+## FP32 class
+
+Honest cross-device steps: 16 (plus 200 same-backend re-run steps, all r = 0). Leave-one-prompt-out false flags: max 0/16, maxV 0/16; conformal n/a (smallest fold has 14 calibration steps; needs >= 199)
+Rules: max = pooled over verifier stacks; maxV = per verifier stack (protocol rule).
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cuda-fp32->cuda-fp32 | 200 | 0.00e+00 | 0.00e+00 |
+| cuda-fp32->x86cpu-fp32 | 16 | 5.50e-06 | 7.73e-06 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+| cache2-late|cuda-fp32|max | 8 | 0.10 | 0.10 | 0.20 | 0.36 | 0.60 |
+| cache2-late|cuda-fp32|maxV | 8 | 0.10 | 0.10 | 0.20 | 0.36 | 0.60 |
+| cache2|cuda-fp32|max | 8 | 0.31 | 0.31 | 0.54 | 0.82 | 0.99 |
+| cache2|cuda-fp32|maxV | 8 | 0.31 | 0.31 | 0.54 | 0.82 | 0.99 |
+| cfg-skip|cuda-fp32|max | 8 | 0.50 | 0.50 | 0.77 | 0.96 | 1.00 |
+| cfg-skip|cuda-fp32|maxV | 8 | 0.50 | 0.50 | 0.77 | 0.96 | 1.00 |
+| neg-strip|cuda-fp32|max | 8 | 0.52 | 0.52 | 0.78 | 0.96 | 1.00 |
+| neg-strip|cuda-fp32|maxV | 8 | 0.52 | 0.52 | 0.78 | 0.96 | 1.00 |
+| step-skip|cuda-fp32|max | 8 | 0.46 | 0.46 | 0.73 | 0.95 | 1.00 |
+| step-skip|cuda-fp32|maxV | 8 | 0.46 | 0.46 | 0.73 | 0.95 | 1.00 |
+| w4|cuda-fp32|max | 8 | 0.40 | 0.40 | 0.65 | 0.91 | 1.00 |
+| w4|cuda-fp32|maxV | 8 | 0.40 | 0.40 | 0.65 | 0.91 | 1.00 |
+| w8|cuda-fp32|max | 8 | 0.43 | 0.43 | 0.68 | 0.92 | 1.00 |
+| w8|cuda-fp32|maxV | 8 | 0.43 | 0.43 | 0.68 | 0.92 | 1.00 |
+
+## TF32 class
+
+Honest cross-device steps: 200 (plus 0 same-backend re-run steps, all r = 0). Leave-one-prompt-out false flags: max 0/200, maxV 0/200; conformal n/a (smallest fold has 175 calibration steps; needs >= 199)
+Rules: max = pooled over verifier stacks; maxV = per verifier stack (protocol rule).
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cuda-tf32->cuda-fp32 | 200 | 9.29e-04 | 3.18e-03 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+
+## BF16 class
+
+Honest cross-device steps: 200 (plus 0 same-backend re-run steps, all r = 0). Leave-one-prompt-out false flags: max 0/200, maxV 0/200; conformal n/a (smallest fold has 175 calibration steps; needs >= 199)
+Rules: max = pooled over verifier stacks; maxV = per verifier stack (protocol rule).
+
+| honest pair | n | median r | max r |
+|---|---|---|---|
+| cuda-bf16->cuda-fp32 | 200 | 4.13e-02 | 1.17e-01 |
+
+| cheat / verifier / rule | n | flagged | P k=1 | k=2 | k=4 | k=8 |
+|---|---|---|---|---|---|---|
+
+## Verification time per checked step (median, s)
+
+- x86cpu-fp32: 710.52
+- cuda-fp32: 17.35

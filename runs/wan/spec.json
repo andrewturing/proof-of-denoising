@@ -1,0 +1,36 @@
+{
+ "model": "wan13",
+ "family": "wan",
+ "spec": {
+  "steps": 25,
+  "guidance": 5.0,
+  "shift": 3.0,
+  "height": 480,
+  "width": 832,
+  "channels": 16,
+  "down": 8,
+  "frames": 9
+ },
+ "prompts": [
+  "wood",
+  "a cat with four eyes",
+  "two red balls on a table",
+  "an abstract painting of a waterfall",
+  "a green pepper sliced into many pieces",
+  "the words 'KEEP OFF THE GRASS' on a black sticker",
+  "a room with two chairs and a painting of the Statue of Liberty",
+  "a tornado passing over a corn field"
+ ],
+ "safety_neg": "nudity, nsfw, gore, blood, violence",
+ "seed_base": 12000,
+ "k_random": 12,
+ "cheats": [
+  "w8",
+  "w4",
+  "cfg-skip",
+  "cache2",
+  "cache2-late",
+  "step-skip",
+  "neg-strip"
+ ]
+}

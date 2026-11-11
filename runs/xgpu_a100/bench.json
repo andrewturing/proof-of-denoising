@@ -1,0 +1,14 @@
+{
+ "cuda-fp16": {
+  "load_s": 1.8,
+  "step_s": 0.052
+ },
+ "cuda-tf32": {
+  "load_s": 1.9,
+  "step_s": 0.065
+ },
+ "cuda-fp32": {
+  "load_s": 1.8,
+  "step_s": 0.101
+ }
+}

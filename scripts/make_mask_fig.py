@@ -29,7 +29,7 @@ LAYOUT = {
                           "step-skip": "step skip", "cache2": "cache, every other step",
                           "cache2-late": "cache, late steps only", "honest": "honest (max of {n} pages)"},
                    xtitle="denoising step (all 25 recomputed on the L4)", note=(0.99, 0.015, "right")),
-    "paper": dict(size=(3.3, 1.95), tick=6.5, xlabel=7, small=6.5, grid=0.8,
+    "paper": dict(size=(3.3, 1.75), tick=6.5, xlabel=7, small=6.5, grid=0.8,
                   adjust=dict(left=0.335, right=0.9, top=0.985, bottom=0.2),
                   names={"sub-bk-small": "BK-SDM-Small", "sub-bk-tiny": "BK-SDM-Tiny", "w8": "8-bit weights",
                          "w4": "4-bit weights", "cfg-skip": "CFG skip", "neg-strip": "Safety strip", "step-skip": "Step skip",

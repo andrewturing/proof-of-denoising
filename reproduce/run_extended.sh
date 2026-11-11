@@ -3,7 +3,7 @@
 #   A: SANA (GPU checks + x86 CPU verifier) and the fresh storybook chapter (resume after the VM restart)
 #   B: 240 disjoint calibration prompts (request-level split conformal), adaptive attacks (steering, splice),
 #      dense all-step L4 checks of every SD1.5 FP32 cheat
-#   bash reproduce/run_extended_vm.sh            (from the kit's pod/ directory)
+#   bash reproduce/run_extended.sh            (from the kit's pod/ directory)
 set -uo pipefail
 cd "$(dirname "$0")/.."
 export CUBLAS_WORKSPACE_CONFIG=:4096:8 POD_DETERMINISTIC=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

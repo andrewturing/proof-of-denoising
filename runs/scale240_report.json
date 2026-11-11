@@ -1,0 +1,115 @@
+{
+ "run": "scale240",
+ "prompts": 240,
+ "taus": "runs/storybook_fresh/taus_fp32.json",
+ "shortcuts": {
+  "cache2": {
+   "trajectories": 240,
+   "steps_per_trajectory": 25,
+   "flag_frac": 0.4800000000000002,
+   "P_k2": 0.7400000000000001,
+   "P_k2_min": 0.74,
+   "below_099": 240,
+   "changed_steps": 2880,
+   "changed_not_flagged": 0,
+   "min_over_changed": 134.93547548201687
+  },
+  "cache2-late": {
+   "trajectories": 240,
+   "steps_per_trajectory": 25,
+   "flag_frac": 0.2400000000000001,
+   "P_k2": 0.42999999999999994,
+   "P_k2_min": 0.43000000000000005,
+   "below_099": 240,
+   "changed_steps": 1440,
+   "changed_not_flagged": 0,
+   "min_over_changed": 267.5032593845798
+  },
+  "cfg-skip": {
+   "trajectories": 240,
+   "steps_per_trajectory": 25,
+   "flag_frac": 1.0,
+   "P_k2": 1.0,
+   "P_k2_min": 1.0,
+   "below_099": 0,
+   "changed_steps": 6000,
+   "changed_not_flagged": 0,
+   "min_over_changed": 600.5819584445837
+  },
+  "neg-strip": {
+   "trajectories": 240,
+   "steps_per_trajectory": 25,
+   "flag_frac": 1.0,
+   "P_k2": 1.0,
+   "P_k2_min": 1.0,
+   "below_099": 0,
+   "changed_steps": 6000,
+   "changed_not_flagged": 0,
+   "min_over_changed": 242.14937293499182
+  },
+  "step-skip": {
+   "trajectories": 240,
+   "steps_per_trajectory": 25,
+   "flag_frac": 0.9600000000000004,
+   "P_k2": 1.0,
+   "P_k2_min": 1.0,
+   "below_099": 0,
+   "changed_steps": 5760,
+   "changed_not_flagged": 0,
+   "min_over_changed": 77.02081755605137
+  },
+  "sub-bk-sdm-small": {
+   "trajectories": 240,
+   "steps_per_trajectory": 25,
+   "flag_frac": 1.0,
+   "P_k2": 1.0,
+   "P_k2_min": 1.0,
+   "below_099": 0,
+   "changed_steps": 6000,
+   "changed_not_flagged": 0,
+   "min_over_changed": 249.8530120435264
+  },
+  "sub-bk-sdm-tiny": {
+   "trajectories": 240,
+   "steps_per_trajectory": 25,
+   "flag_frac": 1.0,
+   "P_k2": 1.0,
+   "P_k2_min": 1.0,
+   "below_099": 0,
+   "changed_steps": 6000,
+   "changed_not_flagged": 0,
+   "min_over_changed": 289.8808715885811
+  },
+  "w4": {
+   "trajectories": 240,
+   "steps_per_trajectory": 25,
+   "flag_frac": 1.0,
+   "P_k2": 1.0,
+   "P_k2_min": 1.0,
+   "below_099": 0,
+   "changed_steps": 6000,
+   "changed_not_flagged": 0,
+   "min_over_changed": 559.6509489933603
+  },
+  "w8": {
+   "trajectories": 240,
+   "steps_per_trajectory": 25,
+   "flag_frac": 1.0,
+   "P_k2": 1.0,
+   "P_k2_min": 1.0,
+   "below_099": 0,
+   "changed_steps": 6000,
+   "changed_not_flagged": 0,
+   "min_over_changed": 24.111756899004263
+  }
+ },
+ "honest_same_device": {
+  "steps": 480,
+  "nonzero": 0
+ },
+ "trajectories": 2160,
+ "changed_steps": 46080,
+ "changed_not_flagged": 0,
+ "min_over_changed": 24.111756899004263,
+ "caught_k2": 7
+}

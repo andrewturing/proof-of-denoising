@@ -1,0 +1,11 @@
+{
+ "prompts": 48,
+ "main_prompt": 33,
+ "main_psnr": 17.758271626870968,
+ "supplement_prompts": [
+  0,
+  33,
+  25,
+  5
+ ]
+}

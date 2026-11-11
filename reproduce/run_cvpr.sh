@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # CVPR-scale run on an NVIDIA VM (after run_nvidia.sh has set up .venv and the models).
-#   bash reproduce/run_cvpr_vm.sh          (from the kit's pod/ directory)
+#   bash reproduce/run_cvpr.sh          (from the kit's pod/ directory)
 # 1. Full 48-prompt PartiPrompts study on CUDA: honest FP16/TF32/FP32 + 18 cheats; cheats checked on
 #    12 random steps, honest on all 25 (verifier cuda-fp32).
 # 2. Dense cross-vendor calibration: every step of the Mac's honest FP32 trajectories on NVIDIA FP32,

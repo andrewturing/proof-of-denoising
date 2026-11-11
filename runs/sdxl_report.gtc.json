@@ -1,0 +1,112 @@
+{
+ "prompts": 16,
+ "classes": {
+  "fp32": {
+   "honest_steps_xdev": 1264,
+   "false_flags_max": 0,
+   "pairs": {
+    "cuda-fp32->a100-fp32": {
+     "n": 400,
+     "median": 1.809239342603583e-05,
+     "max": 0.00014275726015448343
+    },
+    "cuda-fp32->mps-fp32": {
+     "n": 400,
+     "median": 8.8046396183436e-06,
+     "max": 3.861624454190861e-05
+    },
+    "cuda-fp32->t4-fp32": {
+     "n": 400,
+     "median": 8.706542009591063e-06,
+     "max": 3.738183729161829e-05
+    },
+    "cuda-fp32->x86cpu-fp32": {
+     "n": 64,
+     "median": 8.569459609482179e-06,
+     "max": 4.116629479051216e-05
+    }
+   }
+  },
+  "tf32": {
+   "honest_steps_xdev": 400,
+   "false_flags_max": 0,
+   "pairs": {
+    "cuda-tf32->cuda-fp32": {
+     "n": 400,
+     "median": 0.0014924994733481372,
+     "max": 0.007074999317323173
+    }
+   }
+  },
+  "fp16": {
+   "honest_steps_xdev": 400,
+   "false_flags_max": 0,
+   "pairs": {
+    "cuda-fp16->cuda-fp32": {
+     "n": 400,
+     "median": 0.0052715362975204495,
+     "max": 0.0399464572051564
+    }
+   }
+  }
+ },
+ "fp32_detection": {
+  "cache2-late": {
+   "P_k2": 0.42992424242424243,
+   "flag_frac": 0.24479166666666663,
+   "n": 16
+  },
+  "cache2": {
+   "P_k2": 0.759469696969697,
+   "flag_frac": 0.4947916666666667,
+   "n": 16
+  },
+  "cfg-skip": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 16
+  },
+  "neg-strip": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 16
+  },
+  "step-skip": {
+   "P_k2": 1.0,
+   "flag_frac": 0.9791666666666666,
+   "n": 16
+  },
+  "sub-ssd1b": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 16
+  },
+  "sub-vega": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 16
+  },
+  "w4": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 16
+  },
+  "w8": {
+   "P_k2": 1.0,
+   "flag_frac": 1.0,
+   "n": 16
+  }
+ },
+ "fp32_caught_k2": 7,
+ "downgrades": {
+  "cuda-fp16": {
+   "flagged": 400,
+   "steps": 400
+  },
+  "cuda-tf32": {
+   "flagged": 400,
+   "steps": 400
+  }
+ },
+ "fp32_loo_flags": []
+}

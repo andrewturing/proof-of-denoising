@@ -1,0 +1,1 @@
+torch 2.14.1+cu130 cuda 13.0 Tesla T4 diffusers 0.41.0 transformers 5.20.2

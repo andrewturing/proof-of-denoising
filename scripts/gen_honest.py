@@ -30,6 +30,7 @@ def main():
     ap.add_argument("--run-name", default="calib_prompts")
     ap.add_argument("--prompts-file", default=None, help="e.g. prompts/parti_calib.json (default: the study's prompts)")
     ap.add_argument("--seed-base", type=int, default=None, help="seed of prompt p is seed_base + p (default: the study's)")
+    ap.add_argument("--name", default=None, help="worker name in the file names (default: the backend), e.g. t4-fp32 or a100-fp32")
     a = ap.parse_args()
     study = json.loads((ROOT / "runs" / "study" / "spec.json").read_text())
     if a.prompts_file:  # same job definition, other prompts and seeds; spec.json records them for the verifiers
@@ -44,13 +45,13 @@ def main():
     den = Denoiser(Backend.parse(a.backend))
     unc = den.encode(study["safety_neg"])
     for p in range(a.lo, a.hi):
-        out = run / "traj" / f"{a.backend}__honest__{p:02d}.npz"
+        out = run / "traj" / f"{a.name or a.backend}__honest__{p:02d}.npz"
         if out.exists():
             continue
         t0 = time.time()
         states = honest(den, den.encode(study["prompts"][p]), unc, study["seed_base"] + p, spec)
         np.savez(out, states=states, secs=time.time() - t0)
-        print("honest", a.backend, p, f"{time.time() - t0:.1f}s", flush=True)
+        print("honest", a.name or a.backend, p, f"{time.time() - t0:.1f}s", flush=True)
 
 
 if __name__ == "__main__":

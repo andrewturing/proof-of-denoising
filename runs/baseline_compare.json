@@ -1,0 +1,90 @@
+{
+ "prompts": 48,
+ "budget_k2": 0.08,
+ "honest": {
+  "median": 2.964946592463976e-05,
+  "max": 0.008071569995752318,
+  "min": 4.870405234301269e-06,
+  "bit_exact_pairs": 0,
+  "flagged": 1
+ },
+ "deviations": {
+  "sub-bk-sdm-small": {
+   "n": 48,
+   "median_d": 0.7735428550034327,
+   "min_d": 0.2780410788108229,
+   "replay_detect": 1.0,
+   "job_audit_detect_at_k2_budget": 0.08
+  },
+  "sub-bk-sdm-tiny": {
+   "n": 48,
+   "median_d": 0.7698001245340148,
+   "min_d": 0.5552717689829914,
+   "replay_detect": 1.0,
+   "job_audit_detect_at_k2_budget": 0.08
+  },
+  "w8": {
+   "n": 48,
+   "median_d": 0.20743103451497102,
+   "min_d": 0.04074976644072889,
+   "replay_detect": 1.0,
+   "job_audit_detect_at_k2_budget": 0.08
+  },
+  "w4": {
+   "n": 48,
+   "median_d": 0.9095342904833561,
+   "min_d": 0.6773506734399583,
+   "replay_detect": 1.0,
+   "job_audit_detect_at_k2_budget": 0.08
+  },
+  "cfg-skip": {
+   "n": 48,
+   "median_d": 0.7815282097126048,
+   "min_d": 0.6256037661635777,
+   "replay_detect": 1.0,
+   "job_audit_detect_at_k2_budget": 0.08
+  },
+  "neg-strip": {
+   "n": 48,
+   "median_d": 0.7082844359816494,
+   "min_d": 0.2543371829837368,
+   "replay_detect": 1.0,
+   "job_audit_detect_at_k2_budget": 0.08
+  },
+  "step-skip": {
+   "n": 48,
+   "median_d": 0.4230937892209722,
+   "min_d": 0.14872380403721513,
+   "replay_detect": 1.0,
+   "job_audit_detect_at_k2_budget": 0.08
+  },
+  "cache2": {
+   "n": 48,
+   "median_d": 0.42309489356481966,
+   "min_d": 0.148723400230397,
+   "replay_detect": 1.0,
+   "job_audit_detect_at_k2_budget": 0.08
+  },
+  "cache2-late": {
+   "n": 48,
+   "median_d": 0.05401409391728981,
+   "min_d": 0.03207390101100928,
+   "replay_detect": 1.0,
+   "job_audit_detect_at_k2_budget": 0.08
+  },
+  "tf32-as-fp32": {
+   "n": 48,
+   "median_d": 0.006830962349458727,
+   "min_d": 0.0009864292604528577,
+   "replay_detect": 0.2916666666666667,
+   "job_audit_detect_at_k2_budget": 0.023333333333333334
+  },
+  "fp16-as-fp32": {
+   "n": 48,
+   "median_d": 0.022058172749913223,
+   "min_d": 0.0035154318368252847,
+   "replay_detect": 0.7083333333333334,
+   "job_audit_detect_at_k2_budget": 0.05666666666666667
+  }
+ }
+}

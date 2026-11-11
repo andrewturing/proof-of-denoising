@@ -1,4 +1,4 @@
-"""Proof-of-Denoising for flow-matching transformers (SANA: linear DiT, rectified flow).
+"""Proof-of-Denoising for flow-matching transformers (SANA: linear DiT, rectified flow; Wan 2.1: video DiT).
 
 Same protocol as the SD1.5 path (sampler.py + model.py), second model family:
   * pinned first-order Euler sampler over shifted flow sigmas, sigma_0 = 1 (noise) -> sigma_N = 0;
@@ -38,10 +38,12 @@ class FlowSpec:
     width: int = 512
     channels: int = 32
     down: int = 32  # DC-AE f32c32
+    frames: int = 0  # latent frames of a video model; 0 for an image model
 
     @property
-    def shape(self) -> tuple[int, int, int]:
-        return (self.channels, self.height // self.down, self.width // self.down)
+    def shape(self) -> tuple[int, ...]:
+        hw = (self.height // self.down, self.width // self.down)
+        return (self.channels, self.frames, *hw) if self.frames else (self.channels, *hw)
 
     def sigmas(self) -> np.ndarray:
         t = 1.0 - np.arange(self.steps + 1, dtype=np.float64) / self.steps
@@ -141,6 +143,98 @@ class SanaDenoiser:
         zt = torch.from_numpy(z0[None] / self.vae.config.scaling_factor).to(self._dev, self._dt)
         img = self.vae.decode(zt, return_dict=False)[0][0].float().cpu().numpy()
         return ((np.clip(img, -1, 1) + 1) * 127.5).round().astype(np.uint8).transpose(1, 2, 0)
+
+    def sync(self) -> None:
+        if self._dev == "cuda":
+            torch.cuda.synchronize()
+        elif self._dev == "mps":
+            torch.mps.synchronize()
+
+
+# ---- Wan 2.1 (text-to-video, 1.3B): the same sampler and workers, a 5-D latent (C, T, h, w) ----
+
+WAN_REPO = "Wan-AI/Wan2.1-T2V-1.3B-Diffusers"
+WAN_TEXT_LEN = 512
+
+
+class WanText:
+    """UMT5-XXL text encoder for Wan, in FP32 on the CPU. Its 5.7B parameters do not fit beside the transformer on
+    a 24 GB GPU, so the job pins this encoder and callers cache its embeddings. An embedding is (512, 4096)
+    float32, zero after the prompt's last token, as in the reference pipeline."""
+
+    def __init__(self):
+        from transformers import AutoTokenizer, UMT5EncoderModel
+        self.tok = AutoTokenizer.from_pretrained(WAN_REPO, subfolder="tokenizer")
+        self.enc = UMT5EncoderModel.from_pretrained(WAN_REPO, subfolder="text_encoder", torch_dtype=torch.float32).eval()
+
+    @torch.no_grad()
+    def encode(self, text: str) -> np.ndarray:
+        text = " ".join(text.split())  # the job's prompts are plain text: whitespace-normalised, nothing else
+        t = self.tok([text], padding="max_length", max_length=WAN_TEXT_LEN, truncation=True, add_special_tokens=True,
+                     return_attention_mask=True, return_tensors="pt")
+        n = int(t.attention_mask.gt(0).sum())
+        h = self.enc(t.input_ids, t.attention_mask).last_hidden_state[0].float().numpy()
+        out = np.zeros((WAN_TEXT_LEN, h.shape[1]), np.float32)
+        out[:n] = h[:n]
+        return out
+
+
+class WanDenoiser:
+    """Wan 2.1 video transformer (+ optional VAE) on one backend. Conditionings are (512, 4096) float32 arrays
+    from WanText; this class holds no text encoder."""
+
+    def __init__(self, backend: Backend, model: str = "wan13", quant_bits: int | None = None, load_vae: bool = False):
+        from diffusers import AutoencoderKLWan, WanTransformer3DModel
+        self.backend, self.model = backend, model
+        dev, dt = backend.device, DTYPES[backend.dtype]
+        self._tf32 = backend.dtype == "tf32"
+        if dev == "cuda" and os.environ.get("POD_DETERMINISTIC") == "1":
+            torch.backends.cudnn.benchmark = False
+            torch.backends.cudnn.deterministic = True
+            torch.use_deterministic_algorithms(True, warn_only=True)
+        if dev == "cuda":
+            set_tf32(self._tf32)
+        self.transformer = WanTransformer3DModel.from_pretrained(WAN_REPO, subfolder="transformer", torch_dtype=dt).to(dev).eval()
+        if quant_bits:
+            fake_quantize_(self.transformer, quant_bits)
+        self.vae = AutoencoderKLWan.from_pretrained(WAN_REPO, subfolder="vae", torch_dtype=torch.float32).to(dev).eval() if load_vae else None
+        self._dev, self._dt = dev, dt
+
+    @property
+    def name(self) -> str:
+        return self.backend.name
+
+    def free_text_encoder(self) -> None:
+        pass
+
+    @torch.no_grad()
+    def velocity(self, z: np.ndarray, sigma: float, conds: list) -> np.ndarray:
+        """Raw transformer velocity predictions for a batch of conditionings. float32 (B, C, T, h, w)."""
+        b = len(conds)
+        if self._dev == "cuda":
+            set_tf32(self._tf32)
+        zt = torch.from_numpy(np.repeat(z[None], b, axis=0)).to(self._dev, self._dt)
+        emb = torch.from_numpy(np.stack(conds)).to(self._dev, self._dt)
+        tt = torch.full((b,), sigma * 1000.0, device=self._dev, dtype=torch.float32)
+        out = self.transformer(hidden_states=zt, timestep=tt, encoder_hidden_states=emb, return_dict=False)[0]
+        return out.float().cpu().numpy()
+
+    def v_fn(self, cond, uncond, guidance: float):
+        def f(z: np.ndarray, sigma: float) -> np.ndarray:
+            v_u, v_c = self.velocity(z, sigma, [uncond, cond])
+            return v_u + guidance * (v_c - v_u)
+        return f
+
+    @torch.no_grad()
+    def decode(self, z0: np.ndarray) -> np.ndarray:
+        """Final latent -> video frames, uint8 (F, H, W, 3)."""
+        assert self.vae is not None, "load_vae=True is required"
+        c = self.vae.config
+        mean = torch.tensor(c.latents_mean).view(1, -1, 1, 1, 1)
+        std = torch.tensor(c.latents_std).view(1, -1, 1, 1, 1)
+        lat = (torch.from_numpy(z0[None]).float() * std + mean).to(self._dev)
+        vid = self.vae.decode(lat, return_dict=False)[0][0].float().cpu().numpy()  # (3, F, H, W)
+        return ((np.clip(vid, -1, 1) + 1) * 127.5).round().astype(np.uint8).transpose(1, 2, 3, 0)
 
     def sync(self) -> None:
         if self._dev == "cuda":

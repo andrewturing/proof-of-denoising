@@ -200,10 +200,19 @@ def main():
         rows.append(["Honest (node A)", "0 (all 16)", "--", f"{fr['honest_accepted_final']}/{fr['honest_pages']} accepted"])
         tex_table("fresh", "lccc", ["Node B deviation", "detectable steps $m$", "$P$(detect), $k{=}2$", "rejected"], rows)
     dm = j("dense_margin.json")
-    lo = [x for x in ((fr or {}).get("detectable_min_over_reference"), (dm or {}).get("min_over_detectable")) if x is not None]
+    sc = j("scale240_report.json")  # the nine shortcuts on 240 further prompts (scripts/shortcut_scale.py, scale_report.py)
+    sc = sc if sc and sc.get("prompts") == 240 else None  # only the finished run enters the paper
+    lo = [x for x in ((fr or {}).get("detectable_min_over_reference"), (dm or {}).get("min_over_detectable"),
+                      (sc or {}).get("min_over_changed")) if x is not None]
+    commas = lambda x: f"{x:,}".replace(",", "{,}")
     if lo:
         m["cvprShortcutMinOver"] = int(min(lo))
-        m["cvprShortcutTraj"] = (fr["deviating_pages"] if fr else 0) + (dm["trajectories"] if dm else 0)
+        m["cvprShortcutTraj"] = commas((fr["deviating_pages"] if fr else 0) + (dm["trajectories"] if dm else 0) + (sc["trajectories"] if sc else 0))
+    if sc:
+        m.update(cvprScalePrompts=sc["prompts"], cvprScaleTraj=commas(sc["trajectories"]), cvprScaleChanged=commas(sc["changed_steps"]),
+                 cvprScaleMissed=sc["changed_not_flagged"], cvprScaleMinOver=int(sc["min_over_changed"]),
+                 cvprScaleCaught=f"{sc['caught_k2']} of {len(sc['shortcuts'])}",
+                 cvprScaleCacheKtwo=f"{sc['shortcuts']['cache2']['P_k2']:.2f}", cvprScaleCacheLateKtwo=f"{sc['shortcuts']['cache2-late']['P_k2']:.2f}")
     # full-cost attacks
     f = RUNS / "adaptive" / "outputs.jsonl"
     if f.exists():
@@ -216,6 +225,41 @@ def main():
             m[f"cvpr{tag}PsnrMed"], m[f"cvpr{tag}PsnrMin"] = f"{med(ps):.0f}", f"{min(ps):.1f}"
             m[f"cvpr{tag}ProgMax"], m[f"cvpr{tag}ProgMed"] = f"{100 * max(lp):.1f}", f"{100 * med(lp):.2f}"
         m["cvprTargetPsnrMed"] = f"{med([r['psnr_target_vs_honest'] for r in rs]):.0f}"
+    # optimised steering (scripts/optimal_steer.py): adjoint directions inside the same per-step budget
+    f_opt = RUNS / "adaptive_opt" / "outputs.jsonl"
+    if f_opt.exists():
+        ro = [json.loads(l) for l in f_opt.read_text().splitlines() if l.strip()]
+        med_ = lambda v: sorted(v)[len(v) // 2]
+        m["cvprOptN"] = len(ro)
+        for a_, tag in (("max95", "OptHi"), ("max33", "OptLo")):
+            ps = [r["attacks"][a_]["psnr_vs_honest"] for r in ro]
+            lp = [r["attacks"][a_]["latent_progress"] for r in ro]
+            m.update({f"cvpr{tag}PsnrMed": f"{med_(ps):.0f}", f"cvpr{tag}PsnrMin": f"{min(ps):.1f}",
+                      f"cvpr{tag}ProgMax": f"{100 * max(lp):.1f}", f"cvpr{tag}ProgMed": f"{100 * med_(lp):.1f}",
+                      f"cvpr{tag}BelowThirty": sum(x < 30 for x in ps)})
+        # the component of the displacement that points at the chosen target, over both objectives
+        m["cvprOptTowardMax"] = f"{100 * max(r['attacks'][k]['toward_target'] for r in ro for k in ('opt95', 'max95')):.1f}"
+        f_old = RUNS / "adaptive" / "outputs.jsonl"
+        if f_old.exists():
+            old_ = {r["prompt"]: r["attacks"]["steer95"]["latent_progress"] for r in map(json.loads, f_old.read_text().splitlines()) if r}
+            m["cvprOptGain"] = f"{med_([r['attacks']['max95']['latent_progress'] / old_[r['prompt']] for r in ro if old_.get(r['prompt'])]):.0f}"
+        m["cvprOptPowerGain"] = f"{med_([r['power'][-1] / r['power'][0] for r in ro]):.1f}"
+        if f_old.exists():  # fixed and optimised steering side by side (supplement)
+            ol = [json.loads(l) for l in f_old.read_text().splitlines() if l.strip()]
+            rows = []
+            for label, src, key in (("Fixed, $c{=}0.33$", ol, "steer33"), ("Fixed, $c{=}0.95$", ol, "steer95"),
+                                    ("Optimized, $c{=}0.33$", ro, "max33"), ("Optimized, $c{=}0.95$", ro, "max95")):
+                ps = [r["attacks"][key]["psnr_vs_honest"] for r in src]
+                lp = [100 * r["attacks"][key]["latent_progress"] for r in src]
+                rows.append([label, f"{med_(lp):.2f} / {max(lp):.1f}", f"{med_(ps):.0f} / {min(ps):.1f}", f"{sum(x < 30 for x in ps)} / {len(ps)}"])
+            tex_table("steering", "lccc", ["Steering", "displacement (\\%), med / max", "PSNR (dB), med / min", "below 30 dB"], rows)
+    xo = j("adaptive_opt/xverify_summary.json")  # these trajectories re-checked on another stack (scripts/attack_xverify.py)
+    if xo:
+        for a_, tag in (("max95", "OptHi"), ("max33", "OptLo")):
+            v = xo.get("summary", {}).get(a_)
+            if v:
+                m[f"cvpr{tag}XvOver"], m[f"cvpr{tag}XvN"], m[f"cvpr{tag}XvSteps"] = v["steps_over"], v["trajectories"], v["steps"]
+                m[f"cvpr{tag}XvMaxOver"] = f"{v['max_over_tau']:.2f}"
     xa = j("adaptive/xverify_summary.json")
     if xa:
         for a_, tag in (("steer33", "SteerLo"), ("steer95", "SteerHi"), ("splice20", "SpliceLate")):
@@ -240,6 +284,8 @@ def main():
         f32 = sr["classes"].get("fp32", {})
         pr = f32.get("pairs", {}).get("cuda-fp32->x86cpu-fp32")
         m.update(cvprSanaPrompts=sr["prompts"], cvprSanaCaught=f"{sr['fp32_caught_k2']} of {len(sr['fp32_detection'])}")
+        if "cache2" in sr["fp32_detection"]:
+            m["cvprSanaCacheKtwo"] = f"{sr['fp32_detection']['cache2']['P_k2']:.2f}"
         if f32:
             m.update(cvprSanaFlags=f32["false_flags_max"], cvprSanaHonestN=f"{f32['honest_steps_xdev']:,}".replace(",", "{,}"))
         if pr:
@@ -256,6 +302,68 @@ def main():
             d = sr["downgrades"].get(w)
             if d and d["steps"]:
                 m[f"cvprSana{tag}Flag"] = f"{d['flagged']:,}/{d['steps']:,}".replace(",", "{,}")
+    # further model families (scripts/family_study.py; one report each from scripts/sana_report.py <run>)
+    num = lambda x: f"{x:,}".replace(",", "{,}")
+    for run, tag in (("sdxl", "Sdxl"), ("wan", "Wan")):
+        fam = j(f"{run}_report.json")
+        if not fam:
+            continue
+        f32 = fam["classes"].get("fp32", {})
+        det = fam["fp32_detection"]
+        m[f"cvpr{tag}Prompts"] = fam["prompts"]
+        m[f"cvpr{tag}Caught"] = f"{fam['fp32_caught_k2']} of {len(det)}"
+        secs = (j(f"{run}/summary.json") or {}).get("verify_secs_per_step", {}).get("cuda-fp32")  # one re-checked step on the L4
+        if secs:
+            m.update({f"cvpr{tag}StepSec": f"{secs:.1f}" if secs < 10 else f"{secs:.0f}", f"cvpr{tag}CheckSec": f"{2 * secs:.0f}",
+                      f"cvpr{tag}JobMin": f"{25 * secs / 60:.0f}"})
+        for key, t2 in (("cache2", "Cache"), ("cache2-late", "CacheLate")):
+            if key in det:
+                m[f"cvpr{tag}{t2}Ktwo"] = f"{det[key]['P_k2']:.2f}"
+        if f32:
+            m[f"cvpr{tag}Flags"], m[f"cvpr{tag}HonestN"] = f32["false_flags_max"], num(f32["honest_steps_xdev"])
+            for pair, who in (("cuda-fp32->mps-fp32", "Apple"), ("cuda-fp32->x86cpu-fp32", "Cpu"), ("cuda-fp32->a100-fp32", "Ahundred"),
+                              ("cuda-fp32->t4-fp32", "Tfour")):
+                pr = f32["pairs"].get(pair)
+                if pr:
+                    m.update({f"cvpr{tag}{who}N": num(pr["n"]), f"cvpr{tag}{who}Med": sci(pr["median"]), f"cvpr{tag}{who}Max": sci(pr["max"])})
+            if f32["pairs"]:
+                m.update({f"cvpr{tag}Stacks": len(f32["pairs"]), f"cvpr{tag}XvMax": sci(max(v["max"] for v in f32["pairs"].values())),
+                          f"cvpr{tag}XvMed": sci(max(v["median"] for v in f32["pairs"].values()))})
+        lf = sorted((f["over"] for f in fam.get("fp32_loo_flags", [])), reverse=True)
+        if lf:
+            m[f"cvpr{tag}FlagOver"] = f"{lf[0]:.2f}"
+        for w, t2 in (("tf32", "Tf"), ("fp16", "Fp"), ("bf16", "Bf")):
+            pr = fam["classes"].get(w, {}).get("pairs", {}).get(f"cuda-{w}->cuda-fp32")
+            if pr:
+                m[f"cvpr{tag}{t2}Med"] = sci(pr["median"])
+            d = fam["downgrades"].get(f"cuda-{w}")
+            if d and d["steps"]:
+                m[f"cvpr{tag}{t2}Flag"] = f"{num(d['flagged'])}/{num(d['steps'])}"
+    # further NVIDIA GPUs, judged with the thresholds frozen before they joined (scripts/xgpu_report.py)
+    xg = j("xgpu_report.json")
+    if xg and xg.get("honest_fp32_cross", {}).get("steps"):
+        hc = xg["honest_fp32_cross"]
+        cross = {k: v for k, v in xg["honest_fp32"].items() if not v["same_gpu"]}
+        m.update(cvprXgSteps=num(hc["steps"]), cvprXgFlagged=hc["flagged"], cvprXgMaxOver=f"{hc['max_over_tau']:.2f}",
+                 cvprXgMax=sci(hc["max"]), cvprXgMed=sci(hc["median_of_medians"]), cvprXgPairs=len(cross),
+                 cvprXgGpus=len(xg["gpus"]), cvprXgSame=sum(v["flagged"] for v in xg["honest_fp32"].values() if v["same_gpu"]))
+        for tag, g in xg["gpus"].items():
+            t = tag.upper() if tag[0] != "a" else "A" + tag[1:]   # t4 -> T, a100 -> A (TeX names: letters only)
+            name = "".join(ch for ch in t if ch.isalpha())[:1]
+            st = g.get("step_s", {})
+            if "cuda-fp32" in st:
+                m[f"cvprXg{name}StepFp"] = f"{st['cuda-fp32']:.2f}"
+            if "cuda-tf32" in st and "cuda-fp32" in st:
+                m[f"cvprXg{name}TfSaving"] = f"{100 * (1 - st['cuda-tf32'] / st['cuda-fp32']):.0f}"
+            sc = xg["shortcuts"].get(f"{tag}-fp32")
+            if sc:
+                m[f"cvprXg{name}Caught"] = f"{sc['caught_k2']} of {sum(isinstance(v, dict) for v in sc.values())}"
+        real = {k: v for k, v in xg["precision"].items() if not v["bit_identical"]}
+        if real:
+            m["cvprXgDownFlag"] = f"{num(sum(v['flagged'] for v in real.values()))}/{num(sum(v['n'] for v in real.values()))}"
+        rows = [[k.replace("->", " $\\to$ ").replace("cuda-fp32", "L4").replace("-fp32", "").replace("t4", "T4").replace("a100", "A100").replace("mps", "Apple GPU"),
+                 num(v["n"]), sci(v["median"]), sci(v["max"]), f"{v['flagged']}", f"{v['max_over_tau']:.2f}"] for k, v in cross.items()]
+        tex_table("xgpu_pairs", "lrcccc", ["Worker $\\to$ verifier", "steps", "median $r$", "max $r$", "flagged", "max $r/\\tau$"], rows)
     tt = j("two_tier_power.json")
     if tt:
         m.update(cvprTwoTierCommon=tt["with_reference_check"], cvprTwoTierConfirmed=tt["reference_confirmed"])
@@ -287,6 +395,47 @@ def main():
         pk = [x for k in ("cache2", "cache2-late") for x in fr["by_kind"].get(k, {}).get("P_k2", [])]
         if pk:
             m["cvprFreshCacheP"] = f"{min(pk):.2f}\\text{{--}}{max(pk):.2f}"  # en dash that also works in math mode
+
+    # equal-budget baseline: replaying whole jobs (scripts/baseline_compare.py) versus k = 2 step checks
+    bc = j("baseline_compare.json")
+    if bc and dg:
+        h, dv, b = bc["honest"], bc["deviations"], bc["budget_k2"]
+        every = ["sub-bk-sdm-small", "sub-bk-sdm-tiny", "w8", "w4", "cfg-skip", "neg-strip", "step-skip"]
+        pod = {k: bw[f"{k}|cuda-fp32|cuda-fp32|max"]["P_k2"] for k in every + ["cache2", "cache2-late"]}
+        replay = [min(dv[k]["replay_detect"] for k in every), dv["cache2"]["replay_detect"], dv["cache2-late"]["replay_detect"],
+                  dv["tf32-as-fp32"]["replay_detect"], dv["fp16-as-fp32"]["replay_detect"]]
+        ours = [min(pod[k] for k in every), pod["cache2"], pod["cache2-late"],
+                dg["downgrades"]["cuda-tf32"]["P_k2_min"], dg["downgrades"]["cuda-fp16"]["P_k2_min"]]
+        fmt = lambda xs: [f"{x:.2f}" for x in xs]
+        tex_table("baselines", "lcccccc",
+                  ["Verification", "Cost", "Every-step", "Cache", "Late cache", "TF32", "FP16"],
+                  [["Replay every job", "100\\%"] + fmt(replay),
+                   [f"Replay {100 * b:.0f}\\% of jobs", f"{100 * b:.0f}\\%"] + fmt([b * x for x in replay]),
+                   ["\\pod, $k{=}2$", f"{100 * b:.0f}\\%"] + fmt(ours)],
+                  "Per-job detection probability. Replay: final-latent tolerance, Apple GPU replays L4 jobs (baseline_compare.py).")
+        step = fp["honest_pairs"]["cuda-fp32->mps-fp32"]  # the same worker -> verifier pair, per step
+        m.update(cvprBaseN=bc["prompts"], cvprBaseHonestMed=sci(h["median"]), cvprBaseHonestMax=sci(h["max"]),
+                 cvprBaseTail=f"{h['max'] / h['median']:.0f}", cvprBaseStepTail=f"{step['max'] / step['median']:.0f}",
+                 cvprBaseFlagged=h["flagged"], cvprBaseBitExact=h["bit_exact_pairs"],
+                 cvprBaseReplayTf=f"{100 * dv['tf32-as-fp32']['replay_detect']:.0f}",
+                 cvprBaseReplayFp=f"{100 * dv['fp16-as-fp32']['replay_detect']:.0f}",
+                 cvprBaseBudget=f"{100 * b:.0f}")
+
+    # how visible each deviation is (scripts/perceptual_table.py): saving, PSNR to the honest image, who detects it
+    pv = j("perceptual.json")
+    if pv:
+        names = {"tf32-as-fp32": "TF32 run as FP32", "fp16-as-fp32": "FP16 run as FP32", "cache2-late": "Cache (late only)",
+                 "cache2": "Cache (every other)", "step-skip": "Step skip", "cfg-skip": "CFG skip",
+                 "sub-bk-sdm-small": "BK-SDM-Small", "sub-bk-sdm-tiny": "BK-SDM-Tiny", "w8": "8-bit weights (simulated)",
+                 "w4": "4-bit weights (simulated)", "neg-strip": "Safety strip"}
+        rows = [[names[k], "--" if v["saved"] is None else f"{100 * v['saved']:.0f}\\%", f"{v['psnr_median']:.0f}",
+                 f"{v['replay_detect']:.2f}", f"{v['pod_k2']:.2f}"] for k, v in pv["rows"].items()]
+        tex_table("visible", "lcccc", ["Deviation", "Saved", "PSNR (dB)", "Replay", "\\pod, $k{=}2$"], rows,
+                  "Saved compute, median PSNR to the honest image, detection by a full replay and by two step checks.")
+        r = pv["rows"]
+        m.update(cvprVisTfPsnr=f"{r['tf32-as-fp32']['psnr_median']:.0f}", cvprVisFpPsnr=f"{r['fp16-as-fp32']['psnr_median']:.0f}",
+                 cvprVisFpSaved=f"{100 * r['fp16-as-fp32']['saved']:.0f}", cvprVisLatePsnr=f"{r['cache2-late']['psnr_median']:.0f}",
+                 cvprVisN=pv["prompts"])
 
     lines = ["% Generated by pod/scripts/export_macros_cvpr.py from logged runs. Do not edit by hand.", f"% pool: {pool}"]
     assert all(k.isalpha() for k in m), [k for k in m if not k.isalpha()]  # TeX control words are letters only

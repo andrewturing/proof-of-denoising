@@ -17,6 +17,7 @@ RUNS = ROOT / "runs"
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", default="xadaptive_cpu")
+    ap.add_argument("--out", default="adaptive/xverify_summary.json", help="summary file under runs/")
     a = ap.parse_args()
     taus = {int(i): v for i, v in json.loads((RUNS / "storybook_fresh" / "taus_fp32.json").read_text())["tau"].items()}
     per = defaultdict(dict)
@@ -30,7 +31,7 @@ def main():
                    "steps": sum(x["steps"] for x in v.values()),
                    "max_over_tau": max(x["max_over"] for x in v.values())} for k, v in per.items()}
     out = {"run": a.run, "verifier": verifier, "summary": summary, **per}
-    (RUNS / "adaptive" / "xverify_summary.json").write_text(json.dumps(out, indent=1))
+    (RUNS / a.out).write_text(json.dumps(out, indent=1))
     print(json.dumps(summary, indent=1))
 
 
